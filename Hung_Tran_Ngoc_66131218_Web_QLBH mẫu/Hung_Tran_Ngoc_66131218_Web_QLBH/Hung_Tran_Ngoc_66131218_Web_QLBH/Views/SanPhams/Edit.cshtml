@@ -1,0 +1,92 @@
+﻿@model Hung_Tran_Ngoc_66131218_Web_QLBH.Models.SanPham
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>SanPham</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @* 1. Thêm enctype="multipart/form-data" vào form *@
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @* Trường MaSP (Mã Sản Phẩm) phải là input hidden để gửi ID sản phẩm về Controller *@
+            <input type="hidden" asp-for="MaSP" />
+
+            @* 2. Thêm input hidden cho tên ảnh hiện tại *@
+            @* Tên (name) là "existingAnh" để khớp với tham số string? existingAnh trong Controller *@
+            <input type="hidden" name="existingAnh" value="@Model.AnhSP" />
+
+            <div class="form-group">
+                <label asp-for="TenSP" class="control-label"></label>
+                <input asp-for="TenSP" class="form-control" />
+                <span asp-validation-for="TenSP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DonGia" class="control-label"></label>
+                <input asp-for="DonGia" class="form-control" />
+                <span asp-validation-for="DonGia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SoLuong" class="control-label"></label>
+                <input asp-for="SoLuong" class="form-control" />
+                <span asp-validation-for="SoLuong" class="text-danger"></span>
+            </div>
+
+            @* 3. Xử lý AnhSP: Hiển thị ảnh cũ và chọn ảnh mới *@
+            <div class="form-group">
+                <label class="control-label">Ảnh Sản Phẩm</label>
+
+                @* Hiển thị ảnh hiện tại (nếu có) *@
+                @if (!string.IsNullOrEmpty(Model.AnhSP))
+                {
+                    <p>Ảnh hiện tại:</p>
+                    <img src="~/images/uploads/@Model.AnhSP"
+                         alt="@Model.TenSP"
+                         style="width: 100px; height: 100px; object-fit: cover; margin-bottom: 10px;" />
+                }
+
+                @* Trường input để chọn file ảnh mới *@
+                <input type="file" name="image" id="image" class="form-control" />
+            </div>
+
+            @* Xử lý MaLSP: Dropdown List *@
+            <div class="form-group">
+                <label asp-for="MaLSP" class="control-label">Loại Sản Phẩm</label>
+                @* asp-items="ViewBag.LoaiSPs" sẽ load danh sách và chọn MaLSP hiện tại *@
+                <select asp-for="MaLSP" class="form-control" asp-items="ViewBag.LoaiSPs">
+                    <option value="">-- Chọn Loại Sản Phẩm --</option>
+                </select>
+                <span asp-validation-for="MaLSP" class="text-danger"></span>
+            </div>
+
+            @* Xử lý MaGH (Mã Gian Hàng) bằng Dropdown List *@
+            <div class="form-group">
+                <label asp-for="MaGH" class="control-label">Gian Hàng</label>
+                @* Dùng asp-items để hiển thị danh sách thả xuống từ ViewBag.GianHangs *@
+                <select asp-for="MaGH" class="form-control" asp-items="ViewBag.GianHangs">
+                    <option value="">-- Chọn Gian Hàng --</option>
+                </select>
+                <span asp-validation-for="MaGH" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

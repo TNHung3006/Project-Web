@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Hung_Tran_Ngoc_66131218_Web_QLBH.Models.CTBH>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Chi Tiết Bán Hàng</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @* [ĐÃ THÊM] Hiển thị Mã Đơn Bán Hàng *@
+                @Html.DisplayNameFor(model => model.MaDBH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonGia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @* [ĐÃ THÊM] Hiển thị Mã Đơn Bán Hàng *@
+                    @Html.DisplayFor(modelItem => item.MaDBH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DonGia)
+                </td>
+                <td>
+                    @* [KHẮC PHỤC LỖI 404] Truyền cả hai khóa chính MaDBH và MaSP *@
+                    <a asp-action="Edit" asp-route-maDBH="@item.MaDBH" asp-route-maSP="@item.MaSP">Edit</a> |
+                    <a asp-action="Details" asp-route-maDBH="@item.MaDBH" asp-route-maSP="@item.MaSP">Details</a> |
+                    <a asp-action="Delete" asp-route-maDBH="@item.MaDBH" asp-route-maSP="@item.MaSP">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

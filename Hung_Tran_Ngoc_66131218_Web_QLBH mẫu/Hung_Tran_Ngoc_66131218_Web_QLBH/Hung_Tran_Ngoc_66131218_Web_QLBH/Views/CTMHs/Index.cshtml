@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Hung_Tran_Ngoc_66131218_Web_QLBH.Models.CTMH>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Chi Tiết Mua Hàng (CTMH)</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @* [CẦN THIẾT] Hiển thị Mã Đơn Mua Hàng (Khóa chính 1) *@
+                @Html.DisplayNameFor(model => model.MaDMH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonGia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @* Hiển thị Mã Đơn Mua Hàng *@
+                    @Html.DisplayFor(modelItem => item.MaDMH)
+                </td>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DonGia)
+                </td>
+                <td>
+                    @* [KHẮC PHỤC LỖI ROUTING] Truyền cả hai khóa chính MaDMH và MaSP *@
+                    <a asp-action="Edit" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP">Edit</a> |
+                    <a asp-action="Details" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP">Details</a> |
+                    <a asp-action="Delete" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

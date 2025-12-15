@@ -1,0 +1,49 @@
+﻿@model Hung_Tran_Ngoc_66131218_Web_QLBH.Models.DonBanHang
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>DonBanHang</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @* PHẦN ĐÃ SỬA: Xử lý NgayBan bằng input type="date" *@
+            <div class="form-group">
+                <label asp-for="NgayBan" class="control-label"></label>
+                @* Thêm type="date" để hiển thị date picker trong trình duyệt *@
+                <input asp-for="NgayBan" type="date" class="form-control" />
+                <span asp-validation-for="NgayBan" class="text-danger"></span>
+            </div>
+
+            @* PHẦN ĐÃ SỬA: Thay thế input MaKH bằng Dropdown List *@
+            <div class="form-group">
+                <label asp-for="MaKH" class="control-label">Khách Hàng</label>
+                @* Sử dụng <select> và asp-items để liên kết với ViewBag.KhachHangs (đã load trong Controller) *@
+                <select asp-for="MaKH" class="form-control" asp-items="ViewBag.KhachHangs">
+                    <option value="">-- Chọn Khách Hàng --</option>
+                </select>
+                <span asp-validation-for="MaKH" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
