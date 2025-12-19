@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Hung_Tran_Ngoc_66131218_Web_QLBH.Models.HangSX>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaHSX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenHSX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaNuoc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaHSX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenHSX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNuoc)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MaHSX">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MaHSX">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaHSX">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

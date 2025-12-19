@@ -1,0 +1,335 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Hung_Tran_Ngoc_66131218_Web_QLBH
+build_property.RootNamespace = Hung_Tran_Ngoc_66131218_Web_QLBH
+build_property.ProjectDir = D:\project-QLBH-web\project CK\Hung_Tran_Ngoc_66131218_Web_QLBH\Hung_Tran_Ngoc_66131218_Web_QLBH\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\project-QLBH-web\project CK\Hung_Tran_Ngoc_66131218_Web_QLBH\Hung_Tran_Ngoc_66131218_Web_QLBH
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTBHs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RCSHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTBHs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RCSHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTBHs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RCSHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTBHs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RCSHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTBHs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RCSHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTMHs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RNSHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTMHs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RNSHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTMHs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RNSHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTMHs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RNSHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTMHs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RNSHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/DonBanHangs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uQmFuSGFuZ3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/DonBanHangs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uQmFuSGFuZ3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/DonBanHangs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uQmFuSGFuZ3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/DonBanHangs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uQmFuSGFuZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/DonBanHangs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uQmFuSGFuZ3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/DonMuaHangs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uTXVhSGFuZ3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/DonMuaHangs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uTXVhSGFuZ3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/DonMuaHangs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uTXVhSGFuZ3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/DonMuaHangs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uTXVhSGFuZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/DonMuaHangs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uTXVhSGFuZ3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/HangSXs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1NYc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/HangSXs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1NYc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/HangSXs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1NYc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/HangSXs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1NYc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/HangSXs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFuZ1NYc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/KhachHangs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/KhachHangs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/KhachHangs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/KhachHangs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/KhachHangs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/LoaiSPs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNQc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/LoaiSPs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNQc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/LoaiSPs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNQc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/LoaiSPs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNQc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/LoaiSPs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNQc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhaCCs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ0NzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhaCCs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ0NzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhaCCs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ0NzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhaCCs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ0NzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhaCCs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhQ0NzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhanViens/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhanViens/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhanViens/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhanViens/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhanViens/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhomSPs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVNQc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhomSPs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVNQc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhomSPs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVNQc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhomSPs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVNQc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/NhomSPs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhvbVNQc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Nuocs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnVvY3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Nuocs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnVvY3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Nuocs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnVvY3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Nuocs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnVvY3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Nuocs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnVvY3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/SanPhams/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/SanPhams/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/SanPhams/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/SanPhams/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/SanPhams/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Tinhs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluaHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Tinhs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluaHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Tinhs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluaHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Tinhs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluaHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Tinhs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGluaHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Xas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWGFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Xas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWGFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Xas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWGFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Xas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWGFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Xas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcWGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/project CK/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-umw2d5e9cc
