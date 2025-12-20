@@ -1,0 +1,12 @@
+HangSX
+Nuoc
+Tinh
+Xa
+NhomSP
+LoaiSP
+TrangThai
+DonViTinh
+
+LoaiNV
+TrangThaiDBH
+TrangThaiDMH

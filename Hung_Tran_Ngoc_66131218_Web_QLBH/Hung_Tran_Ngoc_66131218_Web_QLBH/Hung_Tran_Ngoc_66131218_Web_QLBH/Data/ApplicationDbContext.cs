@@ -38,6 +38,12 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
         public DbSet<NhanVien> nv { get; set; }
         //14. Hãng sản xuất
         public DbSet<HangSX> hsx {  get; set; }
+        //15. Trạng Thái
+        public DbSet<TrangThai> tt { get; set; }
+        //16. Đơn vị tính
+        public DbSet<DonViTinh> dvt { get; set; }
+        //16. Loại nhân viên
+        public DbSet<LoaiNV> lnv { get; set; }
 
         //1. LoaiSP
         //1.1. Hàm LoaiSP_GetAll(): trả về danh sách các đối tượng thuộc lớp LoaiSP với dữ liệu lấy từ CSDL thông qua thủ tục lưu trữ LoaiSP_GetAll
@@ -769,5 +775,145 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             var p = new SqlParameter("@MaHSX", mahsx);
             Database.ExecuteSqlRaw("EXEC HangSX_Delete @MaHSX", p);
         }
+
+        //15. Trạng Thái
+        //15.1.
+        public List<TrangThai> TrangThai_GetAll()
+        {
+
+            return tt.FromSqlRaw("EXEC TrangThai_GetAll").ToList();
+        }
+        //15.2.
+        public TrangThai? TrangThai_GetById(int trangthai)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@MaTT", trangthai)
+            };
+            return tt.FromSqlRaw("EXEC TrangThai_GetById @MaTT", p).ToList().FirstOrDefault();
+        }
+
+        //15.3.
+        public void TrangThai_Insert(TrangThai tt)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@TenTT", tt.TenTT)
+            };
+            Database.ExecuteSqlRaw("EXEC TrangThai_Insert @TenTT", p);
+
+        }
+
+        //15.4.
+        public void TrangThai_Update(TrangThai tt)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@MaTT", tt.MaTT),
+                new SqlParameter("@TenTT", tt.TenTT)
+            };
+            Database.ExecuteSqlRaw("EXEC TrangThai_Update @MaTT, @TenTT", p);
+        }
+
+        //15.5.
+        public void TrangThai_Delete(int matt)
+        {
+            var p = new SqlParameter("@MaTT", matt);
+            Database.ExecuteSqlRaw("EXEC TrangThai_Delete @MaTT", p);
+        }
+
+
+        //16. Đơn Vị Tính
+        //16.1.
+        public List<DonViTinh> DonViTinh_GetAll()
+        {
+
+            return dvt.FromSqlRaw("EXEC DonViTinh_GetAll").ToList();
+        }
+        //16.2.
+        public DonViTinh? DonViTinh_GetById(int dvtinh)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@MaDVT", dvtinh)
+            };
+            return dvt.FromSqlRaw("EXEC DonViTinh_GetById @MaDVT", p).ToList().FirstOrDefault();
+        }
+
+        //16.3.
+        public void DonViTinh_Insert(DonViTinh dvt)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@TenDVT", dvt.TenDVT)
+            };
+            Database.ExecuteSqlRaw("EXEC DonViTinh_Insert @TenDVT", p);
+
+        }
+
+        //16.4.
+        public void DonViTinh_Update(DonViTinh dvt)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@MaDVT", dvt.MaDVT),
+                new SqlParameter("@TenDVT", dvt.TenDVT)
+            };
+            Database.ExecuteSqlRaw("EXEC DonViTinh_Update @MaDVT, @TenDVT", p);
+        }
+
+        //16.5.
+        public void DonViTinh_Delete(int madvt)
+        {
+            var p = new SqlParameter("@MaDVT", madvt);
+            Database.ExecuteSqlRaw("EXEC DonViTinh_Delete @MaDVT", p);
+        }
+
+        //17. Loại nhân viên
+        //17.1.
+        public List<LoaiNV> LoaiNV_GetAll()
+        {
+
+            return lnv.FromSqlRaw("EXEC LoaiNV_GetAll").ToList();
+        }
+        //17.2.
+        public LoaiNV? LoaiNV_GetById(int loainv)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@MaLNV", loainv)
+            };
+            return lnv.FromSqlRaw("EXEC LoaiNV_GetById @MaLNV", p).ToList().FirstOrDefault();
+        }
+
+        //17.3.
+        public void LoaiNV_Insert(LoaiNV loainv)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@TenLNV", loainv.TenLNV)
+            };
+            Database.ExecuteSqlRaw("EXEC LoaiNV_Insert @TenLNV", p);
+
+        }
+
+        //17.4.
+        public void LoaiNV_Update(LoaiNV loainv)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@MaLNV", loainv.MaLNV),
+                new SqlParameter("@TenLNV", loainv.TenLNV)
+            };
+            Database.ExecuteSqlRaw("EXEC LoaiNV_Update @MaLNV, @TenLNV", p);
+        }
+
+        //17.5.
+        public void LoaiNV_Delete(int malnv)
+        {
+            var p = new SqlParameter("@MaLNV", malnv);
+            Database.ExecuteSqlRaw("EXEC LoaiNV_Delete @MaLNV", p);
+        }
+
     }
 }

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Hung_Tran_Ngoc_66131218_Web_QLBH.Models.LoaiNV>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaLNV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenLNV)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaLNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenLNV)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MaLNV">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MaLNV">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaLNV">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
