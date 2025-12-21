@@ -42,8 +42,12 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
         public DbSet<TrangThai> tt { get; set; }
         //16. Đơn vị tính
         public DbSet<DonViTinh> dvt { get; set; }
-        //16. Loại nhân viên
+        //17. Loại nhân viên
         public DbSet<LoaiNV> lnv { get; set; }
+        //18. Trạng thái đơn mua hàng
+        public DbSet<TrangThaiDMH> ttdmh { get; set; }
+        //19. Trạng thái đơn mua hàng
+        public DbSet<TrangThaiDBH> ttdbh { get; set; }
 
         //1. LoaiSP
         //1.1. Hàm LoaiSP_GetAll(): trả về danh sách các đối tượng thuộc lớp LoaiSP với dữ liệu lấy từ CSDL thông qua thủ tục lưu trữ LoaiSP_GetAll
@@ -582,8 +586,8 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@MaDBH", ctBH.MaDBH),
                 new SqlParameter("@MaSP", ctBH.MaSP),
-                new SqlParameter("@SoLuong", ctBH.SoLuong),
-                new SqlParameter("@DonGia", ctBH.DonGia)
+                new SqlParameter("@SoLuong", ctBH.SLB),
+                new SqlParameter("@DonGia", ctBH.DGB)
             };
             Database.ExecuteSqlRaw("EXEC CTBH_Insert @MaDBH, @MaSP, @SoLuong, @DonGia", p);
 
@@ -596,8 +600,8 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@MaDBH", ctBH.MaDBH),
                 new SqlParameter("@MaSP", ctBH.MaSP),
-                new SqlParameter("@SoLuong", ctBH.SoLuong),
-                new SqlParameter("@DonGia", ctBH.DonGia)
+                new SqlParameter("@SoLuong", ctBH.SLB),
+                new SqlParameter("@DonGia", ctBH.DGB)
             };
             Database.ExecuteSqlRaw("EXEC CTBH_Update @MaDBH, @MaSP, @SoLuong, @DonGia", p);
         }
@@ -639,8 +643,8 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@MaDMH", ctMH.MaDMH),
                 new SqlParameter("@MaSP", ctMH.MaSP),
-                new SqlParameter("@SoLuong", ctMH.SoLuong),
-                new SqlParameter("@DonGia", ctMH.DonGia)
+                new SqlParameter("@SoLuong", ctMH.SLM),
+                new SqlParameter("@DonGia", ctMH.DGM)
             };
             Database.ExecuteSqlRaw("EXEC CTMH_Insert @MaDMH, @MaSP, @SoLuong, @DonGia", p);
 
@@ -653,8 +657,8 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@MaDMH", ctMH.MaDMH),
                 new SqlParameter("@MaSP", ctMH.MaSP),
-                new SqlParameter("@SoLuong", ctMH.SoLuong),
-                new SqlParameter("@DonGia", ctMH.DonGia)
+                new SqlParameter("@SoLuong", ctMH.SLM),
+                new SqlParameter("@DonGia", ctMH.DGM)
             };
             Database.ExecuteSqlRaw("EXEC CTMH_Update @MaDMH, @MaSP, @SoLuong, @DonGia", p);
         }
@@ -913,6 +917,98 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
         {
             var p = new SqlParameter("@MaLNV", malnv);
             Database.ExecuteSqlRaw("EXEC LoaiNV_Delete @MaLNV", p);
+        }
+
+        //18. Trạng Thái đơn mua hàng
+        //18.1.
+        public List<TrangThaiDMH> TrangThaiDMH_GetAll()
+        {
+
+            return ttdmh.FromSqlRaw("EXEC TrangThaiDMH_GetAll").ToList();
+        }
+        //18.2.
+        public TrangThaiDMH? TrangThaiDMH_GetById(int trangthai)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@MaTTDMH", trangthai)
+            };
+            return ttdmh.FromSqlRaw("EXEC TrangThaiDMH_GetById @MaTTDMH", p).ToList().FirstOrDefault();
+        }
+
+        //18.3.
+        public void TrangThaiDMH_Insert(TrangThaiDMH ttDMH)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@TenTTDMH", ttDMH.TenTTDMH)
+            };
+            Database.ExecuteSqlRaw("EXEC TrangThaiDMH_Insert @TenTTDMH", p);
+
+        }
+
+        //18.4.
+        public void TrangThaiDMH_Update(TrangThaiDMH ttDMH)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@MaTTDMH", ttDMH.MaTTDMH),
+                new SqlParameter("@TenTTDMH", ttDMH.TenTTDMH)
+            };
+            Database.ExecuteSqlRaw("EXEC TrangThaiDMH_Update @MaTTDMH, @TenTTDMH", p);
+        }
+
+        //18.5.
+        public void TrangThaiDMH_Delete(int mattDMH)
+        {
+            var p = new SqlParameter("@MaTTDMH", mattDMH);
+            Database.ExecuteSqlRaw("EXEC TrangThaiDMH_Delete @MaTTDMH", p);
+        }
+
+        //19. Trạng Thái đơn bán hàng
+        //19.1.
+        public List<TrangThaiDBH> TrangThaiDBH_GetAll()
+        {
+
+            return ttdbh.FromSqlRaw("EXEC TrangThaiDBH_GetAll").ToList();
+        }
+        //19.2.
+        public TrangThaiDBH? TrangThaiDBH_GetById(int trangthai)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@MaTTDBH", trangthai)
+            };
+            return ttdbh.FromSqlRaw("EXEC TrangThaiDBH_GetById @MaTTDBH", p).ToList().FirstOrDefault();
+        }
+
+        //19.3.
+        public void TrangThaiDBH_Insert(TrangThaiDBH ttDBH)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@TenTTDBH", ttDBH.TenTTDBH)
+            };
+            Database.ExecuteSqlRaw("EXEC TrangThaiDBH_Insert @TenTTDBH", p);
+
+        }
+
+        //19.4.
+        public void TrangThaiDBH_Update(TrangThaiDBH ttDBH)
+        {
+            var p = new[]
+            {
+                new SqlParameter("@MaTTDBH", ttDBH.MaTTDBH),
+                new SqlParameter("@TenTTDBH", ttDBH.TenTTDBH)
+            };
+            Database.ExecuteSqlRaw("EXEC TrangThaiDBH_Update @MaTTDBH, @TenTTDBH", p);
+        }
+
+        //19.5.
+        public void TrangThaiDBH_Delete(int mattDBH)
+        {
+            var p = new SqlParameter("@MaTTDBH", mattDBH);
+            Database.ExecuteSqlRaw("EXEC TrangThaiDBH_Delete @MaTTDBH", p);
         }
 
     }

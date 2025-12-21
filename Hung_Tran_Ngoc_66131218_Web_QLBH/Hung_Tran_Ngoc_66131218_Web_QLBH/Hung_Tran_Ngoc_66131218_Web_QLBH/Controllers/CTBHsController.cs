@@ -44,8 +44,8 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             {
                 // 2. Nếu tồn tại: Cập nhật Số Lượng và Đơn Giá
                 // Giả định bạn muốn cộng dồn số lượng. Đơn giá có thể lấy từ bản ghi mới
-                existingItem.SoLuong += ctbh.SoLuong;
-                existingItem.DonGia = ctbh.DonGia; // Cập nhật đơn giá theo giá mới nhất
+                existingItem.SLB += ctbh.SLB;
+                existingItem.DGB = ctbh.DGB; // Cập nhật đơn giá theo giá mới nhất
 
                 _db.CTBH_Update(existingItem);
             }

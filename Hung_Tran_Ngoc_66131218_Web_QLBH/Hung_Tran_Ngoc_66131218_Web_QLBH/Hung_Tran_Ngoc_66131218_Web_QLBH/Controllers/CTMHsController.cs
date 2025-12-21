@@ -44,8 +44,8 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             if (existingItem != null)
             {
                 // Logic UPSERT: Cập nhật Số Lượng và Đơn Giá
-                existingItem.SoLuong += ctmh.SoLuong;
-                existingItem.DonGia = ctmh.DonGia;
+                existingItem.SLM += ctmh.SLM;
+                existingItem.DGM = ctmh.DGM;
 
                 _db.CTMH_Update(existingItem);
             }

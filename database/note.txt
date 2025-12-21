@@ -1,12 +1,11 @@
-HangSX
 Nuoc
+HangSX
 Tinh
 Xa
 NhomSP
 LoaiSP
 TrangThai
 DonViTinh
-
 LoaiNV
 TrangThaiDBH
 TrangThaiDMH

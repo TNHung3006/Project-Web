@@ -13,11 +13,11 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Mã sản phẩm")]
         public int MaSP { get; set; }
 
-        [Display(Name = "Số lượng")]
-        public int SoLuong { get; set; }
+        [Display(Name = "Số lượng bán")]
+        public int SLB { get; set; }
 
-        [Display(Name = "Đơn giá")]
-        public decimal DonGia { get; set; }
+        [Display(Name = "Đơn giá bán")]
+        public decimal DGB { get; set; }
 
     }
 }
