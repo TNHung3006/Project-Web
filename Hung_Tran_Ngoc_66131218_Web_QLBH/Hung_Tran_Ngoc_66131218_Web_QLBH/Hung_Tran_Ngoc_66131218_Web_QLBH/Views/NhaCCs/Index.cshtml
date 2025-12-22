@@ -13,6 +13,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.MaNCC)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.TenNCC)
             </th>
             <th>
@@ -24,6 +27,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.EmailNCC)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaXa)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -31,16 +37,22 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.MaNCC)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.TenNCC)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DiaChiNCC)
+                @Html.DisplayFor(modelItem => item.DiaChiNCCFull)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DienThoaiNCC)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.EmailNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaXa)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MaNCC">Edit</a> |

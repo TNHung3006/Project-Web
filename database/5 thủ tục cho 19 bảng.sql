@@ -352,9 +352,23 @@ CREATE PROCEDURE KhachHang_Delete @MaKH INT AS BEGIN DELETE FROM KhachHang WHERE
 GO
 
 -- === 14. BẢNG NHACC ===
-CREATE PROCEDURE NhaCC_GetAll AS BEGIN SELECT * FROM NhaCC ORDER BY MaNCC END
+CREATE PROCEDURE NhaCC_GetAll AS 
+BEGIN 
+	SELECT ncc.MaNCC,ncc.TenNCC,ncc.DienThoaiNCC,ncc.EmailNCC,ncc.DiaChiNCC,ncc.MaXa,ncc.DiaChiNCC+', ' +x.TenXa+', '+t.TenTinh as DiaChiNCCFull
+	FROM NhaCC ncc 
+	inner join Xa x on ncc.MaXa=x.MaXa 
+	inner join Tinh t on x.MaTinh=t.MaTinh
+	ORDER BY MaNCC 
+END
 GO
-CREATE PROCEDURE NhaCC_GetById @MaNCC INT AS BEGIN SELECT * FROM NhaCC WHERE MaNCC = @MaNCC END
+CREATE PROCEDURE NhaCC_GetById @MaNCC INT 
+AS BEGIN 
+	SELECT ncc.MaNCC,ncc.TenNCC,ncc.DienThoaiNCC,ncc.EmailNCC,ncc.DiaChiNCC,ncc.MaXa,ncc.DiaChiNCC+', ' +x.TenXa+', '+t.TenTinh as DiaChiNCCFull
+	FROM NhaCC ncc 
+	inner join Xa x on ncc.MaXa=x.MaXa 
+	inner join Tinh t on x.MaTinh=t.MaTinh
+	WHERE MaNCC = @MaNCC 
+END
 GO
 CREATE PROCEDURE NhaCC_Insert 
     @TenNCC NVARCHAR(255), @DiaChiNCC NVARCHAR(255), @DienThoaiNCC VARCHAR(12), 

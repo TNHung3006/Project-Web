@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hung_Tran_Ngoc_66131218_Web_QLBH")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c59591f0951889dc18750011ec37a3542db3f412")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d92d72c43cafd284128959249881589fc224587")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hung_Tran_Ngoc_66131218_Web_QLBH")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hung_Tran_Ngoc_66131218_Web_QLBH")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

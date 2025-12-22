@@ -11,22 +11,34 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         public int MaNV { get; set; }
 
         [Display(Name = "Tên đăng nhập")]
-        public string TenDN { get; set; }
+        public string? TenDN { get; set; }
 
         [Display(Name = "Mật khẩu")]
         public string? MatKhau { get; set; }
 
+        [Display(Name = "Họ nhân viên")]
+        public string? HoNV { get; set; }
+
         [Display(Name = "Tên nhân viên")]
-        public string TenNV { get; set; }
+        public string? TenNV { get; set; }
+
+        [Display(Name = "Giới tính")]
+        public string? GioiTinh { get; set; }
 
         [Display(Name = "số điện thoại")]
-        public string DienThoai { get; set; }
+        public string? DienThoai { get; set; }
 
         [Display(Name = "Email")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Display(Name = "Địa chỉ")]
-        public string DiaChi { get; set; }
+        public string? DiaChi { get; set; }
+
+        [Display(Name = "Mã loại nhân viên")]
+        public int MaLNV { get; set; }
+
+        [Display(Name = "Mã Xã")]
+        public int MaXa { get; set; }
 
     }
 }

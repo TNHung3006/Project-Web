@@ -19,13 +19,23 @@
             </div>
             <div class="form-group">
                 <label asp-for="MatKhau" class="control-label"></label>
-                <input asp-for="MatKhau" class="form-control" />
+                <input asp-for="MatKhau" type="password" class="form-control" />
                 <span asp-validation-for="MatKhau" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoNV" class="control-label"></label>
+                <input asp-for="HoNV" class="form-control" />
+                <span asp-validation-for="HoNV" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TenNV" class="control-label"></label>
                 <input asp-for="TenNV" class="form-control" />
                 <span asp-validation-for="TenNV" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GioiTinh" class="control-label"></label>
+                <input asp-for="GioiTinh" class="form-control" />
+                <span asp-validation-for="GioiTinh" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DienThoai" class="control-label"></label>
@@ -37,10 +47,31 @@
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label class="control-label">Tỉnh / Thành phố</label>
+                <select id="ddlTinh" class="form-control" asp-items="ViewBag.Tinhs">
+                    <option value="">-- Chọn Tỉnh / Thành phố --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MaXa" class="control-label">Xã / Phường</label>
+                <select id="ddlXa" asp-for="MaXa" class="form-control" asp-items="ViewBag.Xas">
+                    <option value="">-- Vui lòng chọn Tỉnh trước --</option>
+                </select>
+                <span asp-validation-for="MaXa" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <label asp-for="DiaChi" class="control-label"></label>
                 <input asp-for="DiaChi" class="form-control" />
                 <span asp-validation-for="DiaChi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaLNV" class="control-label"></label>
+                <input asp-for="MaLNV" class="form-control" />
+                <span asp-validation-for="MaLNV" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -54,5 +85,50 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Bắt sự kiện khi thay đổi Tỉnh
+            $("#ddlTinh").change(function () {
+                var maTinh = $(this).val();
+
+                // Reset dropdown Xã
+                $("#ddlXa").empty();
+
+                if (maTinh) {
+                    // Nếu đã chọn Tỉnh, hiện chữ đang tải
+                    $("#ddlXa").append('<option value="">Đang tải danh sách...</option>');
+
+                    // Gọi Ajax về NhanViensController
+                    $.ajax({
+                        url: '/NhanViens/GetXaByTinh',
+                        type: 'GET',
+                        data: { maTinh: maTinh },
+                        success: function (data) {
+                            $("#ddlXa").empty();
+                            $("#ddlXa").append('<option value="">-- Chọn Xã / Phường --</option>');
+
+                            // Đổ dữ liệu vào dropdown
+                            $.each(data, function (i, item) {
+                                // Lưu ý: item.maXa và item.tenXa (camelCase)
+                                $("#ddlXa").append('<option value="' + item.maXa + '">' + item.tenXa + '</option>');
+                            });
+                        },
+                        error: function () {
+                            alert('Không thể tải danh sách xã/phường.');
+                            $("#ddlXa").empty();
+                            $("#ddlXa").append('<option value="">Lỗi tải dữ liệu</option>');
+                        }
+                    });
+                } else {
+                    // Nếu bỏ chọn Tỉnh (chọn mục --Chọn Tỉnh--)
+                    $("#ddlXa").append('<option value="">-- Vui lòng chọn Tỉnh trước --</option>');
+                }
+            });
+        });
+    </script>
 }

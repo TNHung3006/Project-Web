@@ -372,9 +372,10 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
                 new SqlParameter("@TenNCC", nhaCC.TenNCC),
                 new SqlParameter("@DiaChiNCC", nhaCC.DiaChiNCC),
                 new SqlParameter("@DienThoaiNCC", nhaCC.DienThoaiNCC),
-                new SqlParameter("@EmailNCC", nhaCC.EmailNCC)
+                new SqlParameter("@EmailNCC", nhaCC.EmailNCC),
+                new SqlParameter("@MaXa", nhaCC.MaXa)
             };
-            Database.ExecuteSqlRaw("EXEC NhaCC_Insert @TenNCC, @DiaChiNCC, @DienThoaiNCC, @EmailNCC", p);
+            Database.ExecuteSqlRaw("EXEC NhaCC_Insert @TenNCC, @DiaChiNCC, @DienThoaiNCC, @EmailNCC, @MaXa", p);
 
         }
 
@@ -387,9 +388,10 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
                 new SqlParameter("@TenNCC", nhaCC.TenNCC),
                 new SqlParameter("@DiaChiNCC", nhaCC.DiaChiNCC),
                 new SqlParameter("@DienThoaiNCC", nhaCC.DienThoaiNCC),
-                new SqlParameter("@EmailNCC", nhaCC.EmailNCC)
+                new SqlParameter("@EmailNCC", nhaCC.EmailNCC),
+                new SqlParameter("@MaXa", nhaCC.MaXa)
             };
-            Database.ExecuteSqlRaw("EXEC NhaCC_Update @MaNCC, @TenNCC, @DiaChiNCC, @DienThoaiNCC, @EmailNCC", p);
+            Database.ExecuteSqlRaw("EXEC NhaCC_Update @MaNCC, @TenNCC, @DiaChiNCC, @DienThoaiNCC, @EmailNCC, @MaXa", p);
         }
 
         //7.5.
@@ -699,12 +701,16 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@TenDN", nhanvien.TenDN),
                 new SqlParameter("@MatKhau", nhanvien.MatKhau),
+                new SqlParameter("@HoNV", nhanvien.HoNV),
                 new SqlParameter("@TenNV", nhanvien.TenNV),
+                new SqlParameter("@GioiTinh", nhanvien.GioiTinh),
                 new SqlParameter("@DienThoai", nhanvien.DienThoai),
                 new SqlParameter("@Email", nhanvien.Email),
-                new SqlParameter("@DiaChi", nhanvien.DiaChi)
+                new SqlParameter("@DiaChi", nhanvien.DiaChi),
+                new SqlParameter("@MaLNV", nhanvien.MaLNV),
+                new SqlParameter("@MaXa", nhanvien.MaXa)
             };
-            Database.ExecuteSqlRaw("EXEC NhanVien_Insert @TenDN, @MatKhau, @TenNV, @DienThoai, @Email, @DiaChi", p);
+            Database.ExecuteSqlRaw("EXEC NhanVien_Insert @TenDN, @MatKhau,@HoNV, @TenNV, @GioiTinh, @DienThoai, @Email, @DiaChi, @MaLNV, @MaXa", p);
 
         }
 
@@ -716,12 +722,16 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
                 new SqlParameter("@MaNV", nhanvien.MaNV),
                 new SqlParameter("@TenDN", nhanvien.TenDN),
                 new SqlParameter("@MatKhau", nhanvien.MatKhau),
+                new SqlParameter("@HoNV", nhanvien.HoNV),
                 new SqlParameter("@TenNV", nhanvien.TenNV),
+                new SqlParameter("@GioiTinh", nhanvien.GioiTinh),
                 new SqlParameter("@DienThoai", nhanvien.DienThoai),
                 new SqlParameter("@Email", nhanvien.Email),
-                new SqlParameter("@DiaChi", nhanvien.DiaChi)
+                new SqlParameter("@DiaChi", nhanvien.DiaChi),
+                new SqlParameter("@MaLNV", nhanvien.MaLNV),
+                new SqlParameter("@MaXa", nhanvien.MaXa)
             };
-            Database.ExecuteSqlRaw("EXEC NhanVien_Update @MaNV, @TenDN, @MatKhau, @TenNV, @DienThoai, @Email, @DiaChi", p);
+            Database.ExecuteSqlRaw("EXEC NhanVien_Update @MaNV, @TenDN, @MatKhau,@HoNV, @TenNV, @GioiTinh, @DienThoai, @Email, @DiaChi, @MaLNV, @MaXa", p);
 
         }
 

@@ -19,7 +19,13 @@
                 @Html.DisplayNameFor(model => model.MatKhau)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.HoNV)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.TenNV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GioiTinh)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DienThoai)
@@ -29,6 +35,12 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DiaChi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaLNV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaXa)
             </th>
             <th></th>
         </tr>
@@ -43,7 +55,13 @@
                 @Html.DisplayFor(modelItem => item.MatKhau)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.HoNV)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.TenNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GioiTinh)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DienThoai)
@@ -53,6 +71,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DiaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaLNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaXa)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MaNV">Edit</a> |

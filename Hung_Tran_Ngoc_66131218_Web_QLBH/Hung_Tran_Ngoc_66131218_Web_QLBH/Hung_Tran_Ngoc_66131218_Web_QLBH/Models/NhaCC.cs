@@ -22,5 +22,9 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Email nhà cung cấp")]
         public string EmailNCC { get; set; }
 
+        [Display(Name = "Mã xã")]
+        public int MaXa { get; set; }
+
+        public string? DiaChiNCCFull { get; set; }
     }
 }

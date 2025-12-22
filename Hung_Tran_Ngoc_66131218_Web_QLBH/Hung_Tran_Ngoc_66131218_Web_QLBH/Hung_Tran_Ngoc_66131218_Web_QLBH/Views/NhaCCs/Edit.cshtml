@@ -13,11 +13,28 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="MaNCC" />
+
             <div class="form-group">
                 <label asp-for="TenNCC" class="control-label"></label>
                 <input asp-for="TenNCC" class="form-control" />
                 <span asp-validation-for="TenNCC" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label class="control-label">Tỉnh / Thành phố</label>
+                <select id="ddlTinh" class="form-control" asp-items="ViewBag.Tinhs">
+                    <option value="">-- Chọn Tỉnh --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MaXa" class="control-label">Xã / Phường</label>
+                <select id="ddlXa" asp-for="MaXa" class="form-control" asp-items="ViewBag.Xas">
+                    <option value="">-- Chọn Tỉnh trước --</option>
+                </select>
+                <span asp-validation-for="MaXa" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <label asp-for="DiaChiNCC" class="control-label"></label>
                 <input asp-for="DiaChiNCC" class="form-control" />
@@ -45,5 +62,44 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Khi người dùng thay đổi Tỉnh
+            $("#ddlTinh").change(function () {
+                var maTinh = $(this).val();
+
+                // Xóa danh sách xã cũ
+                $("#ddlXa").empty();
+                $("#ddlXa").append('<option value="">-- Đang tải xã... --</option>');
+
+                if (maTinh) {
+                    $.ajax({
+                        url: '/NhaCCs/GetXaByTinh', // Gọi đến Action trong Controller
+                        type: 'GET',
+                        data: { maTinh: maTinh },
+                        success: function (data) {
+                            $("#ddlXa").empty(); // Xóa option loading
+                            $("#ddlXa").append('<option value="">-- Chọn Xã / Phường --</option>');
+
+                            // Duyệt qua dữ liệu JSON trả về và thêm vào dropdown
+                            $.each(data, function (i, item) {
+                                $("#ddlXa").append('<option value="' + item.maXa + '">' + item.tenXa + '</option>');
+                            });
+                        },
+                        error: function () {
+                            alert("Lỗi khi tải danh sách xã!");
+                        }
+                    });
+                } else {
+                    $("#ddlXa").empty();
+                    $("#ddlXa").append('<option value="">-- Chọn Tỉnh trước --</option>');
+                }
+            });
+        });
+    </script>
 }
