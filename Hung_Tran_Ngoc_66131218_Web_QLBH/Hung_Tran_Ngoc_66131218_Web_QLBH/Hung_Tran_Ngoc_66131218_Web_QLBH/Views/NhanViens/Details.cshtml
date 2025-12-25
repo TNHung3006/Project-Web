@@ -10,6 +10,12 @@
     <h4>NhanVien</h4>
     <hr />
     <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MaNV)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MaNV)
+        </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.TenDN)
         </dt>
@@ -56,13 +62,19 @@
             @Html.DisplayNameFor(model => model.DiaChi)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DiaChi)
+            @Html.DisplayFor(model => model.DiaChiFull)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.MaLNV)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.MaLNV)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TenLNV)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TenLNV)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.MaXa)

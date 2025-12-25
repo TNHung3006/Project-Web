@@ -22,35 +22,6 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         public IActionResult Details(int id)
         {
             var nhanvien = _db.NhanVien_GetById(id);
-            if (nhanvien == null)
-            {
-                return NotFound();
-            }
-
-            // --- ĐOẠN CODE THÊM MỚI ---
-            // 1. Tìm thông tin Xã dựa vào MaXa của Nhà cung cấp
-            var xa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == nhanvien.MaXa);
-
-            // 2. Tìm thông tin Tỉnh dựa vào MaTinh của Xã đó (nếu tìm thấy xã)
-            string tenXa = "Chưa cập nhật";
-            string tenTinh = "Chưa cập nhật";
-
-            if (xa != null)
-            {
-                tenXa = xa.TenXa;
-
-                // Giả sử bạn có hàm lấy danh sách tỉnh giống các bước trước
-                var tinh = _db.Tinh_GetAll().FirstOrDefault(t => t.MaTinh == xa.MaTinh);
-                if (tinh != null)
-                {
-                    tenTinh = tinh.TenTinh;
-                }
-            }
-
-            // 3. Truyền dữ liệu qua View bằng ViewBag
-            ViewBag.TenXa = tenXa;
-            ViewBag.TenTinh = tenTinh;
-
             return View(nhanvien);
         }
 

@@ -13,6 +13,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.MaNV)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.TenDN)
             </th>
             <th>
@@ -40,6 +43,9 @@
                 @Html.DisplayNameFor(model => model.MaLNV)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.TenLNV)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.MaXa)
             </th>
             <th></th>
@@ -48,6 +54,9 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNV)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.TenDN)
             </td>
@@ -70,10 +79,13 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DiaChi)
+                @Html.DisplayFor(modelItem => item.DiaChiFull)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MaLNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenLNV)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MaXa)

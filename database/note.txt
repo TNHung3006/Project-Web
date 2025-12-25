@@ -10,8 +10,13 @@ LoaiNV
 TrangThaiDBH
 TrangThaiDMH
 NhaCC
-
 NhanVien
+
 KhachHang
 
+DonMuaHang
+DonBanHang
+CTMH
+CTBH
 
+SP

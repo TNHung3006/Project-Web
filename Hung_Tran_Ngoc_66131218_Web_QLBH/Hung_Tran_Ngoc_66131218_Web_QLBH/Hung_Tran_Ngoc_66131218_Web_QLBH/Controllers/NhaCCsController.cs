@@ -22,35 +22,6 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         public IActionResult Details(int id)
         {
             var nhaCC = _db.NhaCC_GetById(id);
-            if (nhaCC == null)
-            {
-                return NotFound();
-            }
-
-            // --- ĐOẠN CODE THÊM MỚI ---
-            // 1. Tìm thông tin Xã dựa vào MaXa của Nhà cung cấp
-            var xa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == nhaCC.MaXa);
-
-            // 2. Tìm thông tin Tỉnh dựa vào MaTinh của Xã đó (nếu tìm thấy xã)
-            string tenXa = "Chưa cập nhật";
-            string tenTinh = "Chưa cập nhật";
-
-            if (xa != null)
-            {
-                tenXa = xa.TenXa;
-
-                // Giả sử bạn có hàm lấy danh sách tỉnh giống các bước trước
-                var tinh = _db.Tinh_GetAll().FirstOrDefault(t => t.MaTinh == xa.MaTinh);
-                if (tinh != null)
-                {
-                    tenTinh = tinh.TenTinh;
-                }
-            }
-
-            // 3. Truyền dữ liệu qua View bằng ViewBag
-            ViewBag.TenXa = tenXa;
-            ViewBag.TenTinh = tenTinh;
-
             return View(nhaCC);
         }
 
@@ -94,20 +65,19 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             var nhaCC = _db.NhaCC_GetById(id);
             if (nhaCC == null) return NotFound();
 
-            // A. Lấy tất cả Tỉnh để đổ vào Dropdown Tỉnh
-            // Giả sử bạn có hàm _db.Tinh_GetAll(), nếu chưa có bạn phải tạo thêm
+
             var listTinh = _db.Tinh_GetAll() ?? new List<Tinh>();
 
-            // B. Xác định Tỉnh hiện tại của Nhà cung cấp (để chọn sẵn khi mở form)
-            // Chúng ta phải tìm xem MaXa hiện tại thuộc MaTinh nào.
-            // Cách làm: Tìm thông tin xã hiện tại -> lấy MaTinh của nó
+            // Xác định Tỉnh hiện tại của Nhà cung cấp (để chọn sẵn khi mở form)
+            // tìm xem MaXa hiện tại thuộc MaTinh nào.
+            // Tìm thông tin xã hiện tại -> lấy MaTinh của nó
             var currentXa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == nhaCC.MaXa);
             int selectedMaTinh = currentXa != null ? currentXa.MaTinh : 0;
 
-            // C. Lấy danh sách Xã thuộc Tỉnh hiện tại (chứ không lấy hết tất cả xã)
+            // Lấy danh sách Xã thuộc Tỉnh hiện tại (chứ không lấy hết tất cả xã)
             var listXaOfTinh = _db.Xa_GetAll().Where(x => x.MaTinh == selectedMaTinh).ToList();
 
-            // D. Truyền dữ liệu qua View
+            // Truyền dữ liệu qua View
             ViewBag.Tinhs = new SelectList(listTinh, "MaTinh", "TenTinh", selectedMaTinh);
             ViewBag.Xas = new SelectList(listXaOfTinh, "MaXa", "TenXa", nhaCC.MaXa);
 
