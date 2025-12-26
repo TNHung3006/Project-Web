@@ -17,7 +17,7 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
 
         public KhachHangsController(ApplicationDbContext db, IWebHostEnvironment env) { _db = db; _env = env; }
 
-        // GET: GianHangs
+        // GET: KhacHangs
         public IActionResult Index(string? search)
         {
             // Lưu từ khóa tìm kiếm vào ViewData để hiển thị lại trên form
@@ -28,22 +28,21 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             return View(list);
         }
 
-        // GET: GianHangs/Create
+        // GET: KhachHangs/Create
         public IActionResult Create()
         {
-            // Lấy dữ liệu xã, đảm bảo không trả về null bằng toán tử ??
-            var xaList = _db.Xa_GetAll() ?? new List<Xa>();
+            // 1. Lấy danh sách Tỉnh để hiển thị dropdown đầu tiên
+            var listTinh = _db.Tinh_GetAll() ?? new List<Tinh>();
+            ViewBag.Tinhs = new SelectList(listTinh, "MaTinh", "TenTinh");
 
-            ViewBag.Xas = new SelectList(xaList, "MaXa", "TenXa");
+            // 2. Khởi tạo danh sách Xã rỗng (vì chưa chọn Tỉnh nào)
+            // Hoặc bạn có thể để null, nhưng new List<Xa>() sẽ an toàn hơn cho SelectList
+            ViewBag.Xas = new SelectList(new List<Xa>(), "MaXa", "TenXa");
+
             return View();
         }
-
+        // POST: KhacHangs/Create
         [HttpPost]
-        //public IActionResult Create(KhachHang kh)
-        //{
-        //    _db.KhachHang_Insert(kh);
-        //    return RedirectToAction(nameof(Index));
-        //}
         public async Task<IActionResult> Create(KhachHang kh, IFormFile? image)
         {
 
@@ -63,25 +62,44 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: GianHangs/Edit/5
+        // 1. Thêm Action này để Ajax gọi lấy danh sách xã
+        [HttpGet]
+        public IActionResult GetXaByTinh(int maTinh)
+        {
+            // Giả sử Xa_GetAll trả về List và trong model Xa có thuộc tính MaTinh
+            // Bạn cần lọc danh sách xã theo maTinh được gửi lên
+            var allXas = _db.Xa_GetAll();
+            var xas = allXas.Where(x => x.MaTinh == maTinh).ToList();
+
+            return Json(xas);
+        }
+
+        // GET: KhacHangs/Edit/5
         public IActionResult Edit(int id)
         {
             var kh = _db.KhachHang_GetById(id);
             if (kh == null) return NotFound();
 
-            var xaList = _db.Xa_GetAll() ?? new List<Xa>();
+            // A. Lấy tất cả Tỉnh để đổ vào Dropdown Tỉnh
+            // Giả sử bạn có hàm _db.Tinh_GetAll(), nếu chưa có bạn phải tạo thêm
+            var listTinh = _db.Tinh_GetAll() ?? new List<Tinh>();
 
-            // Load danh sách Xã, và chọn MaTinh hiện tại của xã làm giá trị mặc định
-            ViewBag.Xas = new SelectList(xaList, "MaXa", "TenXa", kh.MaXa);
+            // B. Xác định Tỉnh hiện tại của Nhà cung cấp (để chọn sẵn khi mở form)
+            // Chúng ta phải tìm xem MaXa hiện tại thuộc MaTinh nào.
+            // Cách làm: Tìm thông tin xã hiện tại -> lấy MaTinh của nó
+            var currentXa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == kh.MaXa);
+            int selectedMaTinh = currentXa != null ? currentXa.MaTinh : 0;
+
+            // C. Lấy danh sách Xã thuộc Tỉnh hiện tại (chứ không lấy hết tất cả xã)
+            var listXaOfTinh = _db.Xa_GetAll().Where(x => x.MaTinh == selectedMaTinh).ToList();
+
+            // D. Truyền dữ liệu qua View
+            ViewBag.Tinhs = new SelectList(listTinh, "MaTinh", "TenTinh", selectedMaTinh);
+            ViewBag.Xas = new SelectList(listXaOfTinh, "MaXa", "TenXa", kh.MaXa);
             return View(kh);
+
         }
 
-        //[HttpPost]
-        //public IActionResult Edit(KhachHang kh)
-        //{
-        //    _db.KhachHang_Update(kh);
-        //    return RedirectToAction(nameof(Index));
-        //}
         [HttpPost]
         public async Task<IActionResult> Edit(KhachHang kh, IFormFile? image, string? existingAnh)
         {

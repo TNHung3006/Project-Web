@@ -5,15 +5,13 @@
 }
 
 <h1>Index</h1>
+
 <form asp-action="Index" method="get" class="mb-3">
-    <p>
-        Tìm kiếm theo Tên khách hàng:
-        <input type="text" name="search" value="@ViewData["CurrentFilter"]" />
-        <input type="submit" value="Tìm kiếm" class="btn btn-primary" />
-        <a asp-action="Index" class="btn btn-secondary">Xem tất cả</a>
-    </p>
+    <div class="input-group">
+        <input type="text" name="search" value="@ViewData["CurrentFilter"]" class="form-control" placeholder="Tìm kiếm khách hàng..." />
+        <button type="submit" class="btn btn-primary">Tìm</button>
+    </div>
 </form>
-<hr />
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -21,6 +19,18 @@
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaKH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenDN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MatKhau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoKH)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.TenKH)
             </th>
@@ -40,41 +50,50 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenKH)
-            </td>
-            <td>
-                @if (!string.IsNullOrEmpty(item.AnhKH))
-                {
-                    // Tạo đường dẫn ảnh bằng cách ghép đường dẫn thư mục công khai
-                    // (~/images/uploads/) với tên file (@item.AnhSP) đã lưu trong CSDL.
-                <img src="~/images/uploads/@item.AnhKH"
-                        alt="@item.TenKH"
-                        style="width: 60px; height: 60px; object-fit: cover; border-radius: 5px;" />
-                }
-                else
-                {
-                    // Nếu không có ảnh, hiển thị một văn bản thay thế
-                <span>(Không có ảnh)</span>
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiaChi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SDT)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaXa)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaKH">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaKH">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaKH">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenDN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MatKhau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoKH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenKH)
+                </td>
+
+                <td>
+                    @if (!string.IsNullOrEmpty(item.AnhKH))
+                    {
+                        <img src="/images/uploads/@item.AnhKH" alt="Ảnh KH" style="width: 100px; height: auto; object-fit: cover;" />
+                    }
+                    else
+                    {
+                        <span>Chưa có ảnh</span>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChiFull)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SDT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaXa)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaKH">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaKH">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaKH">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

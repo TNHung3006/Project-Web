@@ -429,6 +429,9 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             using var cmd = Database.GetDbConnection().CreateCommand();
             cmd.CommandText = "KhachHang_Insert";
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add(new SqlParameter("@TenDN", khachHang.TenDN));
+            cmd.Parameters.Add(new SqlParameter("@MatKhau", khachHang.MatKhau));
+            cmd.Parameters.Add(new SqlParameter("@HoKH", khachHang.HoKH));
             cmd.Parameters.Add(new SqlParameter("@TenKH", khachHang.TenKH));
             cmd.Parameters.Add(new SqlParameter("@AnhKH", khachHang.AnhKH ?? (object)DBNull.Value));
             cmd.Parameters.Add(new SqlParameter("@DiaChi", khachHang.DiaChi));
@@ -449,13 +452,16 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             var p = new[]
             {
                 new SqlParameter("@MaKH", khachHang.MaKH),
+                new SqlParameter("@TenDN", khachHang.TenDN),
+                new SqlParameter("@MatKhau", khachHang.MatKhau),
+                new SqlParameter("@HoKH", khachHang.HoKH),
                 new SqlParameter("@TenKH", khachHang.TenKH),
                 new SqlParameter("@AnhKH", khachHang.AnhKH?? (object)DBNull.Value),
                 new SqlParameter("@DiaChi", khachHang.DiaChi),
                 new SqlParameter("@SDT", khachHang.SDT),
                 new SqlParameter("@MaXa", khachHang.MaXa)
             };
-            Database.ExecuteSqlRaw("EXEC KhachHang_Update @MaKH, @TenKH, @AnhKH, @DiaChi, @SDT, @MaXa", p);
+            Database.ExecuteSqlRaw("EXEC KhachHang_Update @MaKH, @TenDN, @MatKhau, @HoKH, @TenKH, @AnhKH, @DiaChi, @SDT, @MaXa", p);
         }
 
         //8.5.

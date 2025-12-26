@@ -10,21 +10,33 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        @* 1. Thêm enctype="multipart/form-data" để cho phép upload file *@
-        <form asp-action="Create" method="post" enctype="multipart/form-data">
+        <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+            <div class="form-group">
+                <label asp-for="TenDN" class="control-label"></label>
+                <input asp-for="TenDN" class="form-control" />
+                <span asp-validation-for="TenDN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MatKhau" class="control-label"></label>
+                <input asp-for="MatKhau" type="password" class="form-control" />
+                <span asp-validation-for="MatKhau" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoKH" class="control-label"></label>
+                <input asp-for="HoKH" class="form-control" />
+                <span asp-validation-for="HoKH" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="TenKH" class="control-label"></label>
                 <input asp-for="TenKH" class="form-control" />
                 <span asp-validation-for="TenKH" class="text-danger"></span>
             </div>
 
-            @* 2. PHẦN ĐÃ SỬA: Thay thế input AnhKH bằng input type="file" *@
             <div class="form-group">
-                <label class="control-label">Ảnh Khách Hàng</label>
-                @* Đặt tên (name) là "image" để khớp với tham số IFormFile? image trong Controller *@
-                <input type="file" name="image" id="image" class="form-control" />
+                <label asp-for="AnhKH" class="control-label">Ảnh Đại Diện</label>
+                <input type="file" name="image" class="form-control" />
             </div>
 
             <div class="form-group">
@@ -32,23 +44,26 @@
                 <input asp-for="DiaChi" class="form-control" />
                 <span asp-validation-for="DiaChi" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label asp-for="SDT" class="control-label"></label>
                 <input asp-for="SDT" class="form-control" />
                 <span asp-validation-for="SDT" class="text-danger"></span>
             </div>
 
-            @* 3. PHẦN ĐÃ SỬA: Thay thế input MaXa bằng Dropdown List *@
             <div class="form-group">
-                <label asp-for="MaXa" class="control-label">Xã/Phường</label>
-                @* Dùng <select> và asp-items để liên kết với ViewBag.Xas *@
-                <select asp-for="MaXa" class="form-control" asp-items="ViewBag.Xas">
-                    <option value="">-- Chọn Xã/Phường --</option>
+                <label class="control-label">Tỉnh / Thành phố</label>
+                <select id="ddlTinh" class="form-control" asp-items="ViewBag.Tinhs">
+                    <option value="">-- Chọn Tỉnh / Thành phố --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MaXa" class="control-label">Xã / Phường</label>
+                <select id="ddlXa" asp-for="MaXa" class="form-control" asp-items="ViewBag.Xas">
+                    <option value="">-- Vui lòng chọn Tỉnh trước --</option>
                 </select>
                 <span asp-validation-for="MaXa" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -64,4 +79,45 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Bắt sự kiện khi thay đổi Tỉnh
+            $("#ddlTinh").change(function () {
+                var maTinh = $(this).val();
+
+                // Reset dropdown Xã
+                $("#ddlXa").empty();
+
+                if (maTinh) {
+                    $("#ddlXa").append('<option value="">Đang tải danh sách...</option>');
+
+                    // Gọi Ajax về KhachHangsController
+                    $.ajax({
+                        url: '/KhachHangs/GetXaByTinh', // Gọi action GetXaByTinh đã viết trong controller
+                        type: 'GET',
+                        data: { maTinh: maTinh },
+                        success: function (data) {
+                            $("#ddlXa").empty();
+                            $("#ddlXa").append('<option value="">-- Chọn Xã / Phường --</option>');
+
+                            // Đổ dữ liệu vào dropdown
+                            $.each(data, function (i, item) {
+                                // Lưu ý: item.maXa và item.tenXa
+                                $("#ddlXa").append('<option value="' + item.maXa + '">' + item.tenXa + '</option>');
+                            });
+                        },
+                        error: function () {
+                            alert('Không thể tải danh sách xã/phường.');
+                            $("#ddlXa").empty();
+                            $("#ddlXa").append('<option value="">Lỗi tải dữ liệu</option>');
+                        }
+                    });
+                } else {
+                    $("#ddlXa").append('<option value="">-- Vui lòng chọn Tỉnh trước --</option>');
+                }
+            });
+        });
+    </script>
 }
