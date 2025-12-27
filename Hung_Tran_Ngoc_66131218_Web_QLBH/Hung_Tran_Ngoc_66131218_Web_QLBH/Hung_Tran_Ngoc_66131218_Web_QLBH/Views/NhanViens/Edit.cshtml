@@ -20,11 +20,13 @@
                 <input asp-for="TenDN" class="form-control" />
                 <span asp-validation-for="TenDN" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="MatKhau" class="control-label"></label>
                 <input asp-for="MatKhau" class="form-control" />
                 <span asp-validation-for="MatKhau" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="HoNV" class="control-label"></label>
                 <input asp-for="HoNV" class="form-control" />
@@ -71,11 +73,15 @@
                 <input asp-for="DiaChi" class="form-control" />
                 <span asp-validation-for="DiaChi" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="MaLNV" class="control-label"></label>
-                <input asp-for="MaLNV" class="form-control" />
+                <label asp-for="MaLNV" class="control-label">Chức vụ / Loại NV</label>
+                <select asp-for="MaLNV" class="form-control" asp-items="ViewBag.LoaiNVs">
+                    <option value="">-- Chọn Chức vụ --</option>
+                </select>
                 <span asp-validation-for="MaLNV" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -101,11 +107,12 @@
 
                 // Xóa danh sách xã cũ
                 $("#ddlXa").empty();
-                $("#ddlXa").append('<option value="">Đang tải...</option>');
 
                 if (maTinh) {
+                    $("#ddlXa").append('<option value="">Đang tải...</option>');
+
+                    // Gọi Ajax về NhanViensController
                     $.ajax({
-                        // ĐÃ SỬA: Đường dẫn trỏ về NhanViensController
                         url: '/NhanViens/GetXaByTinh',
                         type: 'GET',
                         data: { maTinh: maTinh },
@@ -126,8 +133,8 @@
                         }
                     });
                 } else {
-                     $("#ddlXa").empty();
-                     $("#ddlXa").append('<option value="">-- Chọn Tỉnh trước --</option>');
+                    $("#ddlXa").empty();
+                    $("#ddlXa").append('<option value="">-- Chọn Tỉnh trước --</option>');
                 }
             });
         });

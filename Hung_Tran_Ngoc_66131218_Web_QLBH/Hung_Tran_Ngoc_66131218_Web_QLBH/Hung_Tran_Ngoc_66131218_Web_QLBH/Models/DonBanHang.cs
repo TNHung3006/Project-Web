@@ -11,9 +11,19 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         public int MaDBH { get; set; }
 
         [Display(Name = "Ngày bán")]
-        public DateOnly NgayBan { get; set; }
+        public DateTime NgayBan { get; set; }
+
+        [Display(Name = "Địa chỉ giao hàng")]
+        public string? DiaChiGH { get; set; }
 
         [Display(Name = "Mã Khách Hàng")]
         public int MaKH { get; set; }
+        
+        [Display(Name = "Mã xã")]
+        public int MaXa { get; set; }
+        
+        [Display(Name = "Mã TTDBH")]
+        public int MaTTDBH { get; set; }
+
     }
 }

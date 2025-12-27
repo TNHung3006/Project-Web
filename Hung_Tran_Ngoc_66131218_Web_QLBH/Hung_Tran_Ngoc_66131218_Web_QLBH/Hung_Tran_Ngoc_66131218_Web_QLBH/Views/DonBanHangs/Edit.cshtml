@@ -13,25 +13,58 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            @* MaDBH là khóa chính, phải được ẩn để gửi về Controller *@
             <input type="hidden" asp-for="MaDBH" />
 
-            @* PHẦN ĐÃ SỬA: Xử lý NgayBan bằng input type="date" *@
             <div class="form-group">
                 <label asp-for="NgayBan" class="control-label"></label>
-                @* Thêm type="date" để hiển thị date picker trong trình duyệt *@
-                <input asp-for="NgayBan" type="date" class="form-control" />
+                <input asp-for="NgayBan" class="form-control" type="datetime-local" />
                 <span asp-validation-for="NgayBan" class="text-danger"></span>
             </div>
 
-            @* PHẦN ĐÃ SỬA: Thay thế input MaKH bằng Dropdown List *@
+            <div class="form-group">
+                <label asp-for="DiaChiGH" class="control-label"></label>
+
+                @if (string.IsNullOrEmpty(Model.DiaChiGH))
+                {
+                    <input type="text" class="form-control" value="Mua trực tiếp tại quầy" readonly />
+                }
+                else
+                {
+                    <input asp-for="DiaChiGH" class="form-control" />
+                }
+
+                <span asp-validation-for="DiaChiGH" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <label asp-for="MaKH" class="control-label">Khách Hàng</label>
-                @* Sử dụng <select> và asp-items để liên kết với ViewBag.KhachHangs (đã load trong Controller) *@
                 <select asp-for="MaKH" class="form-control" asp-items="ViewBag.KhachHangs">
                     <option value="">-- Chọn Khách Hàng --</option>
                 </select>
                 <span asp-validation-for="MaKH" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Tỉnh / Thành phố Giao Hàng</label>
+                <select id="ddlTinh" class="form-control" asp-items="ViewBag.Tinhs">
+                    <option value="">-- Chọn Tỉnh / Thành phố --</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MaXa" class="control-label">Xã / Phường Giao Hàng</label>
+                <select id="ddlXa" asp-for="MaXa" class="form-control" asp-items="ViewBag.Xas">
+                    <option value="">-- Chọn Tỉnh trước --</option>
+                </select>
+                <span asp-validation-for="MaXa" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MaTTDBH" class="control-label">Trạng Thái</label>
+                <select asp-for="MaTTDBH" class="form-control" asp-items="ViewBag.TrangThaiDBHs">
+                    <option value="">-- Chọn Trạng Thái --</option>
+                </select>
+                <span asp-validation-for="MaTTDBH" class="text-danger"></span>
             </div>
 
             <div class="form-group">
@@ -49,4 +82,42 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Khi người dùng đổi Tỉnh, load lại danh sách Xã
+            $("#ddlTinh").change(function () {
+                var maTinh = $(this).val();
+
+                // Reset dropdown xã
+                $("#ddlXa").empty();
+
+                if (maTinh) {
+                    $("#ddlXa").append('<option value="">Đang tải...</option>');
+
+                    $.ajax({
+                        url: '/DonBanHangs/GetXaByTinh', // Gọi về DonBanHangsController
+                        type: 'GET',
+                        data: { maTinh: maTinh },
+                        success: function (data) {
+                            $("#ddlXa").empty();
+                            $("#ddlXa").append('<option value="">-- Chọn Xã / Phường --</option>');
+
+                            $.each(data, function (i, item) {
+                                $("#ddlXa").append('<option value="' + item.maXa + '">' + item.tenXa + '</option>');
+                            });
+                        },
+                        error: function () {
+                            alert("Lỗi tải danh sách xã.");
+                            $("#ddlXa").empty();
+                            $("#ddlXa").append('<option value="">Lỗi kết nối</option>');
+                        }
+                    });
+                } else {
+                    $("#ddlXa").append('<option value="">-- Chọn Tỉnh trước --</option>');
+                }
+            });
+        });
+    </script>
 }

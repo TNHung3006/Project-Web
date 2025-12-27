@@ -16,7 +16,16 @@
                 @Html.DisplayNameFor(model => model.NgayBan)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.DiaChiGH)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.MaKH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaXa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaTTDBH)
             </th>
             <th></th>
         </tr>
@@ -28,7 +37,23 @@
                 @Html.DisplayFor(modelItem => item.NgayBan)
             </td>
             <td>
+                @if (string.IsNullOrEmpty(item.DiaChiGH))
+                {
+                    <span class="text-muted font-italic">Mua trực tiếp</span>
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.DiaChiGH)
+                }
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.MaKH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaXa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaTTDBH)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MaDBH">Edit</a> |

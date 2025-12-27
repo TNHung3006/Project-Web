@@ -33,8 +33,11 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             ViewBag.Tinhs = new SelectList(listTinh, "MaTinh", "TenTinh");
 
             // 2. Khởi tạo danh sách Xã rỗng (vì chưa chọn Tỉnh nào)
-            // Hoặc bạn có thể để null, nhưng new List<Xa>() sẽ an toàn hơn cho SelectList
+            // Hoặc có thể để null, nhưng new List<Xa>() sẽ an toàn hơn cho SelectList nhưng trong trường hợp này new lish<Xa> sẽ không đảm bảo được việc chọn tỉnh trước rồi chọn xã sau. vì nó sẽ hiện ra toàn bộ xã nếu new lish<xa>
             ViewBag.Xas = new SelectList(new List<Xa>(), "MaXa", "TenXa");
+
+            var listLNV = _db.LoaiNV_GetAll() ?? new List<LoaiNV>();
+            ViewBag.LoaiNVs = new SelectList(listLNV, "MaLNV", "TenLNV");
 
             return View();
         }
@@ -81,6 +84,9 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             // D. Truyền dữ liệu qua View
             ViewBag.Tinhs = new SelectList(listTinh, "MaTinh", "TenTinh", selectedMaTinh);
             ViewBag.Xas = new SelectList(listXaOfTinh, "MaXa", "TenXa", nv.MaXa);
+
+            var listLNV = _db.LoaiNV_GetAll() ?? new List<LoaiNV>();
+            ViewBag.LoaiNVs = new SelectList(listLNV, "MaLNV", "TenLNV", nv.MaLNV);
 
             return View(nv);
         }
