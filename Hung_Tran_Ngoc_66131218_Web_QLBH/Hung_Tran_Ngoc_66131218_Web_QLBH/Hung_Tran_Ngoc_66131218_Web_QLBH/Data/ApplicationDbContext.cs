@@ -49,6 +49,21 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
         //19. Trạng thái đơn mua hàng
         public DbSet<TrangThaiDBH> ttdbh { get; set; }
 
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // --- ĐOẠN QUAN TRỌNG CẦN THÊM ---
+            // Khai báo cho C# biết bảng CTBH dùng 2 khóa chính
+            modelBuilder.Entity<CTBH>()
+                .HasKey(c => new { c.MaDBH, c.MaSP });
+            // --------------------------------
+            modelBuilder.Entity<CTMH>()
+                .HasKey(a => new { a.MaDMH, a.MaSP });
+        }
+
+
         //1. LoaiSP
         //1.1. Hàm LoaiSP_GetAll(): trả về danh sách các đối tượng thuộc lớp LoaiSP với dữ liệu lấy từ CSDL thông qua thủ tục lưu trữ LoaiSP_GetAll
         public List<LoaiSP> LoaiSP_GetAll()
@@ -123,10 +138,12 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add(new SqlParameter("@TenSP", sp.TenSP));
             cmd.Parameters.Add(new SqlParameter("@DonGia", sp.DonGia));
-            cmd.Parameters.Add(new SqlParameter("@SoLuong", sp.SoLuong));
             cmd.Parameters.Add(new SqlParameter("@AnhSP", sp.AnhSP?? (object)DBNull.Value));    
+            cmd.Parameters.Add(new SqlParameter("@MoTaSP", sp.MoTaSP));
             cmd.Parameters.Add(new SqlParameter("@MaLSP", sp.MaLSP));
-            cmd.Parameters.Add(new SqlParameter("@MaGH", sp.MaGH));
+            cmd.Parameters.Add(new SqlParameter("@MaDVT", sp.MaDVT));
+            cmd.Parameters.Add(new SqlParameter("@MaTT", sp.MaTT));
+            cmd.Parameters.Add(new SqlParameter("@MaHSX", sp.MaHSX));
             Database.OpenConnection();
             string maSP = string.Empty;
             using var reader = cmd.ExecuteReader();
@@ -142,12 +159,14 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             new SqlParameter("@MaSP", sp.MaSP),
             new SqlParameter("@TenSP", sp.TenSP),
             new SqlParameter("@DonGia", sp.DonGia),
-            new SqlParameter("@SoLuong", sp.SoLuong),
             new SqlParameter("@AnhSP", sp.AnhSP?? (object)DBNull.Value),
+            new SqlParameter("@MoTaSP", sp.MoTaSP),
             new SqlParameter("@MaLSP", sp.MaLSP),
-            new SqlParameter("@MaGH", sp.MaGH),
+            new SqlParameter("@MaDVT", sp.MaDVT),
+            new SqlParameter("@MaTT", sp.MaTT),
+            new SqlParameter("@MaHSX", sp.MaHSX)
             };
-            Database.ExecuteSqlRaw("EXEC SanPham_Update @MaSP, @TenSP, @DonGia, @Soluong, @AnhSP, @MaLSP, @MaGH", p);
+            Database.ExecuteSqlRaw("EXEC SanPham_Update @MaSP, @TenSP, @DonGia, @AnhSP, @MoTaSP, @MaLSP, @MaDVT, @MaTT, @MaHSX", p);
         }
         //2.5.
         public void SanPham_Delete(string maSP)
@@ -604,10 +623,10 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@MaDBH", ctBH.MaDBH),
                 new SqlParameter("@MaSP", ctBH.MaSP),
-                new SqlParameter("@SoLuong", ctBH.SLB),
-                new SqlParameter("@DonGia", ctBH.DGB)
+                new SqlParameter("@SLB", ctBH.SLB),
+                new SqlParameter("@DGB", ctBH.DGB)
             };
-            Database.ExecuteSqlRaw("EXEC CTBH_Insert @MaDBH, @MaSP, @SoLuong, @DonGia", p);
+            Database.ExecuteSqlRaw("EXEC CTBH_Insert @MaDBH, @MaSP, @SLB, @DGB", p);
 
         }
 
@@ -618,10 +637,10 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@MaDBH", ctBH.MaDBH),
                 new SqlParameter("@MaSP", ctBH.MaSP),
-                new SqlParameter("@SoLuong", ctBH.SLB),
-                new SqlParameter("@DonGia", ctBH.DGB)
+                new SqlParameter("@SLB", ctBH.SLB),
+                new SqlParameter("@DGB", ctBH.DGB)
             };
-            Database.ExecuteSqlRaw("EXEC CTBH_Update @MaDBH, @MaSP, @SoLuong, @DonGia", p);
+            Database.ExecuteSqlRaw("EXEC CTBH_Update @MaDBH, @MaSP, @SLB, @DGB", p);
         }
 
         //11.5.
@@ -661,10 +680,10 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@MaDMH", ctMH.MaDMH),
                 new SqlParameter("@MaSP", ctMH.MaSP),
-                new SqlParameter("@SoLuong", ctMH.SLM),
-                new SqlParameter("@DonGia", ctMH.DGM)
+                new SqlParameter("@SLM", ctMH.SLM),
+                new SqlParameter("@DGM", ctMH.DGM)
             };
-            Database.ExecuteSqlRaw("EXEC CTMH_Insert @MaDMH, @MaSP, @SoLuong, @DonGia", p);
+            Database.ExecuteSqlRaw("EXEC CTMH_Insert @MaDMH, @MaSP, @SLM, @DGM", p);
 
         }
 
@@ -675,10 +694,10 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@MaDMH", ctMH.MaDMH),
                 new SqlParameter("@MaSP", ctMH.MaSP),
-                new SqlParameter("@SoLuong", ctMH.SLM),
-                new SqlParameter("@DonGia", ctMH.DGM)
+                new SqlParameter("@SLM", ctMH.SLM),
+                new SqlParameter("@DGM", ctMH.DGM)
             };
-            Database.ExecuteSqlRaw("EXEC CTMH_Update @MaDMH, @MaSP, @SoLuong, @DonGia", p);
+            Database.ExecuteSqlRaw("EXEC CTMH_Update @MaDMH, @MaSP, @SLM, @DGM", p);
         }
 
         //12.5.

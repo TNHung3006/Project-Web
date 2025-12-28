@@ -13,24 +13,28 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\A.jpg",
-      "PackagePath": "staticwebassets\\images\\uploads\\A.jpg"
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\23acd28bd0614ff4921d4384ea0fe693.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\23acd28bd0614ff4921d4384ea0fe693.jpg"
     },
     {
-      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\Aquafina.jpg",
-      "PackagePath": "staticwebassets\\images\\uploads\\Aquafina.jpg"
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\7up.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\7up.jpg"
+    },
+    {
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\A.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\A.jpg"
     },
     {
       "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\B.jpg",
       "PackagePath": "staticwebassets\\images\\uploads\\B.jpg"
     },
     {
-      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\Banh_Oreo.jpg",
-      "PackagePath": "staticwebassets\\images\\uploads\\Banh_Oreo.jpg"
-    },
-    {
       "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\C.jpg",
       "PackagePath": "staticwebassets\\images\\uploads\\C.jpg"
+    },
+    {
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\C2.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\C2.jpg"
     },
     {
       "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\Coca_Cola.jpg",
@@ -49,20 +53,32 @@
       "PackagePath": "staticwebassets\\images\\uploads\\F.jpg"
     },
     {
-      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\Muoi_iot_1kg.jpg",
-      "PackagePath": "staticwebassets\\images\\uploads\\Muoi_iot_1kg.jpg"
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\NuocYen.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\NuocYen.jpg"
     },
     {
-      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\SuaTuoi.jpg",
-      "PackagePath": "staticwebassets\\images\\uploads\\SuaTuoi.jpg"
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\Pepsi.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\Pepsi.jpg"
     },
     {
-      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\Sữa_Vinamilk_1L.jpg",
-      "PackagePath": "staticwebassets\\images\\uploads\\Sữa_Vinamilk_1L.jpg"
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\Redbull.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\Redbull.jpg"
     },
     {
-      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\eedffa9b37fd4d85ba97f1747c533a84.jpg",
-      "PackagePath": "staticwebassets\\images\\uploads\\eedffa9b37fd4d85ba97f1747c533a84.jpg"
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\SodaBidrico.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\SodaBidrico.jpg"
+    },
+    {
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\TraOLong.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\TraOLong.jpg"
+    },
+    {
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\TraSuaLatte.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\TraSuaLatte.jpg"
+    },
+    {
+      "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\stingdau.jpg",
+      "PackagePath": "staticwebassets\\images\\uploads\\stingdau.jpg"
     },
     {
       "Id": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\js\\site.js",

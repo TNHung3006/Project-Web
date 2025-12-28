@@ -13,20 +13,16 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            @* PHẦN MỚI: Xử lý MaDBH (Mã Đơn Bán Hàng - Khóa chính 1) *@
             <div class="form-group">
                 <label asp-for="MaDBH" class="control-label">Mã Đơn Bán Hàng</label>
-                @* Dùng asp-items để liên kết với ViewBag.DonBanHangs *@
                 <select asp-for="MaDBH" class="form-control" asp-items="ViewBag.DonBanHangs">
                     <option value="">-- Chọn Đơn Bán Hàng --</option>
                 </select>
                 <span asp-validation-for="MaDBH" class="text-danger"></span>
             </div>
 
-            @* PHẦN ĐÃ SỬA: Xử lý MaSP (Mã Sản Phẩm - Khóa chính 2) *@
             <div class="form-group">
                 <label asp-for="MaSP" class="control-label">Sản Phẩm</label>
-                @* Thay thế input bằng Dropdown List dùng ViewBag.SanPhams *@
                 <select asp-for="MaSP" class="form-control" asp-items="ViewBag.SanPhams">
                     <option value="">-- Chọn Sản Phẩm --</option>
                 </select>

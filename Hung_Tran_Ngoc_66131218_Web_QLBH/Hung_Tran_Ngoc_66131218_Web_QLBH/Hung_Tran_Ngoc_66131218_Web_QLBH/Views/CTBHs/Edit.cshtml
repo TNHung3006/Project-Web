@@ -13,29 +13,25 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            @* 1. Khóa chính 1: MaDBH (Mã Đơn Bán Hàng) - GIỮ ẨN VÀ HIỂN THỊ TEXT *@
             <input type="hidden" asp-for="MaDBH" />
             <div class="form-group">
                 <label asp-for="MaDBH" class="control-label">Mã Đơn Bán Hàng</label>
                 <p class="form-control-static">@Model.MaDBH</p>
             </div>
 
-            @* 2. Khóa chính 2: MaSP (Mã Sản Phẩm) - KHÔNG CHO PHÉP SỬA SAU KHI TẠO *@
             <input type="hidden" asp-for="MaSP" />
             <div class="form-group">
                 <label asp-for="MaSP" class="control-label">Sản Phẩm</label>
-                <p class="form-control-static">@* Cần thuộc tính điều hướng TenSP hoặc tên *@@Model.MaSP</p>
+                <p class="form-control-static">@Model.MaSP</p>
                 <span asp-validation-for="MaSP" class="text-danger"></span>
             </div>
 
-            @* 3. Trường dữ liệu: SoLuong *@
             <div class="form-group">
                 <label asp-for="SLB" class="control-label"></label>
                 <input asp-for="SLB" class="form-control" />
                 <span asp-validation-for="SLB" class="text-danger"></span>
             </div>
 
-            @* 4. Trường dữ liệu: DonGia *@
             <div class="form-group">
                 <label asp-for="DGB" class="control-label"></label>
                 <input asp-for="DGB" class="form-control" />

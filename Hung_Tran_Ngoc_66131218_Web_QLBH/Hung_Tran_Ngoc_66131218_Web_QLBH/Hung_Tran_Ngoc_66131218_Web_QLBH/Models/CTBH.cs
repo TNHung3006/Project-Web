@@ -10,6 +10,7 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Mã đơn bán hàng")]
         public int MaDBH { get; set; }
 
+        [Key]
         [Display(Name = "Mã sản phẩm")]
         public int MaSP { get; set; }
 
@@ -18,6 +19,12 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
 
         [Display(Name = "Đơn giá bán")]
         public decimal DGB { get; set; }
+
+        [Display(Name = "Tên sản phẩm")]
+        public string? TenSP { get; set; }
+
+        [Display(Name = "Thành tiền")]
+        public decimal ThanhTien { get; set; }
 
     }
 }

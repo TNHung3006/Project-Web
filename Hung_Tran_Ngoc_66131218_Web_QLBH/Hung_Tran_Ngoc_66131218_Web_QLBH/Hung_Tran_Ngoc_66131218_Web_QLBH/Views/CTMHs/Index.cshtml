@@ -13,14 +13,19 @@
     <thead>
         <tr>
             <th>
-                @* [CẦN THIẾT] Hiển thị Mã Đơn Mua Hàng (Khóa chính 1) *@
                 @Html.DisplayNameFor(model => model.MaDMH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaSP)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.SLM)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DGM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThanhTien)
             </th>
             <th></th>
         </tr>
@@ -30,10 +35,11 @@
         {
             <tr>
                 <td>
-                    @* Hiển thị Mã Đơn Mua Hàng *@
                     @Html.DisplayFor(modelItem => item.MaDMH)
                 </td>
-               
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaSP)
+                </td>              
                 <td>
                     @Html.DisplayFor(modelItem => item.SLM)
                 </td>
@@ -41,7 +47,9 @@
                     @Html.DisplayFor(modelItem => item.DGM)
                 </td>
                 <td>
-                    @* [KHẮC PHỤC LỖI ROUTING] Truyền cả hai khóa chính MaDMH và MaSP *@
+                    @Html.DisplayFor(modelItem => item.ThanhTien)
+                </td>
+                <td>
                     <a asp-action="Edit" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP">Edit</a> |
                     <a asp-action="Details" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP">Details</a> |
                     <a asp-action="Delete" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP">Delete</a>

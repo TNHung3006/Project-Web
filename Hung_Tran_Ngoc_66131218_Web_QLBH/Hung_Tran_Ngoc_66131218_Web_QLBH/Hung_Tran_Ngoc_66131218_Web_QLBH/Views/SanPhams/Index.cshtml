@@ -6,19 +6,10 @@
 
 <h1>Index</h1>
 
-<form asp-action="Index" method="get" class="mb-3">
-    <p>
-        Tìm kiếm theo Tên sản phẩm:
-        <input type="text" name="search" value="@ViewData["CurrentFilter"]" />
-        <input type="submit" value="Tìm kiếm" class="btn btn-primary" />
-        <a asp-action="Index" class="btn btn-secondary">Xem tất cả</a>
-    </p>
-</form>
-<hr />
-
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -29,59 +20,91 @@
                 @Html.DisplayNameFor(model => model.DonGia)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SoLuong)
+                @Html.DisplayNameFor(model => model.AnhSP)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AnhSP)
+                @Html.DisplayNameFor(model => model.MoTaSP)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.MaLSP)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MaGH)
+                @Html.DisplayNameFor(model => model.LoaiSP)
             </th>
-            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaDVT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenDVT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaTT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenTT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaHSX)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HangSX)
+            </th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenSP)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DonGia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SoLuong)
-            </td>
-            <td>
-                @if (!string.IsNullOrEmpty(item.AnhSP))
-                {
-                    // Tạo đường dẫn ảnh bằng cách ghép đường dẫn thư mục công khai
-                    // (~/images/uploads/) với tên file (@item.AnhSP) đã lưu trong CSDL.
-                    <img src="~/images/uploads/@item.AnhSP"
-                            alt="@item.TenSP"
-                            style="width: 60px; height: 60px; object-fit: cover; border-radius: 5px;" />
-                }
-                else
-                {
-                    // Nếu không có ảnh, hiển thị một văn bản thay thế
-                    <span>(Không có ảnh)</span>
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaLSP)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaGH)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaSP">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaSP">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaSP">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenSP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DonGia)
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.AnhSP))
+                    {
+                        <img src="/images/uploads/@item.AnhSP" alt="Ảnh SP" style="width: 100px; height: auto; object-fit: cover; border: 1px solid #ddd;" />
+                    }
+                    else
+                    {
+                        <span>No Image</span>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTaSP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaLSP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoaiSP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaDVT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenDVT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaTT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenTT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaHSX)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HangSX)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaSP" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.MaSP" class="btn btn-sm btn-info">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.MaSP" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

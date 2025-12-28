@@ -1,76 +1,176 @@
 ﻿@model Hung_Tran_Ngoc_66131218_Web_QLBH.Models.SanPham
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Thêm mới Sản Phẩm";
 }
 
-<h1>Create</h1>
+<h1>Thêm mới Sản Phẩm</h1>
 
-<h4>SanPham</h4>
+<h4>Thông tin sản phẩm</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        @* 1. Cần thêm thuộc tính enctype="multipart/form-data" vào form *@
-        <form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="col-md-6">
+        @* Lưu ý: Phải có enctype="multipart/form-data" để upload ảnh *@
+        <form asp-action="Create" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            @* Xử lý MaLSP: Đã đúng, sử dụng Dropdown List *@
-            <div class="form-group">
-                <label asp-for="MaLSP" class="control-label">Loại Sản Phẩm</label>
-                @* Dùng asp-items để hiển thị danh sách thả xuống từ ViewBag.LoaiSPs *@
-                <select asp-for="MaLSP" class="form-control" asp-items="ViewBag.LoaiSPs">
-                    <option value="">-- Chọn Loại Sản Phẩm --</option>
-                </select>
-                <span asp-validation-for="MaLSP" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <label asp-for="TenSP" class="control-label"></label>
+            @* 1. Tên Sản Phẩm *@
+            <div class="form-group mb-3">
+                <label asp-for="TenSP" class="control-label">Tên Sản Phẩm</label>
                 <input asp-for="TenSP" class="form-control" />
                 <span asp-validation-for="TenSP" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <label asp-for="DonGia" class="control-label"></label>
+            @* 2. Đơn Giá *@
+            <div class="form-group mb-3">
+                <label asp-for="DonGia" class="control-label">Đơn Giá</label>
                 <input asp-for="DonGia" class="form-control" />
                 <span asp-validation-for="DonGia" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SoLuong" class="control-label"></label>
-                <input asp-for="SoLuong" class="form-control" />
-                <span asp-validation-for="SoLuong" class="text-danger"></span>
+
+            @* 3. Ảnh Sản Phẩm (Input Type File) *@
+            <div class="form-group mb-3">
+                <label asp-for="AnhSP" class="control-label">Ảnh Sản Phẩm</label>
+                @* Name="image" phải khớp với tham số trong Controller *@
+                <input type="file" name="image" class="form-control" />
+                <span asp-validation-for="AnhSP" class="text-danger"></span>
             </div>
 
-            @* Xử lý AnhSP: sử dụng input type="file" *@
-            <div class="form-group">
-                <label class="control-label">Ảnh Sản Phẩm</label>
-                @* Đặt tên (name) là "image" để khớp với tham số IFormFile? image trong Controller *@
-                <input type="file" name="image" id="image" class="form-control" />
+            @* 4. Mô Tả *@
+            <div class="form-group mb-3">
+                <label asp-for="MoTaSP" class="control-label">Mô Tả</label>
+                <textarea asp-for="MoTaSP" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="MoTaSP" class="text-danger"></span>
             </div>
 
-            @* Xử lý MaGH (Mã Gian Hàng) bằng Dropdown List *@
-            <div class="form-group">
-                <label asp-for="MaGH" class="control-label">Gian Hàng</label>
-                @* Dùng asp-items để hiển thị danh sách thả xuống từ ViewBag.GianHangs *@
-                <select asp-for="MaGH" class="form-control" asp-items="ViewBag.GianHangs">
-                    <option value="">-- Chọn Gian Hàng --</option>
+            @* --- KHU VỰC CASCADING 1: NHÓM SP -> LOẠI SP --- *@
+            <div class="card mb-3 p-3 bg-light">
+                <h6>Phân loại sản phẩm</h6>
+                @* Dropdown Nhóm SP (Chỉ dùng để lọc, không lưu vào Model SanPham) *@
+                <div class="form-group mb-3">
+                    <label class="control-label">Nhóm Sản Phẩm</label>
+                    <select id="ddlNhomSP" class="form-control" asp-items="ViewBag.NhomSPs">
+                        <option value="">-- Chọn Nhóm SP --</option>
+                    </select>
+                </div>
+
+                @* Dropdown Loại SP (Sẽ được load lại bằng Ajax) *@
+                <div class="form-group mb-3">
+                    <label asp-for="MaLSP" class="control-label">Loại Sản Phẩm</label>
+                    <select asp-for="MaLSP" class="form-control" asp-items="ViewBag.LoaiSPs">
+                        <option value="">-- Vui lòng chọn Nhóm SP trước --</option>
+                    </select>
+                    <span asp-validation-for="MaLSP" class="text-danger"></span>
+                </div>
+            </div>
+
+            @* --- KHU VỰC CASCADING 2: NƯỚC -> HÃNG SX --- *@
+            <div class="card mb-3 p-3 bg-light">
+                <h6>Nguồn gốc xuất xứ</h6>
+                @* Dropdown Nước (Chỉ dùng để lọc) *@
+                <div class="form-group mb-3">
+                    <label class="control-label">Nước Sản Xuất</label>
+                    <select id="ddlNuoc" class="form-control" asp-items="ViewBag.Nuocs">
+                        <option value="">-- Chọn Nước --</option>
+                    </select>
+                </div>
+
+                @* Dropdown Hãng SX (Sẽ được load lại bằng Ajax) *@
+                <div class="form-group mb-3">
+                    <label asp-for="MaHSX" class="control-label">Hãng Sản Xuất</label>
+                    <select asp-for="MaHSX" class="form-control" asp-items="ViewBag.HangSXs">
+                        <option value="">-- Vui lòng chọn Nước trước --</option>
+                    </select>
+                    <span asp-validation-for="MaHSX" class="text-danger"></span>
+                </div>
+            </div>
+
+            @* 5. Đơn Vị Tính *@
+            <div class="form-group mb-3">
+                <label asp-for="MaDVT" class="control-label">Đơn Vị Tính</label>
+                <select asp-for="MaDVT" class="form-control" asp-items="ViewBag.DonViTinhs">
+                    <option value="">-- Chọn Đơn Vị Tính --</option>
                 </select>
-                <span asp-validation-for="MaGH" class="text-danger"></span>
+                <span asp-validation-for="MaDVT" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
+            @* 6. Trạng Thái *@
+            <div class="form-group mb-3">
+                <label asp-for="MaTT" class="control-label">Trạng Thái</label>
+                <select asp-for="MaTT" class="form-control" asp-items="ViewBag.TrangThais">
+                    <option value="">-- Chọn Trạng Thái --</option>
+                </select>
+                <span asp-validation-for="MaTT" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
                 <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // 1. Xử lý khi chọn NHÓM SP
+            $("#ddlNhomSP").change(function () {
+                var nhomID = $(this).val(); // Lấy mã nhóm
+                $("#MaLSP").empty(); // Xóa các options cũ của Loại SP
+                $("#MaLSP").append('<option value="">-- Đang tải... --</option>');
+
+                if (nhomID) {
+                    $.ajax({
+                        url: '@Url.Action("GetLoaiSPByNhom", "SanPhams")', // Gọi Action GetLoaiSPByNhom
+                        type: "GET",
+                        data: { maNhomSP: nhomID },
+                        success: function (data) {
+                            $("#MaLSP").empty();
+                            $("#MaLSP").append('<option value="">-- Chọn Loại SP --</option>');
+                            // Duyệt qua danh sách trả về và thêm vào dropdown
+                            $.each(data, function (i, item) {
+                                // Lưu ý: Chữ cái đầu của property trong JSON thường viết thường (maLSP, tenLSP)
+                                $("#MaLSP").append('<option value="' + item.maLSP + '">' + item.tenLSP + '</option>');
+                            });
+                        }
+                    });
+                } else {
+                    $("#MaLSP").empty();
+                    $("#MaLSP").append('<option value="">-- Vui lòng chọn Nhóm SP trước --</option>');
+                }
+            });
+
+            // 2. Xử lý khi chọn NƯỚC
+            $("#ddlNuoc").change(function () {
+                var nuocID = $(this).val();
+                $("#MaHSX").empty();
+                $("#MaHSX").append('<option value="">-- Đang tải... --</option>');
+
+                if (nuocID) {
+                    $.ajax({
+                        url: '@Url.Action("GetHangSXByNuoc", "SanPhams")',
+                        type: "GET",
+                        data: { maNuoc: nuocID },
+                        success: function (data) {
+                            $("#MaHSX").empty();
+                            $("#MaHSX").append('<option value="">-- Chọn Hãng SX --</option>');
+                            $.each(data, function (i, item) {
+                                $("#MaHSX").append('<option value="' + item.maHSX + '">' + item.tenHSX + '</option>');
+                            });
+                        }
+                    });
+                } else {
+                    $("#MaHSX").empty();
+                    $("#MaHSX").append('<option value="">-- Vui lòng chọn Nước trước --</option>');
+                }
+            });
+        });
+    </script>
 }
