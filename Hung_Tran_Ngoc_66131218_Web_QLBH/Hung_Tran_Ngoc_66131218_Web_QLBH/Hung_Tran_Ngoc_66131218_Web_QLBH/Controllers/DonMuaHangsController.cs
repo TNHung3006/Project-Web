@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -27,6 +28,13 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             var nccList = _db.NhaCC_GetAll() ?? new List<NhaCC>();
             // Lấy tất cả nhà cung cấp và truyền qua ViewBag cho View sử dụng
             ViewBag.NhaCCs = new SelectList(nccList, "MaNCC", "TenNCC");
+
+            var nvList = _db.NhanVien_GetAll() ?? new List<NhanVien>();
+            ViewBag.NhanViens = new SelectList(nvList, "MaNV", "TenNV");
+
+            var ttdmhList = _db.TrangThaiDMH_GetAll() ?? new List<TrangThaiDMH>();
+            ViewBag.TTDMHs = new SelectList(ttdmhList, "MaTTDMH", "TenTTDMH");
+
             return View();
         }
 
@@ -47,6 +55,13 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             var nccList = _db.NhaCC_GetAll() ?? new List<NhaCC>();
             // Lấy tất cả nhà cung cấp, và chọn giá trị mặc định là nhà cung cấp hiện tại của loại này
             ViewBag.NhaCCs = new SelectList(nccList, "MaNCC", "TenNCC", dmh.MaNCC);
+
+            var nvList = _db.NhanVien_GetAll() ?? new List<NhanVien>();
+            ViewBag.NhanViens = new SelectList(nvList, "MaNV", "TenNV", dmh.MaNV);
+
+            var ttdmhList = _db.TrangThaiDMH_GetAll() ?? new List<TrangThaiDMH>();
+            ViewBag.TTDMHs = new SelectList(ttdmhList, "MaTTDMH", "TenTTDMH", dmh.MaTTDMH);
+
             return View(dmh);
         }
 

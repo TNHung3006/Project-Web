@@ -495,9 +495,11 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             var p = new[]
             {
                 new SqlParameter("@NgayMua", dmh.NgayMua),
-                new SqlParameter("@MaNCC", dmh.MaNCC)
+                new SqlParameter("@MaNCC", dmh.MaNCC),
+                new SqlParameter("@MaNV", dmh.MaNV),
+                new SqlParameter("@MaTTDMH", dmh.MaTTDMH)
             };
-            Database.ExecuteSqlRaw("EXEC DonMuaHang_Insert @NgayMua, @MaNCC", p);
+            Database.ExecuteSqlRaw("EXEC DonMuaHang_Insert @NgayMua, @MaNCC, @MaNV, @MaTTDMH", p);
 
         }
 
@@ -508,9 +510,11 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@MaDMH", dmh.MaDMH),
                 new SqlParameter("@NgayMua", dmh.NgayMua),
-                new SqlParameter("@MaNCC", dmh.MaNCC)
+                new SqlParameter("@MaNCC", dmh.MaNCC),
+                new SqlParameter("@MaNV", dmh.MaNV),
+                new SqlParameter("@MaTTDMH", dmh.MaTTDMH)
             };
-            Database.ExecuteSqlRaw("EXEC DonMuaHang_Update @MaDMH, @NgayMua, @MaNCC", p);
+            Database.ExecuteSqlRaw("EXEC DonMuaHang_Update @MaDMH, @NgayMua, @MaNCC, @MaNV, @MaTTDMH", p);
         }
 
         //9.5.

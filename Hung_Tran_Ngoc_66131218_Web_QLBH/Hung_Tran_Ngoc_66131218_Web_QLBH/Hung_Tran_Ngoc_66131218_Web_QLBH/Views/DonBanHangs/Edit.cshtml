@@ -17,7 +17,8 @@
 
             <div class="form-group">
                 <label asp-for="NgayBan" class="control-label"></label>
-                <input asp-for="NgayBan" class="form-control" type="datetime-local" />
+                <input asp-for="NgayBan" class="form-control" type="datetime-local"
+                       value="@Model.NgayBan.ToString("yyyy-MM-ddTHH:mm")" />
                 <span asp-validation-for="NgayBan" class="text-danger"></span>
             </div>
 

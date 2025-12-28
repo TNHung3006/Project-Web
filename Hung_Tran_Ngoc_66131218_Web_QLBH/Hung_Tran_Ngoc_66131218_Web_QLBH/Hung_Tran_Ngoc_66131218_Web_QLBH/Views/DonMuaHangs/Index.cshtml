@@ -13,10 +13,28 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.MaDMH)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.NgayMua)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.MaNCC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenNCC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaNV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenNVFull)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaTTDMH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenTTDMH)
             </th>
             <th></th>
         </tr>
@@ -25,10 +43,28 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.MaDMH)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.NgayMua)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MaNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNVFull)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaTTDMH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenTTDMH)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MaDMH">Edit</a> |

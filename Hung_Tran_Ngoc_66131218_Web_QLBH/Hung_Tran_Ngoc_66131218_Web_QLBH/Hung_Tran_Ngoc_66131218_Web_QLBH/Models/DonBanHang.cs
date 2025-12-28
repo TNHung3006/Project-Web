@@ -25,5 +25,11 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Mã TTDBH")]
         public int MaTTDBH { get; set; }
 
+        public string? DiaChiGHFull { get; set; }
+        [Display(Name = "Họ tên khách hàng")]
+        public string? TenKHFull { get; set; }
+        [Display(Name = "Tên TTDBH")]
+        public string? TenTTDBH { get; set; }
+
     }
 }
