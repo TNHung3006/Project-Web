@@ -1,0 +1,51 @@
+﻿@model Hung_Tran_Ngoc_66131218_Web_QLBH.Models.Xa
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Xa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @* MaXa là khóa chính, phải được ẩn để gửi về Controller *@
+            <input type="hidden" asp-for="MaXa" />
+
+            <div class="form-group">
+                <label asp-for="TenXa" class="control-label"></label>
+                <input asp-for="TenXa" class="form-control" />
+                <span asp-validation-for="TenXa" class="text-danger"></span>
+            </div>
+
+            @* PHẦN ĐÃ SỬA: Thay thế input MaTinh bằng Dropdown List *@
+            <div class="form-group">
+                <label asp-for="MaTinh" class="control-label">Tỉnh/Thành phố</label>
+                @* Sử dụng <select> và asp-items="ViewBag.Tinhs" (đã load trong Controller).
+                Asp.Net Core MVC sẽ tự động chọn MaTinh hiện tại của Model.Xa *@
+                <select asp-for="MaTinh" class="form-control" asp-items="ViewBag.Tinhs">
+                    <option value="">-- Chọn Tỉnh/Thành phố --</option>
+                </select>
+                <span asp-validation-for="MaTinh" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

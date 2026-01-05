@@ -21,6 +21,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.MaTinh)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenTinh)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -35,6 +38,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.MaTinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenTinh)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MaXa">Edit</a> |

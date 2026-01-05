@@ -17,7 +17,31 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         public CTBHsController(ApplicationDbContext db) => _db = db;
 
 
-        public IActionResult Index() => View(_db.CTBH_GetAll());
+        public IActionResult Index()
+        {
+            // 1. Lấy danh sách chi tiết
+            var listCTBH = _db.CTBH_GetAll();
+
+            // 2. Tạo một Dictionary để lưu trữ: Mã Đơn -> Tổng Tiền
+            // Mục đích: Để view tra cứu nhanh, không cần gọi DB nhiều lần
+            var tongTienDict = new Dictionary<int, decimal>();
+
+            // Lấy danh sách các mã đơn hàng duy nhất (Distinct)
+            var listMaDonHang = listCTBH.Select(x => x.MaDBH).Distinct().ToList();
+
+            foreach (var maDBH in listMaDonHang)
+            {
+                // Gọi thủ tục tính tiền riêng cho từng đơn
+                decimal tongTien = _db.CTBH_TongThanhTienTheoID(maDBH);
+                tongTienDict.Add(maDBH, tongTien);
+            }
+
+            // 3. Gửi Dictionary này sang View thông qua ViewBag
+            ViewBag.TongTienMap = tongTienDict;
+
+            return View(listCTBH);
+        }
+
 
         // GET: CTBHs/Create
         public IActionResult Create()

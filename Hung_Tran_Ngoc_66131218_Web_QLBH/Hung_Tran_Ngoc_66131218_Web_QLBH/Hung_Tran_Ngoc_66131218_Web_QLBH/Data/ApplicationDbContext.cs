@@ -654,6 +654,27 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             Database.ExecuteSqlRaw("EXEC CTBH_Delete @MaDBH, @MaSP", p);
         }
 
+        //11.6 Hàm tính tổng tiền trả về kiểu decimal (số tiền)
+        public decimal CTBH_TongThanhTienTheoID(int maDBH)
+        {
+            var p = new SqlParameter("@MaDBH", maDBH);
+
+            // Gọi thủ tục và lấy kết quả scalar (1 ô dữ liệu)
+            // Lưu ý: Cần xử lý trường hợp null nếu đơn hàng không có sản phẩm nào
+            using var command = Database.GetDbConnection().CreateCommand();
+            command.CommandText = "EXEC CTBH_TongThanhTienTheoID @MaDBH";
+            command.Parameters.Add(p);
+            Database.OpenConnection();
+
+            var result = command.ExecuteScalar(); // Lấy ô đầu tiên
+            Database.CloseConnection();
+
+            if (result != null && result != DBNull.Value)
+            {
+                return Convert.ToDecimal(result);
+            }
+            return 0;
+        }
 
         //12. CTMH
         //12.1.
@@ -711,6 +732,27 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             Database.ExecuteSqlRaw("EXEC CTBH_Delete @MaDMH, @MaSP", p);
         }
 
+        //12.6 Hàm tính tổng tiền trả về kiểu decimal (số tiền)
+        public decimal CTMH_TongThanhTienTheoID(int maDMH)
+        {
+            var p = new SqlParameter("@MaDMH", maDMH);
+
+            // Gọi thủ tục và lấy kết quả scalar (1 ô dữ liệu)
+            // Lưu ý: Cần xử lý trường hợp null nếu đơn hàng không có sản phẩm nào
+            using var command = Database.GetDbConnection().CreateCommand();
+            command.CommandText = "EXEC CTMH_TongThanhTienTheoID @MaDMH";
+            command.Parameters.Add(p);
+            Database.OpenConnection();
+
+            var result = command.ExecuteScalar(); // Lấy ô đầu tiên
+            Database.CloseConnection();
+
+            if (result != null && result != DBNull.Value)
+            {
+                return Convert.ToDecimal(result);
+            }
+            return 0;
+        }
 
         //13. Nhân Viên
         //13.1.

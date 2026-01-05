@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Hung_Tran_Ngoc_66131218_Web_QLBH.Models.CTBH>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Chi Tiết Bán Hàng (CTBH)</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaDBH)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaSP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayBan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenSP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SLB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DGB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThanhTien)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaDBH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaSP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayBan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenSP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SLB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DGB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThanhTien)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-maDBH="@item.MaDBH" asp-route-maSP="@item.MaSP">Edit</a> |
+                    <a asp-action="Details" asp-route-maDBH="@item.MaDBH" asp-route-maSP="@item.MaSP">Details</a> |
+                    <a asp-action="Delete" asp-route-maDBH="@item.MaDBH" asp-route-maSP="@item.MaSP">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

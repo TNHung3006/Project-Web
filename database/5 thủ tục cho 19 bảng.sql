@@ -489,6 +489,15 @@ GO
 CREATE PROCEDURE CTBH_Delete @MaDBH INT, @MaSP INT AS
 BEGIN DELETE FROM CTBH WHERE MaDBH=@MaDBH AND MaSP=@MaSP END
 GO
+CREATE PROCEDURE CTBH_TongThanhTienTheoID
+    @MaDBH int
+AS
+BEGIN
+    -- Chỉ trả về 1 con số duy nhất
+    SELECT SUM(SLB * DGB) 
+    FROM CTBH 
+    WHERE MaDBH = @MaDBH
+END
 -- === 19. BẢNG CHI TIẾT MUA HÀNG (CTMH) - KHÓA CHÍNH KÉP ===
 -- Lưu ý: Bảng chi tiết không sinh mã tự động mà lấy mã từ Đơn mua hàng và Sản phẩm
 CREATE PROCEDURE CTMH_GetAll AS BEGIN SELECT * FROM CTMH END
@@ -509,3 +518,12 @@ GO
 CREATE PROCEDURE CTMH_Delete @MaDMH INT, @MaSP INT AS
 BEGIN DELETE FROM CTMH WHERE MaDMH=@MaDMH AND MaSP=@MaSP END
 GO
+CREATE PROCEDURE CTMH_TongThanhTienTheoID
+    @MaDMH int
+AS
+BEGIN
+    -- Chỉ trả về 1 con số duy nhất
+    SELECT SUM(SLM * DGM) 
+    FROM CTMH 
+    WHERE MaDMH = @MaDMH
+END

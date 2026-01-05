@@ -10,14 +10,24 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Mã đơn mua hàng")]
         public int MaDMH { get; set; }
 
+        [Key]
         [Display(Name = "Mã sản phẩm")]
         public int MaSP { get; set; }
 
-        [Display(Name = "Số lượng")]
-        public int SoLuong { get; set; }
+        [Display(Name = "Số lượng mua")]
+        public int SLM { get; set; }
 
-        [Display(Name = "Đơn giá")]
-        public decimal DonGia { get; set; }
+        [Display(Name = "Đơn giá mua")]
+        public decimal DGM { get; set; }
+
+        [Display(Name = "Tên sản phẩm")]
+        public string? TenSP { get; set; }
+
+        [Display(Name = "Thành tiền")]
+        public decimal ThanhTien { get; set; }
+
+        [Display(Name = "Ngày mua")]
+        public DateTime NgayMua { get; set; }
 
     }
 }

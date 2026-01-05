@@ -1,52 +1,90 @@
 ﻿@model IEnumerable<Hung_Tran_Ngoc_66131218_Web_QLBH.Models.CTMH>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Chi Tiết Mua Hàng";
+
+    // 1. Gom nhóm theo Mã Đơn Mua Hàng
+    var danhSachDonHang = Model.GroupBy(x => x.MaDMH).OrderByDescending(g => g.Key);
+
+    // 2. Lấy Dictionary tổng tiền từ Controller
+    var mapTongTien = ViewBag.TongTienMap as Dictionary<int, decimal>;
 }
 
-<h1>Chi Tiết Mua Hàng (CTMH)</h1>
+<div class="container-fluid p-4">
+    <h1 class="mb-4">Chi Tiết Mua Hàng</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @* [CẦN THIẾT] Hiển thị Mã Đơn Mua Hàng (Khóa chính 1) *@
-                @Html.DisplayNameFor(model => model.MaDMH)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SoLuong)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DonGia)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @* Hiển thị Mã Đơn Mua Hàng *@
-                    @Html.DisplayFor(modelItem => item.MaDMH)
-                </td>
-               
-                <td>
-                    @Html.DisplayFor(modelItem => item.SoLuong)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DonGia)
-                </td>
-                <td>
-                    @* [KHẮC PHỤC LỖI ROUTING] Truyền cả hai khóa chính MaDMH và MaSP *@
-                    <a asp-action="Edit" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP">Edit</a> |
-                    <a asp-action="Details" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP">Details</a> |
-                    <a asp-action="Delete" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="fa fa-plus"></i> Tạo Mới
+        </a>
+    </p>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th style="width: 5%">STT</th>
+                    <th style="width: 35%">Tên sản phẩm</th>
+                    <th style="width: 15%" class="text-end">Đơn giá mua</th>
+                    <th style="width: 10%" class="text-center">Số lượng</th>
+                    <th style="width: 20%" class="text-end">Thành tiền</th>
+                    <th style="width: 15%" class="text-center">Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var donHang in danhSachDonHang)
+                {
+                    var infoDonHang = donHang.First();
+
+                    // Tra cứu tổng tiền
+                    decimal tongTienDonHang = 0;
+                    if (mapTongTien != null && mapTongTien.ContainsKey(donHang.Key))
+                    {
+                        tongTienDonHang = mapTongTien[donHang.Key];
+                    }
+
+                    <tr class="table-secondary">
+                        <td colspan="4" class="align-middle">
+                            <strong>
+                                <i class="fa fa-shopping-cart"></i> Đơn mua #@donHang.Key
+                            </strong>
+                            <span class="text-muted ms-2">
+                                - Ngày mua: @infoDonHang.NgayMua.ToString("dd/MM/yyyy")
+                            </span>
+                        </td>
+                        <td class="text-end align-middle fw-bold text-danger">
+                            @tongTienDonHang.ToString("N0") ₫
+                        </td>
+                        <td class="text-center"></td>
+                    </tr>
+
+                    var stt = 1;
+                    foreach (var item in donHang)
+                    {
+                        <tr>
+                            <td class="text-center text-muted">@stt</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TenSP)
+                            </td>
+                            <td class="text-end">
+                                @item.DGM.ToString("N0")
+                            </td>
+                            <td class="text-center">
+                                @Html.DisplayFor(modelItem => item.SLM)
+                            </td>
+                            <td class="text-end fw-bold">
+                                @item.ThanhTien.ToString("N0")
+                            </td>
+                            <td class="text-center">
+                                <a asp-action="Edit" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP" class="btn btn-sm btn-outline-warning">Edit</a>
+                                <a asp-action="Details" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP" class="btn btn-sm btn-outline-success">Details</a>
+                                <a asp-action="Delete" asp-route-maDMH="@item.MaDMH" asp-route-maSP="@item.MaSP" class="btn btn-sm btn-outline-danger">Delete</a>
+                            </td>
+                        </tr>
+                        stt++;
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

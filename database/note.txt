@@ -11,13 +11,18 @@ TrangThaiDBH
 TrangThaiDMH
 NhaCC
 NhanVien
-
 KhachHang
-
 DonMuaHang
 DonBanHang
+
 SP
+
 CTMH
 CTBH
+
+
+tạo một hàm get id cho ctbh
+chỉ hiện chi tiết từng mã đơn bán hàng
+tạo thêm 1 thủ tục sum để hiện tổng thành tiền của một đơn hàngó
 
 

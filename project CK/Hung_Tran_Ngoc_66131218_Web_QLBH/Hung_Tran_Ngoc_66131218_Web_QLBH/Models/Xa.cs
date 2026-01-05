@@ -15,5 +15,8 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
 
         [Display(Name = "Mã tỉnh")]
         public int MaTinh { get; set; }
+
+        [Display(Name = "Tên tỉnh")]
+        public string? TenTinh { get; set; }
     }
 }

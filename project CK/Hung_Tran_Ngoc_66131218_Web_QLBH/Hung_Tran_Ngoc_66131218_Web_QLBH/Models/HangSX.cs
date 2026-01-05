@@ -11,9 +11,12 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         public int MaHSX { get; set; }
 
         [Display(Name = "Tên Hãng sản xuất")]
-        public string TenHSX { get; set; } = null!;
+        public string? TenHSX { get; set; }
 
         [Display(Name = "Mã nước")]
-        public string MaNuoc { get; set; } = null!;
+        public string? MaNuoc { get; set; }
+
+        [Display(Name = "Tên nước")]
+        public string? TenNuoc { get; set; }
     }
 }
