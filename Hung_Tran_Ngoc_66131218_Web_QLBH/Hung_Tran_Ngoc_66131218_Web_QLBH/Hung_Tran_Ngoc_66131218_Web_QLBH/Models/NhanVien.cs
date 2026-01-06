@@ -11,27 +11,40 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         public int MaNV { get; set; }
 
         [Display(Name = "Tên đăng nhập")]
-        public string? TenDN { get; set; }
+        [Required(ErrorMessage = "Tên đăng nhập không được để trống")]
+        [StringLength(20, ErrorMessage = "Tên đăng nhập tối đa 20 ký tự")]
+        public string TenDN { get; set; } = null!;
 
         [Display(Name = "Mật khẩu")]
-        public string? MatKhau { get; set; }
+        [Required(ErrorMessage = "Mật khẩu không được để trống")]
+        [DataType(DataType.Password)]
+        public string MatKhau { get; set; } = null!;
 
         [Display(Name = "Họ nhân viên")]
-        public string? HoNV { get; set; }
+        [Required(ErrorMessage = "Họ nhân viên là bắt buộc")]
+        [StringLength(50)]
+        public string HoNV { get; set; } = null!;
 
         [Display(Name = "Tên nhân viên")]
-        public string? TenNV { get; set; }
+        [Required(ErrorMessage = "Tên nhân viên là bắt buộc")]
+        [StringLength(50)]
+        public string TenNV { get; set; } = null!;
 
         [Display(Name = "Giới tính")]
+        [StringLength(10)] // Ví dụ: "Nam", "Nữ"
         public string? GioiTinh { get; set; }
 
-        [Display(Name = "số điện thoại")]
+        [Display(Name = "Số điện thoại")]
+        [RegularExpression(@"^0\d{9,10}$", ErrorMessage = "SĐT phải bắt đầu bằng 0 và có 10-11 số")]
         public string? DienThoai { get; set; }
 
         [Display(Name = "Email")]
-        public string? Email { get; set; }
+        [Required(ErrorMessage = "Email là bắt buộc")]
+        [EmailAddress(ErrorMessage = "Định dạng Email không hợp lệ")]
+        public string Email { get; set; } = null!;
 
         [Display(Name = "Địa chỉ")]
+        [StringLength(200)]
         public string? DiaChi { get; set; }
 
         [Display(Name = "Mã loại nhân viên")]
