@@ -1,101 +1,128 @@
 ﻿@model IEnumerable<Hung_Tran_Ngoc_66131218_Web_QLBH.Models.NhanVien>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Quản lý Nhân viên";
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MaNV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenDN)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MatKhau)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoNV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenNV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.GioiTinh)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DienThoai)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DiaChi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaLNV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenLNV)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaXa)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaNV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenDN)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MatKhau)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HoNV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenNV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GioiTinh)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DienThoai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiaChiFull)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaLNV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenLNV)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaXa)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaNV">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaNV">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaNV">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="container-fluid py-4">
+    <div class="card shadow border-0">
+        <div class="card-header bg-primary bg-gradient text-white d-flex justify-content-between align-items-center">
+            <h5 class="mb-0 fw-bold"><i class="fas fa-users-cog me-2"></i>QUẢN LÝ NHÂN VIÊN</h5>
+            <a asp-action="Create" class="btn btn-light btn-sm rounded-pill fw-bold text-primary shadow-sm">
+                <i class="fas fa-plus me-1"></i> Thêm mới
+            </a>
+        </div>
+
+        <div class="card-body bg-light">
+            <form asp-action="Index" method="get" class="row justify-content-end mb-3">
+                <div class="col-md-4">
+                    <div class="input-group shadow-sm">
+                        <input type="text" name="search" value="@ViewData["CurrentFilter"]" class="form-control border-0" placeholder="Tìm tên..." />
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="table-responsive rounded shadow-sm">
+                <table class="table table-hover align-middle mb-0 bg-white">
+                    <thead class="bg-light">
+                        <tr class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
+                            <th class="ps-3">Họ và Tên</th>
+                            <th>Thông tin liên hệ</th>
+                            <th>Chức vụ / Tài khoản</th>
+                            <th>Địa chỉ</th>
+                            <th class="text-center">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            // --- XỬ LÝ LOGIC HIỂN THỊ GIỚI TÍNH ---
+                            string gColor = "bg-secondary"; // Mặc định màu xám
+                            string gIcon = "fa-user";       // Mặc định icon người
+                            string genderVal = item.GioiTinh?.Trim().ToLower() ?? "";
+
+                            if (genderVal == "nam")
+                            {
+                                gColor = "bg-info";
+                                gIcon = "fa-mars";
+                            }
+                            else if (genderVal == "nữ" || genderVal == "nu")
+                            {
+                                gColor = "bg-danger bg-opacity-75";
+                                gIcon = "fa-venus";
+                            }
+                            else
+                            {
+                                // Các giới tính khác
+                                gColor = "bg-warning text-dark";
+                                gIcon = "fa-genderless";
+                            }
+                                // ---------------------------------------
+
+                            <tr>
+                                <td class="ps-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="avatar me-3 rounded-circle d-flex align-items-center justify-content-center shadow-sm text-white @gColor"
+                                             style="width: 40px; height: 40px;">
+                                            <i class="fas @gIcon"></i>
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <span class="fw-bold text-dark">@item.HoNV @item.TenNV</span>
+                                            <small class="text-muted text-xs">
+                                                (@(item.GioiTinh ?? "Chưa rõ")) - #@item.MaNV
+                                            </small>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span class="text-dark text-sm fw-bold">
+                                            <i class="fas fa-phone text-success me-2" style="width:15px"></i>@item.DienThoai
+                                        </span>
+                                        <span class="text-muted text-sm mt-1">
+                                            <i class="fas fa-envelope text-warning me-2" style="width:15px"></i>@item.Email
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span class="badge bg-primary bg-opacity-10 text-primary border border-primary mb-1" style="width: fit-content;">
+                                            @item.TenLNV
+                                        </span>
+                                        <small class="text-muted text-xs">User: <b>@item.TenDN</b></small>
+                                    </div>
+                                </td>
+
+                                <td style="max-width: 250px;">
+                                    <div class="d-flex align-items-start text-truncate" title="@item.DiaChiFull">
+                                        <i class="fas fa-map-marker-alt text-danger mt-1 me-2"></i>
+                                        <span class="text-sm">@item.DiaChiFull</span>
+                                    </div>
+                                </td>
+
+                                <td class="text-center">
+                                    <div class="btn-group shadow-sm">
+                                        <a asp-action="Edit" asp-route-id="@item.MaNV" class="btn btn-sm btn-outline-primary" title="Sửa">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a asp-action="Details" asp-route-id="@item.MaNV" class="btn btn-sm btn-outline-info" title="Xem">
+                                            <i class="fas fa-info-circle"></i>
+                                        </a>
+                                        <a asp-action="Delete" asp-route-id="@item.MaNV" class="btn btn-sm btn-outline-danger" title="Xóa">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

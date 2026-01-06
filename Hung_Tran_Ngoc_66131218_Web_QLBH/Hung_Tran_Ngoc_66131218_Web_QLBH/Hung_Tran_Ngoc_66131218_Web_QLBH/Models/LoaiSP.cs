@@ -15,5 +15,7 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
 
         [Display(Name = "Mã nhóm sản phẩm")]
         public int MaNhomSP { get; set; }
+
+        public string? TenNhomSP {get; set; }
     }
 }

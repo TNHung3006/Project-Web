@@ -18,7 +18,15 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         public DonMuaHangsController(ApplicationDbContext db) => _db = db;
 
 
-        public IActionResult Index() => View(_db.DonMuaHang_GetAll());
+        public IActionResult Index(string? search)
+        {
+            // Lưu từ khóa tìm kiếm vào ViewData để hiển thị lại trên form
+            ViewData["CurrentFilter"] = search;
+            // Gọi phương thức GetData với tham số search. 
+            // Phương thức này sẽ gọi Stored Procedure đã sửa của bạn.
+            var list = _db.DonMuaHang_GetAll(search);
+            return View(list);
+        }
 
         // GET: LoaiSPs/Create
         public IActionResult Create()

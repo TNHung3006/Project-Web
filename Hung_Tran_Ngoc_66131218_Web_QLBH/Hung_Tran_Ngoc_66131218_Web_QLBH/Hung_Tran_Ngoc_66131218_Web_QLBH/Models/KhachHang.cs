@@ -43,14 +43,14 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
 
         [Display(Name = "Ảnh khách hàng")]
         [StringLength(200)]
-        public string? AnhKH { get; set; } // Vẫn giữ ? vì khách có thể chưa cập nhật avatar
+        public string? AnhKH { get; set; } 
 
         [Display(Name = "Địa chỉ khách hàng")]
         [StringLength(200)]
-        public string? DiaChi { get; set; } // Vẫn giữ ? nếu không ép buộc nhập địa chỉ ngay
+        public string? DiaChi { get; set; } 
 
         [Display(Name = "Mã xã")]
-        public int MaXa { get; set; } // Int mặc định là không null, nếu muốn null phải dùng int?
+        public int MaXa { get; set; } 
 
         public string? DiaChiFull { get; set; }
     }

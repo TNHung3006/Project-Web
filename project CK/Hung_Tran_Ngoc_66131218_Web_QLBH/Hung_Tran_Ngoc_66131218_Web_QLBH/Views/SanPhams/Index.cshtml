@@ -14,6 +14,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.MaSP)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.TenSP)
             </th>
             <th>
@@ -56,6 +59,9 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaSP)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.TenSP)
                 </td>

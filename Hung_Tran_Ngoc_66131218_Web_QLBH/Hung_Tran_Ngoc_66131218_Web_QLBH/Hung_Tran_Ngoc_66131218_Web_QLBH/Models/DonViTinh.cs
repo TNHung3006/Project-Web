@@ -10,7 +10,7 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Mã đơn vị tính")]
         public int MaDVT { get; set; }
 
-        [Display(Name = "Tên nước")]
+        [Display(Name = "Tên đơn vị tính")]
         public string TenDVT { get; set; } = null!;
 
     }

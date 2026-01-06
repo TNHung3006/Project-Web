@@ -17,7 +17,15 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         public NhaCCsController(ApplicationDbContext db) => _db = db;
 
         // GET: NhaCCs
-        public IActionResult Index() => View(_db.NhaCC_GetAll());
+        public IActionResult Index(string? search)
+        {
+            // Lưu từ khóa tìm kiếm vào ViewData để hiển thị lại trên form
+            ViewData["CurrentFilter"] = search;
+            // Gọi phương thức GetData với tham số search. 
+            // Phương thức này sẽ gọi Stored Procedure đã sửa của bạn.
+            var list = _db.NhaCC_GetAll(search);
+            return View(list);
+        }
         // GET: NhaCCs/Details/5
         public IActionResult Details(int id)
         {

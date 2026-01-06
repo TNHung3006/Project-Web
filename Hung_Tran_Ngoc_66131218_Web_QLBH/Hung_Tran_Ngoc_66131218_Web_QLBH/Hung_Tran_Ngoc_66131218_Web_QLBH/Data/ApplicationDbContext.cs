@@ -225,10 +225,14 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
 
         //4. Nước
         //4.1.
-        public List<Nuoc> Nuoc_GetAll()
+        public List<Nuoc> Nuoc_GetAll(string? search = null!)
         {
 
-            return n.FromSqlRaw("EXEC Nuoc_GetAll").ToList();
+            if (string.IsNullOrEmpty(search))
+                return n.FromSqlRaw("EXEC Nuoc_GetAll @Search = NULL").ToList();
+
+            var p = new SqlParameter("@Search", search);
+            return n.FromSqlRaw("EXEC Nuoc_GetAll @Search", p).ToList();
         }
         //4.2.
         public Nuoc? Nuoc_GetById(string nuoc)
@@ -270,10 +274,13 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
 
         //5. Tỉnh
         //5.1.
-        public List<Tinh> Tinh_GetAll()
+        public List<Tinh> Tinh_GetAll(string? search = null!)
         {
+            if (string.IsNullOrEmpty(search))
+                return t.FromSqlRaw("EXEC Tinh_GetAll @Search = NULL").ToList();
 
-            return t.FromSqlRaw("EXEC Tinh_GetAll").ToList();
+            var p = new SqlParameter("@Search", search);
+            return t.FromSqlRaw("EXEC Tinh_GetAll @Search", p).ToList();
         }
         //5.2.
         public Tinh? Tinh_GetById(int tinh)
@@ -319,10 +326,13 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
 
         //6. Xã
         //6.1.
-        public List<Xa> Xa_GetAll()
+        public List<Xa> Xa_GetAll(string? search = null!)
         {
+            if (string.IsNullOrEmpty(search))
+                return x.FromSqlRaw("EXEC Xa_GetAll @Search = NULL").ToList();
 
-            return x.FromSqlRaw("EXEC Xa_GetAll").ToList();
+            var p = new SqlParameter("@Search", search);
+            return x.FromSqlRaw("EXEC Xa_GetAll @Search", p).ToList();
         }
         //6.2.
         public Xa? Xa_GetById(int xa)
@@ -368,10 +378,13 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
 
         //7. Nhà cung cấp
         //7.1.
-        public List<NhaCC> NhaCC_GetAll()
+        public List<NhaCC> NhaCC_GetAll(string? search = null)
         {
+            if (string.IsNullOrEmpty(search))
+                return ncc.FromSqlRaw("EXEC NhaCC_GetAll @Search = NULL").ToList();
 
-            return ncc.FromSqlRaw("EXEC NhaCC_GetAll").ToList();
+            var p = new SqlParameter("@Search", search);
+            return ncc.FromSqlRaw("EXEC NhaCC_GetAll @Search", p).ToList();
         }
         //7.2.
         public NhaCC? NhaCC_GetById(int nhaCC)
@@ -493,10 +506,14 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
 
         //9. Đơn Mua Hàng
         //9.1.
-        public List<DonMuaHang> DonMuaHang_GetAll()
+        public List<DonMuaHang> DonMuaHang_GetAll(string? search = null)
         {
 
-            return dmh.FromSqlRaw("EXEC DonMuaHang_GetAll").ToList();
+            if (string.IsNullOrEmpty(search))
+                return dmh.FromSqlRaw("EXEC DonMuaHang_GetAll @Search = NULL").ToList();
+
+            var p = new SqlParameter("@Search", search);
+            return dmh.FromSqlRaw("EXEC DonMuaHang_GetAll @Search", p).ToList();
         }
         //9.2.
         public DonMuaHang? DonMuaHang_GetById(int donmuahang)
@@ -546,10 +563,14 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
 
         //10. Đơn Bán Hàng
         //10.1.
-        public List<DonBanHang> DonBanHang_GetAll()
+        public List<DonBanHang> DonBanHang_GetAll(string? search = null)
         {
 
-            return dbh.FromSqlRaw("EXEC DonBanHang_GetAll").ToList();
+            if (string.IsNullOrEmpty(search))
+                return dbh.FromSqlRaw("EXEC DonBanHang_GetAll @Search = NULL").ToList();
+
+            var p = new SqlParameter("@Search", search);
+            return dbh.FromSqlRaw("EXEC DonBanHang_GetAll @Search", p).ToList();
         }
         //10.2.
         public DonBanHang? DonBanHang_GetById(int donbanhang)
@@ -567,7 +588,7 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             var p = new[]
             {
                 new SqlParameter("@NgayBan", dbh.NgayBan),
-                new SqlParameter("@DiaChiGH", dbh.DiaChiGH),
+                new SqlParameter("@DiaChiGH", dbh.DiaChiGH ?? (object)DBNull.Value),
                 new SqlParameter("@MaKH", dbh.MaKH),
                 new SqlParameter("@MaXa", dbh.MaXa),
                 new SqlParameter("@MaTTDBH", dbh.MaTTDBH)
@@ -583,7 +604,7 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
             {
                 new SqlParameter("@MaDBH", dbh.MaDBH),
                 new SqlParameter("@NgayBan", dbh.NgayBan),
-                new SqlParameter("@DiaChiGH", dbh.DiaChiGH),
+                new SqlParameter("@DiaChiGH", dbh.DiaChiGH ?? (object)DBNull.Value),
                 new SqlParameter("@MaKH", dbh.MaKH),
                 new SqlParameter("@MaXa", dbh.MaXa),
                 new SqlParameter("@MaTTDBH", dbh.MaTTDBH)
@@ -756,9 +777,13 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Data
 
         //13. Nhân Viên
         //13.1.
-        public List<NhanVien> NhanVien_GetAll()
+        public List<NhanVien> NhanVien_GetAll(string? search = null)
         {
-            return nv.FromSqlRaw("EXEC NhanVien_GetAll").ToList();
+            if (string.IsNullOrEmpty(search))
+                return nv.FromSqlRaw("EXEC NhanVien_GetAll @Search = NULL").ToList();
+
+            var p = new SqlParameter("@Search", search);
+            return nv.FromSqlRaw("EXEC NhanVien_GetAll @Search", p).ToList();
         }
 
         //13.2.

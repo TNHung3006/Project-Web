@@ -1,99 +1,68 @@
 ﻿@model IEnumerable<Hung_Tran_Ngoc_66131218_Web_QLBH.Models.KhachHang>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Danh sách khách hàng (Lưới)";
 }
 
-<h1>Index</h1>
+<div class="container py-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold text-primary"><i class="fas fa-th-large me-2"></i>Khách Hàng</h3>
 
-<form asp-action="Index" method="get" class="mb-3">
-    <div class="input-group">
-        <input type="text" name="search" value="@ViewData["CurrentFilter"]" class="form-control" placeholder="Tìm kiếm khách hàng..." />
-        <button type="submit" class="btn btn-primary">Tìm</button>
+        <div class="d-flex gap-2">
+            <form asp-action="Index" method="get" class="d-flex">
+                <input type="text" name="search" value="@ViewData["CurrentFilter"]" class="form-control me-2 rounded-pill border-primary" placeholder="Tìm kiếm..." />
+                <button type="submit" class="btn btn-primary rounded-pill px-4">Tìm</button>
+            </form>
+            <a asp-action="Create" class="btn btn-success rounded-pill px-4 shadow-sm"><i class="fas fa-plus"></i> Tạo mới</a>
+        </div>
     </div>
-</form>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MaKH)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenDN)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MatKhau)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HoKH)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenKH)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AnhKH)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DiaChi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SDT)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaXa)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaKH)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TenDN)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MatKhau)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HoKH)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TenKH)
-                </td>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-shadow transition-card">
+                    <div class="position-relative text-center pt-4 pb-2 bg-light rounded-top">
+                        @if (!string.IsNullOrEmpty(item.AnhKH))
+                        {
+                            <img src="/images/uploads/@item.AnhKH" class="rounded-circle border border-4 border-white shadow" style="width: 100px; height: 100px; object-fit: cover;" alt="Avatar" />
+                        }
+                        else
+                        {
+                            <div class="rounded-circle bg-secondary d-inline-flex align-items-center justify-content-center text-white border border-4 border-white shadow" style="width: 100px; height: 100px;">
+                                <i class="fas fa-user fa-3x"></i>
+                            </div>
+                        }
+                    </div>
 
-                <td>
-                    @if (!string.IsNullOrEmpty(item.AnhKH))
-                    {
-                        <img src="/images/uploads/@item.AnhKH" alt="Ảnh KH" style="width: 100px; height: auto; object-fit: cover;" />
-                    }
-                    else
-                    {
-                        <span>Chưa có ảnh</span>
-                    }
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DiaChiFull)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.SDT)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaXa)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.MaKH">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.MaKH">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.MaKH">Delete</a>
-                </td>
-            </tr>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-dark mb-1">@item.HoKH @item.TenKH</h5>
+                        <p class="text-muted small mb-3">@item.TenDN</p>
+
+                        <div class="d-flex justify-content-center gap-2 mb-3">
+                            <span class="badge bg-primary bg-opacity-10 text-primary"><i class="fas fa-phone me-1"></i> @item.SDT</span>
+                        </div>
+
+                        <p class="card-text small text-secondary text-truncate" title="@item.DiaChiFull">
+                            <i class="fas fa-map-marker-alt text-danger me-1"></i> @item.DiaChiFull
+                        </p>
+                    </div>
+
+                    <div class="card-footer bg-white border-top-0 d-flex justify-content-between pb-3">
+                        <a asp-action="Edit" asp-route-id="@item.MaKH" class="btn btn-sm btn-light text-primary fw-bold flex-fill me-1">Sửa</a>
+                        <a asp-action="Details" asp-route-id="@item.MaKH" class="btn btn-sm btn-light text-info fw-bold flex-fill me-1">Xem</a>
+                        <a asp-action="Delete" asp-route-id="@item.MaKH" class="btn btn-sm btn-light text-danger fw-bold flex-fill">Xóa</a>
+                    </div>
+                </div>
+            </div>
         }
-    </tbody>
-</table>
+    </div>
+</div>
+
+<style>
+    .hover-shadow:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+        transition: all 0.3s;
+    }
+</style>

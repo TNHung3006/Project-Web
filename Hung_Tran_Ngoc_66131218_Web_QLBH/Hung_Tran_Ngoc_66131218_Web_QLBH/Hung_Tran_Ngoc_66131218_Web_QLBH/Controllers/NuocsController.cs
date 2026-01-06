@@ -16,19 +16,27 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
 
         public NuocsController(ApplicationDbContext db) => _db = db;
 
-        // GET: NhomSPs
-        public IActionResult Index() => View(_db.Nuoc_GetAll());
-        // GET: NhomSPs/Details/5
+        // GET: Nuocs
+        public IActionResult Index(string? search)
+        {
+            // Lưu từ khóa tìm kiếm vào ViewData để hiển thị lại trên form
+            ViewData["CurrentFilter"] = search;
+            // Gọi phương thức GetData với tham số search. 
+            // Phương thức này sẽ gọi Stored Procedure đã sửa của bạn.
+            var list = _db.Nuoc_GetAll(search);
+            return View(list);
+        }
+        // GET: Nuocss/Details/5
         public IActionResult Details(string id)
         {
             var n = _db.Nuoc_GetById(id);
             return View(n);
         }
 
-        // GET: NhomSPs/Create
+        // GET: Nuocs/Create
         public IActionResult Create() => View();
 
-        // POST: NhomSPs/Create
+        // POST: Nuocs/Create
         [HttpPost]
         public IActionResult Create(Nuoc n)
         {
@@ -36,14 +44,14 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: NhomSPs/Edit/5
+        // GET: Nuocs/Edit/5
         public IActionResult Edit(string id)
         {
             var nuoc = _db.Nuoc_GetById(id);
             return View(nuoc);
         }
 
-        // POST: NhomSPs/Edit/5
+        // POST: Nuocs/Edit/5
         [HttpPost]
         public IActionResult Edit(string id, Nuoc nuoc)
         {
@@ -51,14 +59,14 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: NhomSPs/Delete/5
+        // GET: Nuocs/Delete/5
         public IActionResult Delete(string id)
         {
             var n = _db.Nuoc_GetById(id);
             return View(n);
         }
 
-        // POST: NhomSPs/Delete/5
+        // POST: Nuocs/Delete/5
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(string id)
         {

@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+
 namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
 {
     [Table("SanPham")]
@@ -10,18 +11,24 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         public int MaSP { get; set; }
 
         [Display(Name = "Tên sản phẩm")]
-        public string? TenSP { get; set; }
+        [Required(ErrorMessage = "Tên sản phẩm là bắt buộc")]
+        [StringLength(200, ErrorMessage = "Tên sản phẩm không quá 200 ký tự")]
+        public string TenSP { get; set; } = null!;
 
         [Display(Name = "Đơn giá")]
+        [Required(ErrorMessage = "Đơn giá là bắt buộc")]
+        [Range(0, double.MaxValue, ErrorMessage = "Đơn giá phải lớn hơn hoặc bằng 0")]
+        // Nếu dùng EF Core, có thể cần thêm [Column(TypeName = "decimal(18,2)")]
         public decimal DonGia { get; set; }
 
         [Display(Name = "Ảnh sản phẩm")]
+        [StringLength(200)]
         public string? AnhSP { get; set; }
 
         [Display(Name = "Mô tả sản phẩm")]
         public string? MoTaSP { get; set; }
 
-        [Display(Name = "mã loại sản phẩm")]
+        [Display(Name = "Mã loại sản phẩm")]
         public int MaLSP { get; set; }
 
         [Display(Name = "Mã đơn vị tính")]
@@ -32,6 +39,7 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
 
         [Display(Name = "Mã hãng sản xuất")]
         public int MaHSX { get; set; }
+
 
         [Display(Name = "Hãng sản xuất")]
         public string? HangSX { get; set; }
@@ -44,6 +52,5 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
 
         [Display(Name = "Đơn vị tính")]
         public string? TenDVT { get; set; }
-
     }
 }

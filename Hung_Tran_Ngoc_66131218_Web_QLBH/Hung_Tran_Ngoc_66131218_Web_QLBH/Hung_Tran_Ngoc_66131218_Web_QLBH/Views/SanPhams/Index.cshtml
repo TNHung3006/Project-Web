@@ -1,116 +1,93 @@
 ﻿@model IEnumerable<Hung_Tran_Ngoc_66131218_Web_QLBH.Models.SanPham>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Danh sách sản phẩm";
 }
 
-<h1>Index</h1>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Create New</a>
-</p>
+<div class="container py-4">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+        <h3 class="fw-bold text-primary"><i class="fas fa-box-open me-2"></i>QUẢN LÝ SẢN PHẨM</h3>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MaSP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenSP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DonGia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AnhSP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MoTaSP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaLSP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LoaiSP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaDVT)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenDVT)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaTT)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenTT)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaHSX)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HangSX)
-            </th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
+        <div class="d-flex gap-2">
+            <a asp-action="Create" class="btn btn-success rounded-pill px-4 shadow-sm fw-bold">
+                <i class="fas fa-plus-circle me-1"></i> Thêm Sản Phẩm
+            </a>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaSP)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TenSP)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DonGia)
-                </td>
-                <td>
-                    @if (!string.IsNullOrEmpty(item.AnhSP))
-                    {
-                        <img src="/images/uploads/@item.AnhSP" alt="Ảnh SP" style="width: 100px; height: auto; object-fit: cover; border: 1px solid #ddd;" />
-                    }
-                    else
-                    {
-                        <span>No Image</span>
-                    }
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MoTaSP)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaLSP)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LoaiSP)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaDVT)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TenDVT)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaTT)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TenTT)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MaHSX)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.HangSX)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.MaSP" class="btn btn-sm btn-warning">Edit</a>
-                    <a asp-action="Details" asp-route-id="@item.MaSP" class="btn btn-sm btn-info">Details</a>
-                    <a asp-action="Delete" asp-route-id="@item.MaSP" class="btn btn-sm btn-danger">Delete</a>
-                </td>
-            </tr>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm hover-shadow transition-card position-relative overflow-hidden">
+
+                    <span class="position-absolute top-0 end-0 badge bg-warning text-dark m-2 shadow-sm rounded-pill">
+                        @item.TenTT
+                    </span>
+
+                    <div class="bg-white text-center p-3 d-flex align-items-center justify-content-center" style="height: 200px;">
+                        @if (!string.IsNullOrEmpty(item.AnhSP))
+                        {
+                            <img src="/images/uploads/@item.AnhSP" class="img-fluid" style="max-height: 100%; object-fit: contain;" alt="@item.TenSP" />
+                        }
+                        else
+                        {
+                            <div class="text-secondary d-flex flex-column align-items-center justify-content-center h-100 w-100 bg-light rounded">
+                                <i class="fas fa-image fa-3x mb-2"></i>
+                                <small>Chưa có ảnh</small>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="card-body pt-2">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <small class="text-uppercase text-muted fw-bold" style="font-size: 0.7rem;">@item.HangSX</small>
+                            <span class="badge bg-light text-secondary border">@item.LoaiSP</span>
+                        </div>
+
+                        <h5 class="card-title fw-bold text-dark text-truncate" title="@item.TenSP">
+                            @item.TenSP
+                        </h5>
+
+                        <h4 class="text-danger fw-bold my-2">
+                            @string.Format("{0:#,##0} đ", item.DonGia) <small class="text-muted fs-6 fw-normal">/@item.TenDVT</small>
+                        </h4>
+
+                        <p class="card-text small text-secondary text-truncate mb-3" title="@item.MoTaSP">
+                            @item.MoTaSP
+                        </p>
+                    </div>
+
+                    <div class="card-footer bg-white border-top-0 p-3 pt-0">
+                        <div class="d-flex justify-content-between gap-2">
+                            <a asp-action="Edit" asp-route-id="@item.MaSP" class="btn btn-outline-primary btn-sm flex-fill fw-bold" title="Sửa">
+                                <i class="fas fa-edit"></i> Sửa
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.MaSP" class="btn btn-outline-info btn-sm flex-fill fw-bold" title="Chi tiết">
+                                <i class="fas fa-eye"></i> Xem
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.MaSP" class="btn btn-outline-danger btn-sm flex-fill fw-bold" title="Xóa">
+                                <i class="fas fa-trash-alt"></i> Xóa
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         }
-    </tbody>
-</table>
+    </div>
+</div>
+
+<style>
+    /* Hiệu ứng khi rê chuột vào thẻ */
+    .hover-shadow:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    }
+
+    .transition-card {
+        transition: all 0.3s ease;
+    }
+</style>
