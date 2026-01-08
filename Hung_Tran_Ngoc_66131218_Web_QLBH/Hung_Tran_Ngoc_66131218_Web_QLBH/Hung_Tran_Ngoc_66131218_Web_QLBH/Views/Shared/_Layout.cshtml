@@ -1,50 +1,249 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<html lang="vi">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Hung_Tran_Ngoc_66131218_Web_QLBH</title>
+    <title>@ViewData["Title"] - Quản Lý Bán Hàng</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Hung_Tran_Ngoc_66131218_Web_QLBH.styles.css" asp-append-version="true" />
+
+    <style>
+        /* CSS riêng cho Layout Admin Dashboard */
+        body {
+            overflow-x: hidden;
+            background-color: #f4f6f9;
+        }
+
+        /* Sidebar styling */
+        #sidebar-wrapper {
+            min-height: 100vh;
+            margin-left: -15rem;
+            transition: margin .25s ease-out;
+            background-color: #343a40; /* Màu nền tối */
+        }
+
+            #sidebar-wrapper .sidebar-heading {
+                padding: 0.875rem 1.25rem;
+                font-size: 1.2rem;
+                font-weight: bold;
+                color: #fff;
+                background-color: #212529;
+                border-bottom: 1px solid #4b545c;
+            }
+
+            #sidebar-wrapper .list-group {
+                width: 15rem;
+            }
+
+        #page-content-wrapper {
+            min-width: 100vw;
+        }
+
+        body.sb-sidenav-toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+
+        /* --- MENU LINK STYLING (Đã sửa màu hover) --- */
+        .list-group-item-dark {
+            background-color: #343a40;
+            color: #c2c7d0; /* Màu chữ mặc định (xám nhạt) */
+            border: none;
+            border-bottom: 1px solid #4b545c;
+            transition: all 0.3s; /* Hiệu ứng chuyển màu mượt mà */
+        }
+
+            /* KHI DI CHUỘT VÀO (HOVER) - Đổi sang màu vàng sáng */
+            .list-group-item-dark:hover {
+                background-color: #495057 !important; /* Nền sáng hơn chút */
+                color: #ffc107 !important; /* MÀU VÀNG (GOLD) ĐỂ DỄ NHÌN */
+                padding-left: 1.5rem; /* Hiệu ứng đẩy chữ sang phải */
+            }
+
+            /* Link đang được chọn (Active) */
+            .list-group-item-dark.active {
+                background-color: #0d6efd;
+                border-color: #0d6efd;
+                color: #fff !important;
+                font-weight: bold;
+            }
+
+        /* Sub-menu styling */
+        .sub-menu .list-group-item {
+            background-color: #3f474e;
+            padding-left: 2.5rem;
+            font-size: 0.9rem;
+        }
+
+            /* Hover cho menu con cũng đổi màu vàng */
+            .sub-menu .list-group-item:hover {
+                background-color: #4b545c !important;
+                color: #ffc107 !important;
+            }
+
+        /* Responsive */
+        @@media (min-width: 768px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+
+            body.sb-sidenav-toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Hung_Tran_Ngoc_66131218_Web_QLBH</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+    <div class="d-flex" id="wrapper">
+        <div class="border-end bg-dark" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                <i class="fas fa-cubes me-2"></i>Web QLBH
+            </div>
+            <div class="list-group list-group-flush my-3">
+
+                <a asp-controller="Shop" asp-action="Index" class="list-group-item list-group-item-action list-group-item-warning fw-bold text-center mb-3 rounded shadow-sm">
+                    <i class="fas fa-store me-2"></i>XEM CỬA HÀNG
+                </a>
+
+                <a asp-controller="Home" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark bg-transparent">
+                    <i class="fas fa-tachometer-alt me-2"></i>Tổng quan (Dashboard)
+                </a>
+
+                <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
+                   data-bs-toggle="collapse" href="#menuSanPham" role="button" aria-expanded="false">
+                    <i class="fas fa-box me-2"></i>Quản lý Kho hàng
+                </a>
+                <div class="collapse sub-menu" id="menuSanPham">
+                    <a asp-controller="SanPhams" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">DS Sản phẩm</a>
+                    <a asp-controller="NhomSPs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Nhóm sản phẩm</a>
+                    <a asp-controller="LoaiSPs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Loại sản phẩm</a>
+                    <a asp-controller="HangSXs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Hãng sản xuất</a>
+                    <a asp-controller="DonViTinhs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Đơn vị tính</a>
+                    <a asp-controller="TrangThais" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Trạng thái SP</a>
+                    <a asp-controller="Nuocs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Quốc gia/Xuất xứ</a>
+                </div>
+
+                <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
+                   data-bs-toggle="collapse" href="#menuBanHang" role="button" aria-expanded="false">
+                    <i class="fas fa-shopping-cart me-2"></i>Hoạt động Bán hàng
+                </a>
+                <div class="collapse sub-menu" id="menuBanHang">
+                    <a asp-controller="DonBanHangs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Đơn Bán Hàng</a>
+                    <a asp-controller="CTBHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Chi tiết bán</a>
+                    <a asp-controller="KhachHangs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Khách hàng</a>
+                    <a asp-controller="TrangThaiDBHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Trạng thái đơn bán</a>
+                </div>
+
+                <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
+                   data-bs-toggle="collapse" href="#menuNhapHang" role="button" aria-expanded="false">
+                    <i class="fas fa-truck-loading me-2"></i>Hoạt động Nhập hàng
+                </a>
+                <div class="collapse sub-menu" id="menuNhapHang">
+                    <a asp-controller="DonMuaHangs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Đơn Mua Hàng</a>
+                    <a asp-controller="CTMHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Chi tiết mua</a>
+                    <a asp-controller="NhaCCs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Nhà cung cấp</a>
+                    <a asp-controller="TrangThaiDMHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Trạng thái đơn mua</a>
+                </div>
+
+                <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
+                   data-bs-toggle="collapse" href="#menuHeThong" role="button" aria-expanded="false">
+                    <i class="fas fa-cogs me-2"></i>Hệ thống & Nhân sự
+                </a>
+                <div class="collapse sub-menu" id="menuHeThong">
+                    <a asp-controller="NhanViens" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Nhân viên</a>
+                    <a asp-controller="LoaiNVs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Chức vụ / Loại NV</a>
+                    <a asp-controller="Tinhs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Tỉnh / Thành phố</a>
+                    <a asp-controller="Xas" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Xã / Phường</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-4 py-3">
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-outline-dark" id="sidebarToggle"><i class="fas fa-bars"></i></button>
+                    <h4 class="ms-3 mb-0 text-secondary d-none d-sm-block">Hệ thống quản lý</h4>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark fw-bold" href="/">
+                                <i class="fas fa-home me-1"></i> Trang chủ
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user-circle me-1"></i> Admin
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Hồ sơ</a>
+                                <a class="dropdown-item" href="#">Cài đặt</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#">Đăng xuất</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
+            </nav>
+
+            <div class="container-fluid px-4 py-4">
+                @RenderBody()
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Hung_Tran_Ngoc_66131218_Web_QLBH - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        // 1. Logic đóng mở Sidebar khi bấm nút
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("sidebarToggle");
+
+        toggleButton.onclick = function () {
+            el.classList.toggle("sb-sidenav-toggled");
+        };
+
+        // 2. LOGIC: Tự động Highlight Menu và Mở nhóm khi load trang
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPath = window.location.pathname.toLowerCase();
+            const menuLinks = document.querySelectorAll('#sidebar-wrapper .list-group-item');
+
+            menuLinks.forEach(link => {
+                const linkPath = link.getAttribute('href').toLowerCase();
+
+                if (linkPath !== '/' && currentPath.includes(linkPath)) {
+
+                    // a. Highlight link con
+                    link.classList.add('active');
+
+                    // b. Tìm nhóm cha (div chứa sub-menu) và mở nó ra
+                    const parentGroup = link.closest('.collapse');
+                    if (parentGroup) {
+                        parentGroup.classList.add('show');
+
+                        // c. Highlight tên Nhóm (Đã sửa thành màu vàng text-warning)
+                        const triggerId = parentGroup.getAttribute('id');
+                        const triggerLink = document.querySelector(`[href="#${triggerId}"]`);
+                        if (triggerLink) {
+                            triggerLink.classList.remove('collapsed');
+                            triggerLink.setAttribute('aria-expanded', 'true');
+                            triggerLink.classList.add('text-warning'); // SỬA: Đổi thành màu vàng
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

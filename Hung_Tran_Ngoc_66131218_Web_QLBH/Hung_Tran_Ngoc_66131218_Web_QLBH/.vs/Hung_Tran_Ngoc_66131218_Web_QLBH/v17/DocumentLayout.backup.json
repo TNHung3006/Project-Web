@@ -3,6 +3,66 @@
   "WorkspaceRootPath": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\views\\shared\\_layoutcustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\views\\shop\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\views\\shop\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\models\\loaisp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\models\\loaisp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\controllers\\hangsxscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\controllers\\hangsxscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|d:\\project-qlbh-web\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\hung_tran_ngoc_66131218_web_qlbh\\views\\xas\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{76C89E43-294D-48F2-B915-58BEF749E346}|Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj|solutionrelative:hung_tran_ngoc_66131218_web_qlbh\\views\\xas\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -250,24 +310,219 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shop\\Details.cshtml",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shop\\Details.cshtml",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shop\\Details.cshtml",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shop\\Details.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAwwDkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-08T10:49:11.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\GioHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\GioHang\\Index.cshtml",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\GioHang\\Index.cshtml",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\GioHang\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-08T10:41:58.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GioHangController.cs",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\GioHangController.cs",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\GioHangController.cs",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\GioHangController.cs",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\GioHangController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAswDUAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T10:41:01.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\CartItem.cs",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\CartItem.cs",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T10:39:37.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shop\\Index.cshtml",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shop\\Index.cshtml",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shop\\Index.cshtml",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shop\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-08T08:52:21.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LayoutCustomer.cshtml",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shared\\_LayoutCustomer.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAADkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-08T08:51:46.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Program.cs",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Program.cs",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Program.cs",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T08:10:49.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoaiSP.cs",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\LoaiSP.cs",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\LoaiSP.cs",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\LoaiSP.cs",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\LoaiSP.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAYwBUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T09:14:32.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\SanPham.cs",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\SanPham.cs",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\SanPham.cs",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Models\\SanPham.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T09:14:27.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ShopController.cs",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\ShopController.cs",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\ShopController.cs",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\ShopController.cs",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\ShopController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA/wCUAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T08:50:30.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAwwPIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-08T08:06:55.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HangSXsController.cs",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\HangSXsController.cs",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\HangSXsController.cs",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\HangSXsController.cs",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\HangSXsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T08:36:04.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAwwG0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-08T08:33:12.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwB4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T08:07:35.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T08:39:58.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Delete.cshtml",
               "ToolTip": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Delete.cshtml",
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Delete.cshtml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAqwC8AAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwB4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-07T16:40:30.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 16,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Details.cshtml",
@@ -275,12 +530,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Details.cshtml",
               "ViewState": "AgIAAAsAAAAAAAAAAAAqwC0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:40:25.609Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:40:25.609Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 17,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Edit.cshtml",
@@ -288,12 +542,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Edit.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAqwDkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:40:19.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:40:19.25Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 18,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Create.cshtml",
@@ -301,12 +554,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Xas\\Create.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAqwDMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:40:01.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:40:01.054Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 19,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Delete.cshtml",
@@ -314,12 +566,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Delete.cshtml",
               "ViewState": "AgIAAA4AAAAAAAAAAAAqwCoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:39:16.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:39:16.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 20,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Details.cshtml",
@@ -327,12 +578,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Details.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwCcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:39:11.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:39:11.77Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 21,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Edit.cshtml",
@@ -340,12 +590,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Edit.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:39:05.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:39:05.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 22,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Create.cshtml",
@@ -353,12 +602,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThais\\Create.cshtml",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:38:56.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:38:56.571Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 23,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Delete.cshtml",
@@ -366,12 +614,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Delete.cshtml",
               "ViewState": "AgIAAAgAAAAAAAAAAAAqwCoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:36:12.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:36:12.492Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 24,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Details.cshtml",
@@ -379,12 +626,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Details.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwCcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:36:06.651Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:36:06.651Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 25,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Edit.cshtml",
@@ -392,12 +638,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Edit.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:36:00.275Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:36:00.275Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 26,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Create.cshtml",
@@ -405,12 +650,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDMHs\\Create.cshtml",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:35:52.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:35:52.635Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 27,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Delete.cshtml",
@@ -418,12 +662,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Delete.cshtml",
               "ViewState": "AgIAAAgAAAAAAAAAAAAqwCoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:34:56.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:34:56.851Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 28,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Details.cshtml",
@@ -431,12 +674,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Details.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwCcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:34:51.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:34:51.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 29,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Edit.cshtml",
@@ -444,12 +686,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Edit.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:34:44.898Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:34:44.898Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 30,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Create.cshtml",
@@ -457,12 +698,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\TrangThaiDBHs\\Create.cshtml",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:34:36.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:34:36.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 31,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Delete.cshtml",
@@ -470,12 +710,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Delete.cshtml",
               "ViewState": "AgIAAAIAAAAAAAAAAAAqwCoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:31:28.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:31:28.241Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 32,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Details.cshtml",
@@ -483,12 +722,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Details.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwCcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:31:22.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:31:22.979Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 33,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Edit.cshtml",
@@ -496,12 +734,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Edit.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:31:12.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:31:12.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 34,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Create.cshtml",
@@ -509,12 +746,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Tinhs\\Create.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:31:02.301Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:31:02.301Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 35,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Delete.cshtml",
@@ -522,12 +758,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Delete.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAAAqwCYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:27:12.476Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:27:12.476Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 36,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Details.cshtml",
@@ -535,12 +770,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Details.cshtml",
               "ViewState": "AgIAAAEAAAAAAAAAAAAqwCMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:27:07.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:27:07.578Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 37,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Edit.cshtml",
@@ -548,12 +782,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Edit.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:27:02.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:27:02.932Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 38,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Create.cshtml",
@@ -561,12 +794,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\Nuocs\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:25:59.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:25:59.808Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 39,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Delete.cshtml",
@@ -574,12 +806,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Delete.cshtml",
               "ViewState": "AgIAAAgAAAAAAAAAAAAqwCoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:25:00.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:25:00.963Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 40,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Details.cshtml",
@@ -587,12 +818,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Details.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwCcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:24:56.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:24:56.059Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 41,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Edit.cshtml",
@@ -600,12 +830,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Edit.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:24:50.031Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:24:50.031Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 42,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Create.cshtml",
@@ -613,12 +842,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhomSPs\\Create.cshtml",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:24:42.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:24:42.731Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 44,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Delete.cshtml",
@@ -626,12 +854,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Delete.cshtml",
               "ViewState": "AgIAAAsAAAAAAAAAAAAqwCMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:17:30.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:17:30.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 43,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Details.cshtml",
@@ -639,12 +866,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Details.cshtml",
               "ViewState": "AgIAABAAAAAAAAAAAAAqwCMAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:17:24.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:17:24.424Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 45,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Edit.cshtml",
@@ -652,12 +878,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Edit.cshtml",
               "ViewState": "AgIAAI0AAAAAAAAAAAAqwLEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:17:14.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:17:14.912Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 46,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Create.cshtml",
@@ -665,12 +890,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhanViens\\Create.cshtml",
               "ViewState": "AgIAAJ4AAAAAAAAAAAAqwLAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:17:03.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:17:03.339Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 48,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Create.cshtml",
@@ -678,12 +902,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Create.cshtml",
               "ViewState": "AgIAAGAAAAAAAAAAAAAqwIEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:13:10.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:13:10.871Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 49,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Edit.cshtml",
@@ -691,12 +914,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Edit.cshtml",
               "ViewState": "AgIAAFwAAAAAAAAAAAAqwIAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:12:59.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:12:59.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 50,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Details.cshtml",
@@ -704,12 +926,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Details.cshtml",
               "ViewState": "AgIAAB4AAAAAAAAAAAAqwEAAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:12:50.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:12:50.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 51,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Delete.cshtml",
@@ -717,12 +938,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\NhaCCs\\Delete.cshtml",
               "ViewState": "AgIAABcAAAAAAAAAAAAqwDkAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:12:42.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:12:42.891Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 47,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Delete.cshtml",
@@ -730,12 +950,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Delete.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwC8AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:08:44.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:08:44.509Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 52,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Details.cshtml",
@@ -743,12 +962,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Details.cshtml",
               "ViewState": "AgIAAAsAAAAAAAAAAAAqwC0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:08:39.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:08:39.95Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 53,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Edit.cshtml",
@@ -756,12 +974,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Edit.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAqwDkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:08:35.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:08:35.429Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 54,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Create.cshtml",
@@ -769,12 +986,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiSPs\\Create.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAqwDMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:08:29.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:08:29.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 55,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Delete.cshtml",
@@ -782,12 +998,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Delete.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAAAuwCYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:06:19.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:06:19.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 56,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Details.cshtml",
@@ -795,12 +1010,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Details.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwCcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:06:13.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:06:13.269Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 57,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Edit.cshtml",
@@ -808,12 +1022,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Edit.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:06:07.086Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:06:07.086Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 58,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Create.cshtml",
@@ -821,12 +1034,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\LoaiNVs\\Create.cshtml",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T16:05:56.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T16:05:56.468Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 61,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Delete.cshtml",
@@ -834,12 +1046,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Delete.cshtml",
               "ViewState": "AgIAABoAAAAAAAAAAAAqwDwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:56:56.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:56:56.642Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 59,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Details.cshtml",
@@ -847,12 +1058,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Details.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:56:50.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:56:50.819Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 60,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Edit.cshtml",
@@ -860,12 +1070,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Edit.cshtml",
               "ViewState": "AgIAAEUAAAAAAAAAAAAqwKgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:56:42.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:56:42.99Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 62,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Create.cshtml",
@@ -873,12 +1082,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\KhachHangs\\Create.cshtml",
               "ViewState": "AgIAAHgAAAAAAAAAAAAqwJwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:56:32.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:56:32.816Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 63,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Delete.cshtml",
@@ -886,12 +1094,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Delete.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAqwC4AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:54:38.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:54:38.255Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 64,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Details.cshtml",
@@ -899,12 +1106,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Details.cshtml",
               "ViewState": "AgIAAAsAAAAAAAAAAAAqwC0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:54:32.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:54:32.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 65,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Edit.cshtml",
@@ -912,12 +1118,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Edit.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAqwDkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:54:26.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:54:26.751Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 66,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Create.cshtml",
@@ -925,12 +1130,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\HangSXs\\Create.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAqwDMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:54:18.796Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:54:18.796Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 67,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Create.cshtml",
@@ -938,12 +1142,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Create.cshtml",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:50:16.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:50:16.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 68,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Edit.cshtml",
@@ -951,12 +1154,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Edit.cshtml",
               "ViewState": "AgIAAA0AAAAAAAAAAAAqwDEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:50:13.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:50:13.038Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 69,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Details.cshtml",
@@ -964,12 +1166,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Details.cshtml",
               "ViewState": "AgIAAAUAAAAAAAAAAAAqwCcAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:50:05.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:50:05.357Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 70,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Delete.cshtml",
@@ -977,12 +1178,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonViTinhs\\Delete.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAAAqwCYAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:50:00.432Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:50:00.432Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 71,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Create.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Create.cshtml",
@@ -990,12 +1190,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Create.cshtml",
               "ViewState": "AgIAADMAAAAAAAAAAAAqwFcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:48:57.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:48:57.415Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 72,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Edit.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Edit.cshtml",
@@ -1003,12 +1202,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Edit.cshtml",
               "ViewState": "AgIAAA4AAAAAAAAAAAAqwFkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:48:45.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:48:45.189Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 73,
               "Title": "Details.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Details.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Details.cshtml",
@@ -1016,12 +1214,11 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Details.cshtml",
               "ViewState": "AgIAABIAAAAAAAAAAAAqwDQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:48:38.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:48:38.731Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 74,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Delete.cshtml",
               "RelativeDocumentMoniker": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Delete.cshtml",
@@ -1029,8 +1226,7 @@
               "RelativeToolTip": "Hung_Tran_Ngoc_66131218_Web_QLBH\\Views\\DonMuaHangs\\Delete.cshtml",
               "ViewState": "AgIAABAAAAAAAAAAAAAqwDIAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-07T15:48:34.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T15:48:34.079Z"
             }
           ]
         }

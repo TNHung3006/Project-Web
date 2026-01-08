@@ -18,7 +18,6 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Đơn giá")]
         [Required(ErrorMessage = "Đơn giá là bắt buộc")]
         [Range(0, double.MaxValue, ErrorMessage = "Đơn giá phải lớn hơn hoặc bằng 0")]
-        // Nếu dùng EF Core, có thể cần thêm [Column(TypeName = "decimal(18,2)")]
         public decimal DonGia { get; set; }
 
         [Display(Name = "Ảnh sản phẩm")]
@@ -42,16 +41,22 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Mã hãng sản xuất")]
         public int MaHSX { get; set; }
 
+        // --- CÁC THUỘC TÍNH PHỤ (KHÔNG CÓ TRONG CSDL) ---
+        // Phải thêm [NotMapped] để tránh lỗi "Invalid column name"
 
+        [NotMapped]
         [Display(Name = "Hãng sản xuất")]
         public string? HangSX { get; set; }
 
+        [NotMapped]
         [Display(Name = "Loại sản phẩm")]
-        public string? LoaiSP { get; set; }
+        public string? LoaiSP { get; set; } // Đây là string lưu Tên Loại
 
+        [NotMapped]
         [Display(Name = "Trạng thái")]
         public string? TenTT { get; set; }
 
+        [NotMapped]
         [Display(Name = "Đơn vị tính")]
         public string? TenDVT { get; set; }
     }

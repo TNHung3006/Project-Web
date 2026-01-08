@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lq6ofMA8qBcVP8ZTP7TptKifO56EP/xvJ8CbaWT7D30=",
+  "Hash": "fds9pp97MIe3xV+FK/S7Jl+KX2MH02XGybLUGzuqPrs=",
   "Source": "Hung_Tran_Ngoc_66131218_Web_QLBH",
   "BasePath": "_content/Hung_Tran_Ngoc_66131218_Web_QLBH",
   "Mode": "Default",
@@ -224,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\uploads\\B.jpg"
+    },
+    {
+      "Identity": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\banner.jpg",
+      "SourceId": "Hung_Tran_Ngoc_66131218_Web_QLBH",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\",
+      "BasePath": "_content/Hung_Tran_Ngoc_66131218_Web_QLBH",
+      "RelativePath": "images/uploads/banner.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\uploads\\banner.jpg"
     },
     {
       "Identity": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\C.jpg",

@@ -1,0 +1,90 @@
+﻿@using Microsoft.AspNetCore.Http
+@using Newtonsoft.Json
+@using Hung_Tran_Ngoc_66131218_Web_QLBH.Models
+@inject IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Cửa Hàng Online</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3 fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary" asp-controller="Shop" asp-action="Index">
+                    <i class="fas fa-store me-2"></i>SHOP GIẢI KHÁT
+                </a>
+
+                <form asp-controller="Shop" asp-action="Index" method="get" class="d-flex mx-auto" style="width: 40%;">
+
+                    <input class="form-control me-2 rounded-pill" type="search"
+                           name="searchString"
+                           value="@ViewData["CurrentFilter"]"
+                           placeholder="Tìm sản phẩm..." aria-label="Search">
+
+                    <button class="btn btn-outline-primary rounded-pill" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#"><i class="fas fa-heart me-1"></i> Yêu thích</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-bold" asp-controller="GioHang" asp-action="Index">
+                            <i class="fas fa-shopping-cart me-1"></i> Giỏ hàng
+
+                            @{
+                                var session = HttpContextAccessor.HttpContext.Session;
+                                string jsoncart = session.GetString("ShopCart");
+                                var cart = new List<CartItem>();
+                                if (jsoncart != null)
+                                {
+                                    cart = JsonConvert.DeserializeObject<List<CartItem>>(jsoncart);
+                                }
+                                int soLuong = cart.Sum(item => item.SoLuong);
+                            }
+
+                            <span class="badge bg-danger rounded-pill">@soLuong</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-dark btn-sm rounded-pill px-3">
+                            <i class="fas fa-user-shield me-1"></i> Quản trị
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary btn-sm rounded-pill px-3" href="#">Đăng nhập</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" style="margin-top: 80px;">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            &copy; Shop Online - Uy tín chất lượng <br />
+            &copy; SĐT Liên Hệ: 0123456789<br />
+            DESIGN BY Trần Ngọc Hùng - MSSV: 66131218
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
