@@ -50,8 +50,9 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         public string? DiaChi { get; set; } 
 
         [Display(Name = "Mã xã")]
-        public int MaXa { get; set; } 
+        public int MaXa { get; set; }
 
+        [NotMapped]
         public string? DiaChiFull { get; set; }
     }
 }

@@ -1,0 +1,63 @@
+﻿@model Hung_Tran_Ngoc_66131218_Web_QLBH.Models.KhachHang
+
+@{
+    ViewData["Title"] = "Hồ sơ cá nhân";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0 fw-bold"><i class="fas fa-user-edit me-2"></i>HỒ SƠ CÁ NHÂN</h5>
+                </div>
+                <div class="card-body p-4">
+                    @if (ViewBag.Success != null)
+                    {
+                        <div class="alert alert-success"><i class="fas fa-check-circle me-1"></i> @ViewBag.Success</div>
+                    }
+
+                    <form asp-action="ProfileCustomer" method="post">
+                        <input type="hidden" asp-for="MaKH" />
+                        <input type="hidden" asp-for="TenDN" />
+                        <input type="hidden" asp-for="MatKhau" />
+                        <input type="hidden" asp-for="MaXa" /> <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Họ đệm</label>
+                                <input asp-for="HoKH" class="form-control" />
+                                <span asp-validation-for="HoKH" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Tên</label>
+                                <input asp-for="TenKH" class="form-control" />
+                                <span asp-validation-for="TenKH" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Tên đăng nhập</label>
+                            <input asp-for="TenDN" class="form-control bg-light" readonly />
+                            <small class="text-muted">Không thể thay đổi tên đăng nhập.</small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Số điện thoại</label>
+                            <input asp-for="SDT" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Địa chỉ nhận hàng</label>
+                            <textarea asp-for="DiaChi" class="form-control" rows="2"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-end gap-2 mt-4">
+                            <a asp-controller="Shop" asp-action="Index" class="btn btn-outline-secondary">Quay lại mua sắm</a>
+                            <button type="submit" class="btn btn-primary px-4 fw-bold">Lưu thay đổi</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

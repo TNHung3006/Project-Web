@@ -1,0 +1,75 @@
+﻿@model Hung_Tran_Ngoc_66131218_Web_QLBH.Models.KhachHang
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Đăng ký thành viên - Shop Giải Khát</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f0f2f5; }
+        .register-box { max-width: 600px; margin: 50px auto; background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="register-box">
+            <h3 class="text-center text-primary fw-bold mb-4">ĐĂNG KÝ THÀNH VIÊN</h3>
+
+            <form asp-action="Register" method="post">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.Error</div>
+                }
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Họ đệm</label>
+                        <input asp-for="HoKH" class="form-control" required placeholder="Ví dụ: Nguyễn Văn" />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Tên</label>
+                        <input asp-for="TenKH" class="form-control" required placeholder="Ví dụ: An" />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Số điện thoại</label>
+                    <input asp-for="SDT" class="form-control" required placeholder="09xxxxxxxxx" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Địa chỉ</label>
+                    <input asp-for="DiaChi" class="form-control" placeholder="Số nhà, đường, phường..." />
+                </div>
+
+                <hr class="my-4" />
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Tên đăng nhập</label>
+                    <input asp-for="TenDN" class="form-control" required />
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold">Mật khẩu</label>
+                        <input asp-for="MatKhau" type="password" class="form-control" required />
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label fw-bold">Nhập lại mật khẩu</label>
+                        <input type="password" name="ConfirmPassword" class="form-control" required />
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 mt-3">
+                    <button type="submit" class="btn btn-primary btn-lg">Đăng Ký Ngay</button>
+                    <a asp-action="LoginCustomer" class="btn btn-outline-secondary">Đã có tài khoản? Đăng nhập</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

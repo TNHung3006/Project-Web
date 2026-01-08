@@ -2,6 +2,7 @@
 @using Newtonsoft.Json
 @using Hung_Tran_Ngoc_66131218_Web_QLBH.Models
 @inject IHttpContextAccessor HttpContextAccessor
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -21,7 +22,6 @@
                 </a>
 
                 <form asp-controller="Shop" asp-action="Index" method="get" class="d-flex mx-auto" style="width: 40%;">
-
                     <input class="form-control me-2 rounded-pill" type="search"
                            name="searchString"
                            value="@ViewData["CurrentFilter"]"
@@ -36,10 +36,10 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="#"><i class="fas fa-heart me-1"></i> Yêu thích</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link text-dark fw-bold" asp-controller="GioHang" asp-action="Index">
                             <i class="fas fa-shopping-cart me-1"></i> Giỏ hàng
-
                             @{
                                 var session = HttpContextAccessor.HttpContext.Session;
                                 string jsoncart = session.GetString("ShopCart");
@@ -50,20 +50,59 @@
                                 }
                                 int soLuong = cart.Sum(item => item.SoLuong);
                             }
-
                             <span class="badge bg-danger rounded-pill">@soLuong</span>
                         </a>
                     </li>
 
-                    <li class="nav-item ms-2">
-                        <a asp-controller="Home" asp-action="Index" class="btn btn-dark btn-sm rounded-pill px-3">
-                            <i class="fas fa-user-shield me-1"></i> Quản trị
-                        </a>
-                    </li>
+                    @if (Context.Session.GetString("AdminLogin") != null)
+                    {
+                        <li class="nav-item ms-2">
+                            <a asp-controller="Home" asp-action="Index" class="btn btn-dark btn-sm rounded-pill px-3">
+                                <i class="fas fa-user-shield me-1"></i> Quản trị
+                            </a>
+                        </li>
+                    }
 
-                    <li class="nav-item ms-2">
-                        <a class="btn btn-primary btn-sm rounded-pill px-3" href="#">Đăng nhập</a>
-                    </li>
+                    @if (Context.Session.GetString("KhachHangLogin") != null)
+                    {
+                    // TRƯỜNG HỢP 1: ĐÃ ĐĂNG NHẬP -> Hiện menu Dropdown
+                        <li class="nav-item ms-2 dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold text-primary border border-primary rounded-pill px-3" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user-circle me-1"></i> Xin chào, @Context.Session.GetString("TenKH")
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="userDropdown">
+
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Account" asp-action="ProfileCustomer">
+                                        <i class="fas fa-user me-2 text-muted"></i>Hồ sơ cá nhân
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Account" asp-action="MyOrders">
+                                        <i class="fas fa-history me-2 text-muted"></i>Đơn hàng của tôi
+                                    </a>
+                                </li>
+
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item text-danger fw-bold" asp-controller="Account" asp-action="LogoutCustomer">
+                                        <i class="fas fa-sign-out-alt me-2"></i>Đăng xuất
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        // TRƯỜNG HỢP 2: CHƯA ĐĂNG NHẬP -> Hiện nút Đăng nhập & Đăng ký
+                        <li class="nav-item ms-2">
+                            <a asp-controller="Account" asp-action="LoginCustomer" class="btn btn-primary btn-sm rounded-pill px-3 fw-bold">Đăng nhập</a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <a asp-controller="Account" asp-action="Register" class="btn btn-outline-primary btn-sm rounded-pill px-3 fw-bold">Đăng ký</a>
+                        </li>
+                    }
                 </ul>
             </div>
         </nav>

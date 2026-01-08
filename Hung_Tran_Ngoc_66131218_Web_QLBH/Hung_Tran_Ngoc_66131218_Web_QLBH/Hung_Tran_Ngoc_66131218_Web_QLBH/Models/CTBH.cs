@@ -29,5 +29,8 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Ngày bán")]
         public DateTime NgayBan { get; set; }
 
+        [NotMapped] // Không tạo cột này trong Database
+        public string? AnhSP { get; set; }
+
     }
 }

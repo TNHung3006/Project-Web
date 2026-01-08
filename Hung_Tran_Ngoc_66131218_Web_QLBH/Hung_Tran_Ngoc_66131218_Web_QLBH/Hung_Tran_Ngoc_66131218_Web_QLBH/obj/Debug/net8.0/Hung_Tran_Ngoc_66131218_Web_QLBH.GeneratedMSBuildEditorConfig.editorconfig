@@ -26,6 +26,38 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\project-QLBH-web\Hung_Tran_Ngoc_66131218_Web_QLBH\Hung_Tran_Ngoc_66131218_Web_QLBH\Hung_Tran_Ngoc_66131218_Web_QLBH
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/project-QLBH-web/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Account/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Account/LoginCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbkN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Account/MyOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNeU9yZGVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Account/OrderDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxPcmRlckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Account/ProfileCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlQ3VzdG9tZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/project-QLBH-web/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/project-QLBH-web/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Hung_Tran_Ngoc_66131218_Web_QLBH/Views/CTBHs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ1RCSHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

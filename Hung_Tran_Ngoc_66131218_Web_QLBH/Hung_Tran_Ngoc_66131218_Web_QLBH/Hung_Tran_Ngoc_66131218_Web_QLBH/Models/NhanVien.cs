@@ -53,8 +53,10 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Mã Xã")]
         public int MaXa { get; set; }
 
+        [NotMapped]
         public string? DiaChiFull { get; set; }
 
+        [NotMapped]
         [Display(Name = "Tên loại nhân viên")]
         public string? TenLNV { get; set; }
     }

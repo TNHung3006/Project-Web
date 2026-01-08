@@ -18,18 +18,25 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
 
         [Display(Name = "Mã Khách Hàng")]
         public int MaKH { get; set; }
-        
+
         [Display(Name = "Mã xã")]
         public int MaXa { get; set; }
-        
+
         [Display(Name = "Mã TTDBH")]
         public int MaTTDBH { get; set; }
 
+        // --- CÁC THUỘC TÍNH PHỤ (KHÔNG CÓ TRONG CSDL) ---
+        // Phải thêm [NotMapped] để hệ thống không tìm cột này trong SQL
+
+        [NotMapped]
         public string? DiaChiGHFull { get; set; }
+
+        [NotMapped]
         [Display(Name = "Họ tên khách hàng")]
-        public string? TenKHFull { get; set; }
+        public string? TenKHFull { get; set; } // Biến này sẽ chứa "Họ" + "Tên"
+
+        [NotMapped]
         [Display(Name = "Tên TTDBH")]
         public string? TenTTDBH { get; set; }
-
     }
 }

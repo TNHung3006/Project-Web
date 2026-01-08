@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@{
+    // Lấy quyền từ Session (Nếu chưa đăng nhập thì mặc định là 0)
+    int role = Context.Session.GetInt32("MaLNV") ?? 0;
+}
+
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
@@ -45,23 +51,21 @@
             margin-left: 0;
         }
 
-        /* --- MENU LINK STYLING (Đã sửa màu hover) --- */
+        /* --- MENU LINK STYLING --- */
         .list-group-item-dark {
             background-color: #343a40;
-            color: #c2c7d0; /* Màu chữ mặc định (xám nhạt) */
+            color: #c2c7d0;
             border: none;
             border-bottom: 1px solid #4b545c;
-            transition: all 0.3s; /* Hiệu ứng chuyển màu mượt mà */
+            transition: all 0.3s;
         }
 
-            /* KHI DI CHUỘT VÀO (HOVER) - Đổi sang màu vàng sáng */
             .list-group-item-dark:hover {
-                background-color: #495057 !important; /* Nền sáng hơn chút */
-                color: #ffc107 !important; /* MÀU VÀNG (GOLD) ĐỂ DỄ NHÌN */
-                padding-left: 1.5rem; /* Hiệu ứng đẩy chữ sang phải */
+                background-color: #495057 !important;
+                color: #ffc107 !important;
+                padding-left: 1.5rem;
             }
 
-            /* Link đang được chọn (Active) */
             .list-group-item-dark.active {
                 background-color: #0d6efd;
                 border-color: #0d6efd;
@@ -76,7 +80,6 @@
             font-size: 0.9rem;
         }
 
-            /* Hover cho menu con cũng đổi màu vàng */
             .sub-menu .list-group-item:hover {
                 background-color: #4b545c !important;
                 color: #ffc107 !important;
@@ -115,55 +118,67 @@
                     <i class="fas fa-tachometer-alt me-2"></i>Tổng quan (Dashboard)
                 </a>
 
-                <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
-                   data-bs-toggle="collapse" href="#menuSanPham" role="button" aria-expanded="false">
-                    <i class="fas fa-box me-2"></i>Quản lý Kho hàng
-                </a>
-                <div class="collapse sub-menu" id="menuSanPham">
-                    <a asp-controller="SanPhams" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">DS Sản phẩm</a>
-                    <a asp-controller="NhomSPs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Nhóm sản phẩm</a>
-                    <a asp-controller="LoaiSPs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Loại sản phẩm</a>
-                    <a asp-controller="HangSXs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Hãng sản xuất</a>
-                    <a asp-controller="DonViTinhs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Đơn vị tính</a>
-                    <a asp-controller="TrangThais" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Trạng thái SP</a>
-                    <a asp-controller="Nuocs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Quốc gia/Xuất xứ</a>
-                </div>
+                @if (role == 1 || role == 3)
+                {
+                    <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
+                       data-bs-toggle="collapse" href="#menuSanPham" role="button" aria-expanded="false">
+                        <i class="fas fa-box me-2"></i>Quản lý Kho hàng
+                    </a>
+                    <div class="collapse sub-menu" id="menuSanPham">
+                        <a asp-controller="SanPhams" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">DS Sản phẩm</a>
+                        <a asp-controller="NhomSPs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Nhóm sản phẩm</a>
+                        <a asp-controller="LoaiSPs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Loại sản phẩm</a>
+                        <a asp-controller="HangSXs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Hãng sản xuất</a>
+                        <a asp-controller="DonViTinhs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Đơn vị tính</a>
+                        <a asp-controller="TrangThais" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Trạng thái SP</a>
+                        <a asp-controller="Nuocs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Quốc gia/Xuất xứ</a>
+                    </div>
+                }
 
-                <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
-                   data-bs-toggle="collapse" href="#menuBanHang" role="button" aria-expanded="false">
-                    <i class="fas fa-shopping-cart me-2"></i>Hoạt động Bán hàng
-                </a>
-                <div class="collapse sub-menu" id="menuBanHang">
-                    <a asp-controller="DonBanHangs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Đơn Bán Hàng</a>
-                    <a asp-controller="CTBHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Chi tiết bán</a>
-                    <a asp-controller="KhachHangs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Khách hàng</a>
-                    <a asp-controller="TrangThaiDBHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Trạng thái đơn bán</a>
-                </div>
+                @if (role == 1 || role == 2)
+                {
+                    <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
+                       data-bs-toggle="collapse" href="#menuBanHang" role="button" aria-expanded="false">
+                        <i class="fas fa-shopping-cart me-2"></i>Hoạt động Bán hàng
+                    </a>
+                    <div class="collapse sub-menu" id="menuBanHang">
+                        <a asp-controller="DonBanHangs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Đơn Bán Hàng</a>
+                        <a asp-controller="CTBHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Chi tiết bán</a>
+                        <a asp-controller="KhachHangs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Khách hàng</a>
+                        <a asp-controller="TrangThaiDBHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Trạng thái đơn bán</a>
+                    </div>
+                }
 
-                <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
-                   data-bs-toggle="collapse" href="#menuNhapHang" role="button" aria-expanded="false">
-                    <i class="fas fa-truck-loading me-2"></i>Hoạt động Nhập hàng
-                </a>
-                <div class="collapse sub-menu" id="menuNhapHang">
-                    <a asp-controller="DonMuaHangs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Đơn Mua Hàng</a>
-                    <a asp-controller="CTMHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Chi tiết mua</a>
-                    <a asp-controller="NhaCCs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Nhà cung cấp</a>
-                    <a asp-controller="TrangThaiDMHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Trạng thái đơn mua</a>
-                </div>
+                @if (role == 1 || role == 3)
+                {
+                    <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
+                       data-bs-toggle="collapse" href="#menuNhapHang" role="button" aria-expanded="false">
+                        <i class="fas fa-truck-loading me-2"></i>Hoạt động Nhập hàng
+                    </a>
+                    <div class="collapse sub-menu" id="menuNhapHang">
+                        <a asp-controller="DonMuaHangs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Đơn Mua Hàng</a>
+                        <a asp-controller="CTMHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Chi tiết mua</a>
+                        <a asp-controller="NhaCCs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Nhà cung cấp</a>
+                        <a asp-controller="TrangThaiDMHs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Trạng thái đơn mua</a>
+                    </div>
+                }
 
-                <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
-                   data-bs-toggle="collapse" href="#menuHeThong" role="button" aria-expanded="false">
-                    <i class="fas fa-cogs me-2"></i>Hệ thống & Nhân sự
-                </a>
-                <div class="collapse sub-menu" id="menuHeThong">
-                    <a asp-controller="NhanViens" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Nhân viên</a>
-                    <a asp-controller="LoaiNVs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Chức vụ / Loại NV</a>
-                    <a asp-controller="Tinhs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Tỉnh / Thành phố</a>
-                    <a asp-controller="Xas" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Xã / Phường</a>
-                </div>
+                @if (role == 1)
+                {
+                    <a class="list-group-item list-group-item-action list-group-item-dark bg-transparent dropdown-toggle"
+                       data-bs-toggle="collapse" href="#menuHeThong" role="button" aria-expanded="false">
+                        <i class="fas fa-cogs me-2"></i>Hệ thống & Nhân sự
+                    </a>
+                    <div class="collapse sub-menu" id="menuHeThong">
+                        <a asp-controller="NhanViens" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Nhân viên</a>
+                        <a asp-controller="LoaiNVs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Chức vụ / Loại NV</a>
+                        <a asp-controller="Tinhs" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Tỉnh / Thành phố</a>
+                        <a asp-controller="Xas" asp-action="Index" class="list-group-item list-group-item-action list-group-item-dark">Xã / Phường</a>
+                    </div>
+                }
+
             </div>
         </div>
-
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-4 py-3">
                 <div class="d-flex align-items-center">
@@ -180,13 +195,29 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-user-circle me-1"></i> Admin
+                                <i class="fas fa-user-circle me-1"></i>
+                                @if (Context.Session.GetString("HoTen") != null)
+                                {
+                                    @Context.Session.GetString("HoTen")
+                                }
+                                else
+                                {
+                                    <span>Admin</span>
+                                }
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Hồ sơ</a>
-                                <a class="dropdown-item" href="#">Cài đặt</a>
+                                <a class="dropdown-item" asp-controller="Account" asp-action="Profile">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Hồ sơ
+                                </a>
+                                <a class="dropdown-item" asp-controller="Account" asp-action="ChangePassword">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Cài đặt
+                                </a>
+
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item text-danger" href="#">Đăng xuất</a>
+
+                                <a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout">
+                                    <i class="fas fa-sign-out-alt me-1"></i> Đăng xuất
+                                </a>
                             </div>
                         </li>
                     </ul>
@@ -204,7 +235,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     <script>
-        // 1. Logic đóng mở Sidebar khi bấm nút
         var el = document.getElementById("wrapper");
         var toggleButton = document.getElementById("sidebarToggle");
 
@@ -212,7 +242,6 @@
             el.classList.toggle("sb-sidenav-toggled");
         };
 
-        // 2. LOGIC: Tự động Highlight Menu và Mở nhóm khi load trang
         document.addEventListener("DOMContentLoaded", function () {
             const currentPath = window.location.pathname.toLowerCase();
             const menuLinks = document.querySelectorAll('#sidebar-wrapper .list-group-item');
@@ -221,22 +250,16 @@
                 const linkPath = link.getAttribute('href').toLowerCase();
 
                 if (linkPath !== '/' && currentPath.includes(linkPath)) {
-
-                    // a. Highlight link con
                     link.classList.add('active');
-
-                    // b. Tìm nhóm cha (div chứa sub-menu) và mở nó ra
                     const parentGroup = link.closest('.collapse');
                     if (parentGroup) {
                         parentGroup.classList.add('show');
-
-                        // c. Highlight tên Nhóm (Đã sửa thành màu vàng text-warning)
                         const triggerId = parentGroup.getAttribute('id');
                         const triggerLink = document.querySelector(`[href="#${triggerId}"]`);
                         if (triggerLink) {
                             triggerLink.classList.remove('collapsed');
                             triggerLink.setAttribute('aria-expanded', 'true');
-                            triggerLink.classList.add('text-warning'); // SỬA: Đổi thành màu vàng
+                            triggerLink.classList.add('text-warning');
                         }
                     }
                 }
