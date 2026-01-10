@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BAnR/HybQXk=",
+  "dgSpecHash": "Sbel4HYQzpU=",
   "success": true,
-  "projectFilePath": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj",
+  "projectFilePath": "D:\\project-QLBH-web\\project CK\\Hung_Tran_Ngoc_66131218_Web_QLBH- hoàn thiện nhưng chưa giao diện\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

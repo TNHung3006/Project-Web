@@ -7,6 +7,8 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
     public class KhachHang
     {
         [Key]
+        // DÒNG QUAN TRỌNG NHẤT: Báo cho EF biết SQL sẽ tự sinh khóa này
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "Mã khách hàng")]
         public int MaKH { get; set; }
 

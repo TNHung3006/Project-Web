@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fds9pp97MIe3xV+FK/S7Jl+KX2MH02XGybLUGzuqPrs=",
+  "Hash": "/MNo4w5IOPhBixizJFioIs5VAvSL9Nz66xR+bPsO0Dg=",
   "Source": "Hung_Tran_Ngoc_66131218_Web_QLBH",
   "BasePath": "_content/Hung_Tran_Ngoc_66131218_Web_QLBH",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\01aff463c68e4567add4184f88a02163.jpg",
+      "SourceId": "Hung_Tran_Ngoc_66131218_Web_QLBH",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\",
+      "BasePath": "_content/Hung_Tran_Ngoc_66131218_Web_QLBH",
+      "RelativePath": "images/uploads/01aff463c68e4567add4184f88a02163.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\uploads\\01aff463c68e4567add4184f88a02163.jpg"
     },
     {
       "Identity": "D:\\project-QLBH-web\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\Hung_Tran_Ngoc_66131218_Web_QLBH\\wwwroot\\images\\uploads\\1013d4315c8b433989dc2cd044e8cb75.jpg",

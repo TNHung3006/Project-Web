@@ -164,8 +164,16 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
                 kh.AnhKH = "default.jpg"; // Ảnh mặc định
 
                 // D. Lưu khách hàng mới
-                _context.kh.Add(kh);
-                _context.SaveChanges();
+                try
+                {
+                    _context.KhachHang_Insert(kh);
+                }
+                catch (Exception ex)
+                {
+                    // Bắt lỗi nếu thủ tục SQL có vấn đề
+                    ViewBag.Error = "Lỗi khi lưu dữ liệu: " + ex.Message;
+                    return View(kh);
+                }
 
                 ViewBag.Success = "Đăng ký thành công! Bạn có thể đăng nhập ngay.";
                 return RedirectToAction("LoginCustomer");
@@ -289,7 +297,7 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
                                MaSP = ct.MaSP,
                                SLB = ct.SLB,
                                DGB = ct.DGB,
-                               ThanhTien = ct.ThanhTien,
+                               ThanhTien = ct.SLB * ct.DGB,
                                NgayBan = ct.NgayBan,
 
                                // Lấy tên và ảnh từ bảng Sản Phẩm

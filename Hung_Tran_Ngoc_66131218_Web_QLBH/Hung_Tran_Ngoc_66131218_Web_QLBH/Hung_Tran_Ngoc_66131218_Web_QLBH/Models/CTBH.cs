@@ -20,14 +20,17 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Models
         [Display(Name = "Đơn giá bán")]
         public decimal DGB { get; set; }
 
+        [NotMapped]
+
         [Display(Name = "Tên sản phẩm")]
         public string? TenSP { get; set; }
-
+        [NotMapped]
         [Display(Name = "Thành tiền")]
         public decimal ThanhTien { get; set; }
-
+        [NotMapped]
         [Display(Name = "Ngày bán")]
         public DateTime NgayBan { get; set; }
+
 
         [NotMapped] // Không tạo cột này trong Database
         public string? AnhSP { get; set; }

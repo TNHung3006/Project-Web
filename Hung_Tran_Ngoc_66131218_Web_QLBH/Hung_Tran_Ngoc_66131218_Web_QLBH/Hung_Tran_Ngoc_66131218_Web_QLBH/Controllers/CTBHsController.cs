@@ -16,32 +16,47 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
 
         public CTBHsController(ApplicationDbContext db) => _db = db;
 
-
+        // GET: CTBHs
         public IActionResult Index()
         {
-            // 1. Lấy danh sách chi tiết
+            // 1. Lấy danh sách chi tiết thô
             var listCTBH = _db.CTBH_GetAll();
 
-            // 2. Tạo một Dictionary để lưu trữ: Mã Đơn -> Tổng Tiền
-            // Mục đích: Để view tra cứu nhanh, không cần gọi DB nhiều lần
-            var tongTienDict = new Dictionary<int, decimal>();
+            // 2. Lấy các danh sách tham chiếu để tra cứu (Sản phẩm & Đơn hàng)
+            // Lưu ý: SanPham_GetAll truyền null để lấy tất cả
+            var listSP = _db.SanPham_GetAll(null);
+            var listDonHang = _db.DonBanHang_GetAll(); // Hàm này cần có trong DbContext của bạn
 
-            // Lấy danh sách các mã đơn hàng duy nhất (Distinct)
+            // 3. MAP DỮ LIỆU THỦ CÔNG cho các thuộc tính [NotMapped]
+            foreach (var item in listCTBH)
+            {
+                // a. Tìm Tên Sản Phẩm
+                var sp = listSP.FirstOrDefault(x => x.MaSP == item.MaSP);
+                item.TenSP = sp != null ? sp.TenSP : "SP đã xóa";
+
+                // b. Tìm Ngày Bán (từ bảng Đơn Bán Hàng)
+                var donHang = listDonHang.FirstOrDefault(x => x.MaDBH == item.MaDBH);
+                // Giả sử DonBanHang có thuộc tính NgayBan
+                item.NgayBan = donHang != null ? donHang.NgayBan : DateTime.MinValue;
+
+                // c. Tính Thành Tiền (Số lượng * Đơn giá)
+                item.ThanhTien = item.SLB * item.DGB;
+            }
+
+            // 4. Logic tính tổng tiền theo nhóm (Giữ nguyên code cũ của bạn)
+            var tongTienDict = new Dictionary<int, decimal>();
             var listMaDonHang = listCTBH.Select(x => x.MaDBH).Distinct().ToList();
 
             foreach (var maDBH in listMaDonHang)
             {
-                // Gọi thủ tục tính tiền riêng cho từng đơn
                 decimal tongTien = _db.CTBH_TongThanhTienTheoID(maDBH);
                 tongTienDict.Add(maDBH, tongTien);
             }
 
-            // 3. Gửi Dictionary này sang View thông qua ViewBag
             ViewBag.TongTienMap = tongTienDict;
 
             return View(listCTBH);
         }
-
 
         // GET: CTBHs/Create
         public IActionResult Create()
@@ -60,16 +75,14 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         [HttpPost]
         public IActionResult Create(CTBH ctbh)
         {
-
             // 1. Kiểm tra xem bản ghi (MaDBH, MaSP) này đã tồn tại chưa
             var existingItem = _db.CTBH_GetById(ctbh.MaDBH, ctbh.MaSP);
 
             if (existingItem != null)
             {
                 // 2. Nếu tồn tại: Cập nhật Số Lượng và Đơn Giá
-                // Giả định bạn muốn cộng dồn số lượng. Đơn giá có thể lấy từ bản ghi mới
                 existingItem.SLB += ctbh.SLB;
-                existingItem.DGB = ctbh.DGB; // Cập nhật đơn giá theo giá mới nhất
+                existingItem.DGB = ctbh.DGB;
 
                 _db.CTBH_Update(existingItem);
             }
@@ -109,12 +122,31 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         public IActionResult Details(int maDBH, int maSP)
         {
             var ctbh = _db.CTBH_GetById(maDBH, maSP);
+
+            // --- BỔ SUNG: Hiển thị tên SP và Thành tiền trong trang Details ---
+            if (ctbh != null)
+            {
+                var sp = _db.SanPham_GetAll(null).FirstOrDefault(x => x.MaSP == ctbh.MaSP);
+                ctbh.TenSP = sp?.TenSP;
+                ctbh.ThanhTien = ctbh.SLB * ctbh.DGB;
+            }
+            // ----------------------------------------------------------------
+
             return View(ctbh);
         }
 
         public IActionResult Delete(int maDBH, int maSP)
         {
             var ctbh = _db.CTBH_GetById(maDBH, maSP);
+
+            // --- BỔ SUNG: Hiển thị tên SP khi xóa để dễ nhìn ---
+            if (ctbh != null)
+            {
+                var sp = _db.SanPham_GetAll(null).FirstOrDefault(x => x.MaSP == ctbh.MaSP);
+                ctbh.TenSP = sp?.TenSP;
+            }
+            // --------------------------------------------------
+
             return View(ctbh);
         }
 

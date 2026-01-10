@@ -26,6 +26,34 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         {
             ViewData["CurrentFilter"] = search;
             var list = _db.SanPham_GetAll(search);
+
+            // --- BỔ SUNG: Gán dữ liệu cho các thuộc tính [NotMapped] ---
+            // Vì [NotMapped] nên EF không tự map, ta phải lấy tên dựa vào ID
+            var listLoai = _db.LoaiSP_GetAll();
+            var listHang = _db.HangSX_GetAll();
+            var listDVT = _db.DonViTinh_GetAll();
+            var listTT = _db.TrangThai_GetAll();
+
+            foreach (var item in list)
+            {
+                // Tìm tên Loại theo MaLSP
+                var loai = listLoai.FirstOrDefault(x => x.MaLSP == item.MaLSP);
+                item.LoaiSP = loai != null ? loai.TenLSP : "";
+
+                // Tìm tên Hãng theo MaHSX
+                var hang = listHang.FirstOrDefault(x => x.MaHSX == item.MaHSX);
+                item.HangSX = hang != null ? hang.TenHSX : "";
+
+                // Tìm tên Đơn vị tính theo MaDVT
+                var dvt = listDVT.FirstOrDefault(x => x.MaDVT == item.MaDVT);
+                item.TenDVT = dvt != null ? dvt.TenDVT : "";
+
+                // Tìm tên Trạng thái theo MaTT
+                var tt = listTT.FirstOrDefault(x => x.MaTT == item.MaTT);
+                item.TenTT = tt != null ? tt.TenTT : "";
+            }
+            // --- KẾT THÚC BỔ SUNG ---
+
             return View(list);
         }
 
@@ -180,6 +208,21 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         {
             var sp = _db.SanPham_GetById(id);
             if (sp == null) return NotFound();
+
+            // --- BỔ SUNG: Gán dữ liệu cho các thuộc tính [NotMapped] ---
+            var loai = _db.LoaiSP_GetAll().FirstOrDefault(x => x.MaLSP == sp.MaLSP);
+            sp.LoaiSP = loai != null ? loai.TenLSP : "";
+
+            var hang = _db.HangSX_GetAll().FirstOrDefault(x => x.MaHSX == sp.MaHSX);
+            sp.HangSX = hang != null ? hang.TenHSX : "";
+
+            var dvt = _db.DonViTinh_GetAll().FirstOrDefault(x => x.MaDVT == sp.MaDVT);
+            sp.TenDVT = dvt != null ? dvt.TenDVT : "";
+
+            var tt = _db.TrangThai_GetAll().FirstOrDefault(x => x.MaTT == sp.MaTT);
+            sp.TenTT = tt != null ? tt.TenTT : "";
+            // --- KẾT THÚC BỔ SUNG ---
+
             return View(sp);
         }
 

@@ -21,16 +21,61 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         {
             // Lưu từ khóa tìm kiếm vào ViewData để hiển thị lại trên form
             ViewData["CurrentFilter"] = search;
-            // Gọi phương thức GetData với tham số search. 
-            // Phương thức này sẽ gọi Stored Procedure đã sửa của bạn.
+
             var list = _db.NhanVien_GetAll(search);
+
+            // --- BỔ SUNG: Gán dữ liệu cho [NotMapped] (TenLNV, DiaChiFull) ---
+            var listXa = _db.Xa_GetAll();
+            var listTinh = _db.Tinh_GetAll();
+            var listLoaiNV = _db.LoaiNV_GetAll(); // Lấy danh sách loại NV
+
+            foreach (var nv in list)
+            {
+                // 1. Gán Tên Loại Nhân Viên
+                var lnv = listLoaiNV.FirstOrDefault(x => x.MaLNV == nv.MaLNV);
+                nv.TenLNV = lnv != null ? lnv.TenLNV : "";
+
+                // 2. Gán Địa chỉ đầy đủ (Ghép chuỗi)
+                var xa = listXa.FirstOrDefault(x => x.MaXa == nv.MaXa);
+                var tinh = xa != null ? listTinh.FirstOrDefault(t => t.MaTinh == xa.MaTinh) : null;
+
+                string tenXa = xa?.TenXa ?? "";
+                string tenTinh = tinh?.TenTinh ?? "";
+                string diaChiCu = nv.DiaChi ?? "";
+
+                // Nối chuỗi thông minh, bỏ qua các thành phần bị rỗng
+                var parts = new List<string> { diaChiCu, tenXa, tenTinh };
+                nv.DiaChiFull = string.Join(", ", parts.Where(s => !string.IsNullOrEmpty(s)));
+            }
+            // -----------------------------------------------------------------
+
             return View(list);
         }
+
         // GET: NhanVien/Details/5
         public IActionResult Details(int id)
         {
-            var nhanvien = _db.NhanVien_GetById(id);
-            return View(nhanvien);
+            var nv = _db.NhanVien_GetById(id);
+            if (nv == null) return NotFound();
+
+            // --- BỔ SUNG: Hiển thị chi tiết đầy đủ ---
+            // 1. Lấy tên loại NV
+            var lnv = _db.LoaiNV_GetAll().FirstOrDefault(x => x.MaLNV == nv.MaLNV);
+            nv.TenLNV = lnv?.TenLNV;
+
+            // 2. Lấy địa chỉ full
+            var xa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == nv.MaXa);
+            var tinh = xa != null ? _db.Tinh_GetAll().FirstOrDefault(t => t.MaTinh == xa.MaTinh) : null;
+
+            string tenXa = xa?.TenXa ?? "";
+            string tenTinh = tinh?.TenTinh ?? "";
+            string diaChiCu = nv.DiaChi ?? "";
+
+            var parts = new List<string> { diaChiCu, tenXa, tenTinh };
+            nv.DiaChiFull = string.Join(", ", parts.Where(s => !string.IsNullOrEmpty(s)));
+            // ----------------------------------------
+
+            return View(nv);
         }
 
         // GET: NhanVien/Create
@@ -41,7 +86,6 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             ViewBag.Tinhs = new SelectList(listTinh, "MaTinh", "TenTinh");
 
             // 2. Khởi tạo danh sách Xã rỗng (vì chưa chọn Tỉnh nào)
-            // Hoặc có thể để null, nhưng new List<Xa>() sẽ an toàn hơn cho SelectList nhưng trong trường hợp này new lish<Xa> sẽ không đảm bảo được việc chọn tỉnh trước rồi chọn xã sau. vì nó sẽ hiện ra toàn bộ xã nếu new lish<xa>
             ViewBag.Xas = new SelectList(new List<Xa>(), "MaXa", "TenXa");
 
             var listLNV = _db.LoaiNV_GetAll() ?? new List<LoaiNV>();
@@ -77,16 +121,13 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             if (nv == null) return NotFound();
 
             // A. Lấy tất cả Tỉnh để đổ vào Dropdown Tỉnh
-            // Giả sử bạn có hàm _db.Tinh_GetAll(), nếu chưa có bạn phải tạo thêm
             var listTinh = _db.Tinh_GetAll() ?? new List<Tinh>();
 
-            // B. Xác định Tỉnh hiện tại của Nhà cung cấp (để chọn sẵn khi mở form)
-            // Chúng ta phải tìm xem MaXa hiện tại thuộc MaTinh nào.
-            // Cách làm: Tìm thông tin xã hiện tại -> lấy MaTinh của nó
+            // B. Xác định Tỉnh hiện tại (để chọn sẵn khi mở form)
             var currentXa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == nv.MaXa);
             int selectedMaTinh = currentXa != null ? currentXa.MaTinh : 0;
 
-            // C. Lấy danh sách Xã thuộc Tỉnh hiện tại (chứ không lấy hết tất cả xã)
+            // C. Lấy danh sách Xã thuộc Tỉnh hiện tại
             var listXaOfTinh = _db.Xa_GetAll().Where(x => x.MaTinh == selectedMaTinh).ToList();
 
             // D. Truyền dữ liệu qua View
@@ -111,6 +152,23 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         public IActionResult Delete(int id)
         {
             var nv = _db.NhanVien_GetById(id);
+            if (nv == null) return NotFound();
+
+            // --- BỔ SUNG: Hiển thị thông tin rõ ràng khi xóa ---
+            var lnv = _db.LoaiNV_GetAll().FirstOrDefault(x => x.MaLNV == nv.MaLNV);
+            nv.TenLNV = lnv?.TenLNV;
+
+            var xa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == nv.MaXa);
+            var tinh = xa != null ? _db.Tinh_GetAll().FirstOrDefault(t => t.MaTinh == xa.MaTinh) : null;
+
+            string tenXa = xa?.TenXa ?? "";
+            string tenTinh = tinh?.TenTinh ?? "";
+            string diaChiCu = nv.DiaChi ?? "";
+
+            var parts = new List<string> { diaChiCu, tenXa, tenTinh };
+            nv.DiaChiFull = string.Join(", ", parts.Where(s => !string.IsNullOrEmpty(s)));
+            // ---------------------------------------------------
+
             return View(nv);
         }
 

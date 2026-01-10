@@ -16,34 +16,56 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
 
         public DonBanHangsController(ApplicationDbContext db) => _db = db;
 
-
+        // 1. SỬA HÀM INDEX: Để hiển thị Tên Khách và Trạng Thái trong danh sách
         public IActionResult Index(string? search)
         {
-            // Lưu từ khóa tìm kiếm vào ViewData để hiển thị lại trên form
             ViewData["CurrentFilter"] = search;
-            // Gọi phương thức GetData với tham số search. 
-            // Phương thức này sẽ gọi Stored Procedure đã sửa của bạn.
             var list = _db.DonBanHang_GetAll(search);
+
+            // Lấy danh sách phụ trợ để tra cứu tên
+            var listKhach = _db.KhachHang_GetAll();
+            var listTT = _db.TrangThaiDBH_GetAll();
+
+            // Vòng lặp để điền thông tin vào các biến [NotMapped]
+            foreach (var item in list)
+            {
+                // A. Điền tên khách hàng (Họ + Tên)
+                var kh = listKhach.FirstOrDefault(k => k.MaKH == item.MaKH);
+                if (kh != null)
+                {
+                    item.TenKHFull = kh.HoKH + " " + kh.TenKH;
+                }
+                else
+                {
+                    item.TenKHFull = "Khách vãng lai";
+                }
+
+                // B. Điền tên trạng thái đơn hàng
+                var tt = listTT.FirstOrDefault(t => t.MaTTDBH == item.MaTTDBH);
+                item.TenTTDBH = tt?.TenTTDBH ?? "Chưa xác định";
+
+                // C. Xử lý địa chỉ hiển thị (Nếu cần)
+                if (string.IsNullOrEmpty(item.DiaChiGH))
+                {
+                    item.DiaChiGHFull = "Mua trực tiếp tại quầy";
+                }
+                else
+                {
+                    item.DiaChiGHFull = item.DiaChiGH; // Có thể nối thêm Xã/Tỉnh nếu muốn
+                }
+            }
+
             return View(list);
         }
 
         // GET: DonBanHangs/Create
         public IActionResult Create()
         {
-
-            // Xử lý khách hàng
             var khList = _db.KhachHang_GetAll() ?? new List<KhachHang>();
-            // Lấy tất cả khách hàng và truyền qua ViewBag cho View sử dụng
             ViewBag.KhachHangs = new SelectList(khList, "MaKH", "TenKH");
 
-            // 1. Lấy danh sách Tỉnh để hiển thị dropdown đầu tiên
             var listTinh = _db.Tinh_GetAll() ?? new List<Tinh>();
             ViewBag.Tinhs = new SelectList(listTinh, "MaTinh", "TenTinh");
-
-            // 2. Khởi tạo danh sách Xã rỗng (vì chưa chọn Tỉnh nào)
-            // Hoặc có thể để null, nhưng new List<Xa>() sẽ an toàn hơn cho SelectList
-            // nhưng trong trường hợp này new lish<Xa> sẽ không đảm bảo được việc chọn tỉnh trước rồi chọn xã sau.
-            // vì nó sẽ hiện ra toàn bộ xã nếu new lish<xa>
             ViewBag.Xas = new SelectList(new List<Xa>(), "MaXa", "TenXa");
 
             var ttdbhList = _db.TrangThaiDBH_GetAll() ?? new List<TrangThaiDBH>();
@@ -58,15 +80,11 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // 1. Thêm Action này để Ajax gọi lấy danh sách xã
         [HttpGet]
         public IActionResult GetXaByTinh(int maTinh)
         {
-            // Giả sử Xa_GetAll trả về List và trong model Xa có thuộc tính MaTinh
-            // Bạn cần lọc danh sách xã theo maTinh được gửi lên
             var allXas = _db.Xa_GetAll();
             var xas = allXas.Where(x => x.MaTinh == maTinh).ToList();
-
             return Json(xas);
         }
 
@@ -76,25 +94,15 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             var dbh = _db.DonBanHang_GetById(id);
             if (dbh == null) return NotFound();
 
-
             var listTinh = _db.Tinh_GetAll() ?? new List<Tinh>();
-
-            // Xác định Tỉnh hiện tại của Nhà cung cấp (để chọn sẵn khi mở form)
-            // tìm xem MaXa hiện tại thuộc MaTinh nào.
-            // Tìm thông tin xã hiện tại -> lấy MaTinh của nó
             var currentXa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == dbh.MaXa);
             int selectedMaTinh = currentXa != null ? currentXa.MaTinh : 0;
-
-            // Lấy danh sách Xã thuộc Tỉnh hiện tại (chứ không lấy hết tất cả xã)
             var listXaOfTinh = _db.Xa_GetAll().Where(x => x.MaTinh == selectedMaTinh).ToList();
 
-            // Truyền dữ liệu qua View
             ViewBag.Tinhs = new SelectList(listTinh, "MaTinh", "TenTinh", selectedMaTinh);
             ViewBag.Xas = new SelectList(listXaOfTinh, "MaXa", "TenXa", dbh.MaXa);
 
-            // Xử lý khách hàng
             var khList = _db.KhachHang_GetAll() ?? new List<KhachHang>();
-            // Lấy tất cả khách hàng và truyền qua ViewBag cho View sử dụng
             ViewBag.KhachHangs = new SelectList(khList, "MaKH", "TenKH", dbh.MaKH);
 
             var ttdbhList = _db.TrangThaiDBH_GetAll() ?? new List<TrangThaiDBH>();
@@ -110,15 +118,59 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // 2. SỬA HÀM DETAILS: Để hiển thị chi tiết đầy đủ trong bảng thông tin
         public IActionResult Details(int id)
         {
             var dbh = _db.DonBanHang_GetById(id);
+            if (dbh == null) return NotFound();
+
+            // A. Lấy tên Khách hàng
+            var kh = _db.KhachHang_GetById(dbh.MaKH);
+            dbh.TenKHFull = kh != null ? (kh.HoKH + " " + kh.TenKH) : "Khách vãng lai";
+
+            // B. Lấy tên Trạng thái
+            var tt = _db.TrangThaiDBH_GetById(dbh.MaTTDBH);
+            dbh.TenTTDBH = tt?.TenTTDBH ?? "Chưa xác định";
+
+            // C. Lấy tên Xã/Tỉnh để hiển thị địa chỉ đẹp hơn
+            var xa = _db.Xa_GetById(dbh.MaXa);
+            string tenXa = xa?.TenXa ?? "";
+
+            // Nếu có xã thì tìm tiếp Tỉnh
+            string tenTinh = "";
+            if (xa != null)
+            {
+                var tinh = _db.Tinh_GetById(xa.MaTinh);
+                tenTinh = tinh?.TenTinh ?? "";
+            }
+
+            // Ghép chuỗi địa chỉ đầy đủ
+            if (!string.IsNullOrEmpty(dbh.DiaChiGH))
+            {
+                // Ví dụ: 123 Đường ABC, Xã Hòa Thắng, Tỉnh Đắk Lắk
+                dbh.DiaChiGHFull = $"{dbh.DiaChiGH}, {tenXa}, {tenTinh}".Trim(',', ' ');
+            }
+            else
+            {
+                dbh.DiaChiGHFull = "Mua trực tiếp";
+            }
+
             return View(dbh);
         }
 
+        // 3. SỬA HÀM DELETE: Để hiển thị thông tin trước khi xóa
         public IActionResult Delete(int id)
         {
             var dbh = _db.DonBanHang_GetById(id);
+            if (dbh == null) return NotFound();
+
+            // Cũng cần lấy tên để hiển thị lúc xác nhận xóa
+            var kh = _db.KhachHang_GetById(dbh.MaKH);
+            dbh.TenKHFull = kh != null ? (kh.HoKH + " " + kh.TenKH) : "Khách vãng lai";
+
+            var tt = _db.TrangThaiDBH_GetById(dbh.MaTTDBH);
+            dbh.TenTTDBH = tt?.TenTTDBH ?? "Chưa xác định";
+
             return View(dbh);
         }
 

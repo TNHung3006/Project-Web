@@ -22,9 +22,33 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         {
             // Lưu từ khóa tìm kiếm vào ViewData để hiển thị lại trên form
             ViewData["CurrentFilter"] = search;
-            // Gọi phương thức GetData với tham số search. 
-            // Phương thức này sẽ gọi Stored Procedure đã sửa của bạn.
+
             var list = _db.KhachHang_GetAll(search);
+
+            // --- BỔ SUNG: Gán dữ liệu cho [NotMapped] DiaChiFull ---
+            // 1. Lấy danh sách Xã và Tỉnh để tra cứu
+            var listXa = _db.Xa_GetAll();
+            var listTinh = _db.Tinh_GetAll();
+
+            foreach (var kh in list)
+            {
+                // Tìm Xã của khách hàng
+                var xa = listXa.FirstOrDefault(x => x.MaXa == kh.MaXa);
+                // Tìm Tỉnh dựa trên Xã đó
+                var tinh = xa != null ? listTinh.FirstOrDefault(t => t.MaTinh == xa.MaTinh) : null;
+
+                // Ghép chuỗi địa chỉ: "Số nhà, Xã ..., Tỉnh ..."
+                string tenXa = xa?.TenXa ?? "";
+                string tenTinh = tinh?.TenTinh ?? "";
+                string diaChiCu = kh.DiaChi ?? "";
+
+                // Format đẹp: Loại bỏ các dấu phẩy dư thừa nếu dữ liệu trống
+                var parts = new List<string> { diaChiCu, tenXa, tenTinh };
+                // Lọc bỏ các chuỗi rỗng và nối lại bằng dấu phẩy
+                kh.DiaChiFull = string.Join(", ", parts.Where(s => !string.IsNullOrEmpty(s)));
+            }
+            // -------------------------------------------------------
+
             return View(list);
         }
 
@@ -36,9 +60,6 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             ViewBag.Tinhs = new SelectList(listTinh, "MaTinh", "TenTinh");
 
             // 2. Khởi tạo danh sách Xã rỗng (vì chưa chọn Tỉnh nào)
-            // Hoặc có thể để null, nhưng new List<Xa>() sẽ an toàn hơn cho SelectList
-            // nhưng trong trường hợp này new lish<Xa> sẽ không đảm bảo được việc chọn tỉnh trước rồi chọn xã sau.
-            // vì nó sẽ hiện ra toàn bộ xã nếu new lish<xa>
             ViewBag.Xas = new SelectList(new List<Xa>(), "MaXa", "TenXa");
 
             return View();
@@ -59,8 +80,7 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
                 kh.AnhKH = fileName;
             }
 
-            var newMaKH = _db.KhachHang_Insert(kh); // trả MaSP
-            // nếu cần hiển thị newMaSP, có thể gửi ViewBag.NewMaSP = newMaSP
+            var newMaKH = _db.KhachHang_Insert(kh);
             return RedirectToAction(nameof(Index));
         }
 
@@ -68,11 +88,8 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         [HttpGet]
         public IActionResult GetXaByTinh(int maTinh)
         {
-            // Giả sử Xa_GetAll trả về List và trong model Xa có thuộc tính MaTinh
-            // Bạn cần lọc danh sách xã theo maTinh được gửi lên
             var allXas = _db.Xa_GetAll();
             var xas = allXas.Where(x => x.MaTinh == maTinh).ToList();
-
             return Json(xas);
         }
 
@@ -83,12 +100,9 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
             if (kh == null) return NotFound();
 
             // A. Lấy tất cả Tỉnh để đổ vào Dropdown Tỉnh
-            // Giả sử bạn có hàm _db.Tinh_GetAll(), nếu chưa có bạn phải tạo thêm
             var listTinh = _db.Tinh_GetAll() ?? new List<Tinh>();
 
             // B. Xác định Tỉnh hiện tại của Nhà cung cấp (để chọn sẵn khi mở form)
-            // Chúng ta phải tìm xem MaXa hiện tại thuộc MaTinh nào.
-            // Cách làm: Tìm thông tin xã hiện tại -> lấy MaTinh của nó
             var currentXa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == kh.MaXa);
             int selectedMaTinh = currentXa != null ? currentXa.MaTinh : 0;
 
@@ -136,12 +150,40 @@ namespace Hung_Tran_Ngoc_66131218_Web_QLBH.Controllers
         public IActionResult Details(int id)
         {
             var kh = _db.KhachHang_GetById(id);
+            if (kh == null) return NotFound();
+
+            // --- BỔ SUNG: Hiển thị DiaChiFull trong Details ---
+            var xa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == kh.MaXa);
+            var tinh = xa != null ? _db.Tinh_GetAll().FirstOrDefault(t => t.MaTinh == xa.MaTinh) : null;
+
+            string tenXa = xa?.TenXa ?? "";
+            string tenTinh = tinh?.TenTinh ?? "";
+            string diaChiCu = kh.DiaChi ?? "";
+
+            var parts = new List<string> { diaChiCu, tenXa, tenTinh };
+            kh.DiaChiFull = string.Join(", ", parts.Where(s => !string.IsNullOrEmpty(s)));
+            // -------------------------------------------------
+
             return View(kh);
         }
 
         public IActionResult Delete(int id)
         {
             var kh = _db.KhachHang_GetById(id);
+            if (kh == null) return NotFound();
+
+            // --- BỔ SUNG: Hiển thị DiaChiFull trong Delete để xác nhận ---
+            var xa = _db.Xa_GetAll().FirstOrDefault(x => x.MaXa == kh.MaXa);
+            var tinh = xa != null ? _db.Tinh_GetAll().FirstOrDefault(t => t.MaTinh == xa.MaTinh) : null;
+
+            string tenXa = xa?.TenXa ?? "";
+            string tenTinh = tinh?.TenTinh ?? "";
+            string diaChiCu = kh.DiaChi ?? "";
+
+            var parts = new List<string> { diaChiCu, tenXa, tenTinh };
+            kh.DiaChiFull = string.Join(", ", parts.Where(s => !string.IsNullOrEmpty(s)));
+            // -------------------------------------------------------------
+
             return View(kh);
         }
 

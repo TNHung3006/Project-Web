@@ -8,7 +8,12 @@
     var donHang = ViewBag.DonHang as Hung_Tran_Ngoc_66131218_Web_QLBH.Models.DonBanHang;
 
     // Tính tổng tiền
-    decimal tongTien = Model.Sum(x => x.ThanhTien);
+    decimal tongTien = 0;
+    if (Model != null && Model.Any())
+    {
+        // Vì bây giờ ThanhTien đã lấy được từ DB, bạn có thể sum trực tiếp
+        tongTien = Model.Sum(x => x.ThanhTien);
+    }
 }
 
 <div class="container py-5">
